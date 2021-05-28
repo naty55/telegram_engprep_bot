@@ -2,17 +2,9 @@ import sqlite3
 from sqlite3 import Error
 
 
-def neat_word(word):
-    """
-    Generic function to neat a string to keep the words stored in the DB in one manner
-    :param word: word to neat
-    :return: striped lowered case word
-    """
-    return word.strip().lower()
-
-
 class DataBase:
     """
+    API to represent the Database.
     """
 
     def __init__(self, filename):
@@ -28,7 +20,7 @@ class DataBase:
         """
         Connect to DB
         :param filename:
-        :return:
+        :return: None
         """
         conn = None
         try:
@@ -39,18 +31,18 @@ class DataBase:
         self.connection = conn
 
     def initialize_tables(self):
-        dict_table = "CREATE TABLE IF NOT EXISTS dict (" \
-                     "id INTEGER PRIMARY KEY AUTOINCREMENT," \
-                     "word TEXT," \
-                     "translation TEXT );"
+        """
+        Initialize tables in db.
+        :return: None
+        """
 
         persons_table = "CREATE TABLE IF NOT EXISTS persons (" \
                         "id INTEGER PRIMARY KEY AUTOINCREMENT," \
-                        "name TEXT," \
-                        "telegram_id INTEGER," \
-                        "age INTEGER, " \
-                        "gender INTEGER," \
-                        "dict_index INTEGER );"
+                        "name TEXT NOT NULL," \
+                        "telegram_id INTEGER NOT NULL," \
+                        "age INTEGER NOT NULL, " \
+                        "gender INTEGER NOT NULL," \
+                        "dict_index INTEGER NOT NULL );"
 
         scores_table = "CREATE TABLE IF NOT EXISTS scores (" \
                        "word_id INTEGER NOT NULL," \
@@ -58,14 +50,18 @@ class DataBase:
                        "duration INTEGER NOT NULL," \
                        "failures INTEGER NOT NULL, " \
                        "total INTEGER NOT NULL, " \
-                       "FOREIGN KEY (word_id) REFERENCES dict(id) " \
                        "FOREIGN KEY (person_id) REFERENCES persons(id) );"
 
-        success = self.exec_query(dict_table) + self.exec_query(persons_table) + self.exec_query(scores_table)
+        success = self.exec_query(persons_table) + self.exec_query(scores_table)
         if success == 0:
             print("[INFO] Tables are all set")
 
     def exec_query(self, query):
+        """
+        Generic function to execute read query on db
+        :param query: query to execute
+        :return: list with the results; or empty list if there was no result
+        """
         cursor = self.connection.cursor()
         try:
             cursor.execute(query)
@@ -76,6 +72,11 @@ class DataBase:
             return 1
 
     def exec_read_query(self, query):
+        """
+        Generic function to execute read query on db
+        :param query: query to execute
+        :return: list with the results; or empty list if there was no result
+        """
         cursor = self.connection.cursor()
         try:
             cursor.execute(query)
@@ -84,56 +85,38 @@ class DataBase:
             print(f"[ERROR] The error {e} occurred")
             return []
 
-    def check_for_person_or_word(self, table, conditions):
-        query = "SELECT "
-
-    def add_new_word(self, word, translation):
-        word = neat_word(word)
-        translation = neat_word(translation)
-
-        result = self.exec_read_query(f"SELECT translation FROM dict WHERE word = '{word}'")
-        exists = result != []
-
-        if exists:
-            e_translations = result[0][0].split(",")
-            if translation not in e_translations:
-                e_translations.append(translation)
-            e_translations = ",".join(e_translations)
-            query = f"""
-                    UPDATE
-                        dict
-                    SET
-                        translation = '{e_translations}'
-                    WHERE
-                        word = '{word}'
-                    """
-
-        else:
-            query = f"""
-                    INSERT INTO 
-                        dict (word, translation)
-                    VALUES
-                        ('{word}','{translation}');
-                    """
-        success = self.exec_query(query)
-        if success == 0:
-            print(f"[INFO] the word {word} and its translation {translation} are all set")
-
-    def delete_word(self, word):
-        delete_query = f"DELETE FROM dict WHERE word = '{neat_word(word)}'"
-        success = self.exec_query(delete_query)
-        if success == 0:
-            print(f"[INFO] The word {word} had been successfully deleted")
-
-    def get_translation(self, word):
+    def check_for_person(self, conditions):
         """
-        Get a translation for a word from the DB
-        :param word: word to get the translation for
-        :return: the translation if the word is in the DB; otherwise return empty string
+        Check for person with given set of conditions
+        :param conditions: dictionary
+        :raise Exception if conditions are empty
+        :return: True if person with give conditions exist; False otherwise
         """
-        result = self.exec_read_query(f"SELECT translation FROM dict WHERE word = '{neat_word(word)}'")
-        if result:
-            return result[0][0]
-        return ""
+        if not len(conditions.items()):
+            raise Exception("No conditions to work with")
+        conditions = " AND ".join([f"{str(key)}='{conditions.get(key)}'" for key in conditions.keys()])
+        query = f"SELECT * FROM persons WHERE ({conditions})"
+        result = self.exec_read_query(query)
+        return len(result) != 0
 
+    def add_new_person(self, name, telegram_id, gender, age):
+        """
+        Add new person to Database.
+        set the new person's dict_index to 0
+        :param name: name of the person
+        :param telegram_id: telegram id of the telegram account
+        :param gender: gender of person
+        :param age: age of person
+        :return: None
+        """
+        if self.check_for_person({'telegram_id': telegram_id}):
+            return
+        query = f"""INSERT INTO
+                      persons (name, telegram_id, gender, age, dict_index)
+                   VALUES
+                       ('{name}', '{telegram_id}', '{gender}', '{age}', '{0}'); 
+                """
+        result = self.exec_query(query)
+        if result == 0:
+            print(f"[INFO] new person updated name : {name}, telegram_id : {telegram_id}")
 
