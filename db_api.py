@@ -1,6 +1,8 @@
 import sqlite3
 from sqlite3 import Error
 
+# ALL OF THIS SHOULD BE REFACTORED AS NOW IT IS NOT SECURE AGAINST SQL INJECTION
+
 
 class DataBase:
     """
@@ -128,8 +130,7 @@ class DataBase:
         if result:
             failures = result[0][3] + (1 if failure else 0)
             total = result[0][4] + 1
-            duration = (result[0][2] + duration) / total
-            print(failures, total, duration)
+            duration = (result[0][2] * (total - 1) + duration) / total
             query = f"""UPDATE scores
                     SET failures='{failures}', total='{total}', duration='{duration}'
                     WHERE (word_id = '{word_id}' AND person_id = '{person_id}')"""
@@ -152,3 +153,6 @@ class DataBase:
                 f"WHERE id = {person_id}"
         if self.exec_query(query) == 0:
             print(f"[INFO] successfully updated dict_index : {dict_index}, id : {person_id}")
+
+    def close(self):
+        self.connection.close()
