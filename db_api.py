@@ -58,11 +58,11 @@ class DataBase:
         if success == 0:
             print("[INFO] Tables are all set")
 
-    def exec_query(self, query):
+    def exec_query(self, query: str) -> int:
         """
         Generic function to execute read query on db
         :param query: query to execute
-        :return: list with the results; or empty list if there was no result
+        :return: 0 for success; 1 otherwise
         """
         cursor = self.connection.cursor()
         try:
@@ -73,7 +73,7 @@ class DataBase:
             print(f"[ERROR] The error {e} occurred")
             return 1
 
-    def exec_read_query(self, query):
+    def exec_read_query(self, query: str):
         """
         Generic function to execute read query on db
         :param query: query to execute
@@ -87,7 +87,7 @@ class DataBase:
             print(f"[ERROR] The error {e} occurred")
             return []
 
-    def check_for_person(self, conditions):
+    def check_for_person(self, conditions: dict) -> bool:
         """
         Check for person with given set of conditions
         :param conditions: dictionary
@@ -101,7 +101,7 @@ class DataBase:
         result = self.exec_read_query(query)
         return len(result) != 0
 
-    def add_new_person(self, name, telegram_id, gender, age):
+    def add_new_person(self, name: str, telegram_id: int, gender: str, age: int):
         """
         Add new person to Database.
         set the new person's dict_index to 0
