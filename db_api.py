@@ -120,3 +120,14 @@ class DataBase:
         if result == 0:
             print(f"[INFO] new person updated name : {name}, telegram_id : {telegram_id}")
 
+    def update_score(self, person_id, word_id):
+        pass
+
+    def update_dict_index(self, person_id, dict_index):
+        if not self.check_for_person({'id': person_id}):
+            raise Exception(f"Trying to update person status of person that does not exist {person_id}")
+        query = f"UPDATE persons " \
+                f"SET dict_index='{dict_index}'" \
+                f"WHERE id = {person_id}"
+        if self.exec_query(query) == 0:
+            print(f"[INFO] successfully updated dict_index : {dict_index}, id : {person_id}")
