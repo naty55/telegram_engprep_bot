@@ -120,8 +120,29 @@ class DataBase:
         if result == 0:
             print(f"[INFO] new person updated name : {name}, telegram_id : {telegram_id}")
 
-    def update_score(self, person_id, word_id):
-        pass
+    def update_score(self, person_id, word_id, duration, failure):
+        if not self.check_for_person({'id': person_id}):
+            raise Exception(f"No person with id={person_id}")
+        check_query = f"SELECT * FROM scores WHERE (person_id = '{person_id}' AND word_id = '{word_id}')"
+        result = self.exec_read_query(check_query)
+        if result:
+            failures = result[0][3] + (1 if failure else 0)
+            total = result[0][4] + 1
+            duration = (result[0][2] + duration) / total
+            print(failures, total, duration)
+            query = f"""UPDATE scores
+                    SET failures='{failures}', total='{total}', duration='{duration}'
+                    WHERE (word_id = '{word_id}' AND person_id = '{person_id}')"""
+        else:
+            total = 1
+            query = "INSERT INTO " \
+                    f"scores (word_id, person_id, duration, failures, total)" \
+                    f"VALUES " \
+                    f"({word_id}, {person_id}, {duration}, {1 if failure else 0}, 1);"
+        success = self.exec_query(query)
+        if success == 0:
+            print(f"[INFO] score successfully updated person_id: {person_id}, word_id : {word_id}, "
+                  f"duration : {duration}, failure : {failure}, total : {total}")
 
     def update_dict_index(self, person_id, dict_index):
         if not self.check_for_person({'id': person_id}):
