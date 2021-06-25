@@ -1,6 +1,7 @@
 import sqlite3
 from sqlite3 import Error
 
+
 # ALL OF THIS SHOULD BE REFACTORED AS NOW IT IS NOT SECURE AGAINST SQL INJECTION
 
 
@@ -26,7 +27,7 @@ class DataBase:
         """
         conn = None
         try:
-            conn = sqlite3.connect(filename)
+            conn = sqlite3.connect(filename, check_same_thread=False)  # for now
             print("[INFO] connection to DB successful")
         except Error as e:
             print(f"[ERROR] error {e}")
@@ -44,7 +45,8 @@ class DataBase:
                         "telegram_id INTEGER NOT NULL," \
                         "age INTEGER NOT NULL, " \
                         "gender INTEGER NOT NULL," \
-                        "dict_index INTEGER NOT NULL );"
+                        "dict_index INTEGER NOT NULL," \
+                        "last_seen STRING );"
 
         scores_table = "CREATE TABLE IF NOT EXISTS scores (" \
                        "word_id INTEGER NOT NULL," \
@@ -153,6 +155,23 @@ class DataBase:
                 f"WHERE id = {person_id}"
         if self.exec_query(query) == 0:
             print(f"[INFO] successfully updated dict_index : {dict_index}, id : {person_id}")
+
+    def get_person_data(self, telegram_id):
+        if self.check_for_person({'telegram_id': telegram_id}):
+            query = f"SELECT * FROM persons WHERE telegram_id={telegram_id}"
+            row = self.exec_read_query(query)[0]
+            data = {
+                'id': row[0],
+                'name': row[1],
+                'telegram_id': row[2],
+                'age': row[3],
+                'gender': row[4],
+                'index': row[5],
+                'last_seen': row[6]
+            }
+            return data
+        else:
+            return None
 
     def close(self):
         self.connection.close()
