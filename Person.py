@@ -14,6 +14,10 @@ class Person:
         """
         self.telegram_chat_id = telegram_chat_id
         self.current_name = current_name
+        self.name = current_name
+        self.is_known = False
+        self.is_on_quiz = False
+        self.left_questions = 0
         self._initialize()
 
     def _initialize(self):
@@ -22,9 +26,6 @@ class Person:
             self.is_known = True
             self.name = person_data['name']
             self.gender = person_data['gender']
-        else:
-            self.name = self.current_name
-            self.is_known = False
         self.touch()
 
     def save_person_data(self):
