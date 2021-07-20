@@ -12,6 +12,7 @@ gender_kb = [[InlineKeyboardButton('Male', callback_data='gender_male')],
              [InlineKeyboardButton('Other', callback_data='gender_other')]]
 gender_markup = InlineKeyboardMarkup(gender_kb)
 
+next_button = InlineKeyboardMarkup(((InlineKeyboardButton('Next', callback_data='next_button'),),))
 #
 sessions = SessionsDict(lambda: False)
 
@@ -47,16 +48,25 @@ def register_handler(update: Update, context: CallbackContext):
 
 
 def button_map_handler(update: Update, context: CallbackContext):
+    person, person_id = start_session(update.effective_user.id, update.effective_user.name)
     update.callback_query.answer()
     query = update.callback_query
     answer = query.data
     if answer.startswith('gender_'):
-        person = sessions.get(update.effective_user.id)
         person.gender = answer.split('_')[1]
         query.delete_message()
         get_age(person)
     elif answer.startswith('age_'):
         pass
+    elif answer.startswith('next'):
+        try:
+            context.bot_data.pop(query.message.message_id).delete()
+        except KeyError:
+            pass  # Ignore case when the poll is not registered in bot_data
+        else:
+            quiz_person(person, context)
+        finally:
+            query.delete_message()
 
 
 def quiz_me_handler(update: Update, context: CallbackContext):
@@ -71,15 +81,16 @@ def quiz_me_handler(update: Update, context: CallbackContext):
 
 def quiz_handler(update: Update, context: CallbackContext):
     person, person_id = start_session(update.effective_user.id, update.effective_user.name)
+    user_answer = update.poll_answer.option_ids[0]
     try:
-        message = context.bot_data.pop(update.poll_answer.poll_id)
+        poll_correct_answer = context.bot_data.pop(update.poll_answer.poll_id)
     except KeyError:
-        pass  # Ignore case when the poll is not registered in bot_data
+        pass  # Ignore case he poll is not registered
     else:
-        sleep(3)
-        message.delete()
-        quiz_person(person, context)
-
+        if poll_correct_answer == user_answer:
+            print("WW")
+        else:
+            print("HH")
 
 def conversation_map_handler(update: Update, context: CallbackContext):
     print(update.message.text)
@@ -96,9 +107,11 @@ def quiz_person(person: Person, context: CallbackContext):
         answer = question['answer']
         options = question['options']
         q = f"What is the translation of the word '{word}'"
-        message = context.bot.send_poll(chat_id=person.telegram_chat_id, question=q, options=options, type=Poll.QUIZ,
+        poll_message = context.bot.send_poll(chat_id=person.telegram_chat_id, question=q, options=options, type=Poll.QUIZ,
                                         correct_option_id=answer, is_anonymous=False)
-        context.bot_data[message.poll.id] = message
+        button_message = context.bot.send_message(chat_id=person.telegram_chat_id,  reply_markup=next_button, text="_" * 30)
+        context.bot_data[button_message.message_id] = poll_message
+        context.bot_data[poll_message.poll.id] = poll_message.poll.correct_option_id
         person.left_questions -= 1
     else:
         context.bot.send_message(text="Good Job", chat_id=person.telegram_chat_id)
