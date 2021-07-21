@@ -52,12 +52,12 @@ def button_map_handler(update: Update, context: CallbackContext):
     update.callback_query.answer()
     query = update.callback_query
     answer = query.data
+
     if answer.startswith('gender_'):
         person.gender = answer.split('_')[1]
-        query.delete_message()
-        get_age(person)
-    elif answer.startswith('age_'):
-        pass
+        person.interval_to_get_age_is_open = True
+        context.bot.send_message(text="How old are you ? ", chat_id=person_id)
+
     elif answer.startswith('next'):
         try:
             context.bot_data.pop(query.message.message_id).delete()
@@ -65,8 +65,8 @@ def button_map_handler(update: Update, context: CallbackContext):
             pass  # Ignore case when the poll is not registered in bot_data
         else:
             quiz_person(person, context)
-        finally:
-            query.delete_message()
+
+    query.delete_message()
 
 
 def quiz_me_handler(update: Update, context: CallbackContext):
@@ -92,12 +92,14 @@ def quiz_handler(update: Update, context: CallbackContext):
         else:
             print("HH")
 
-def conversation_map_handler(update: Update, context: CallbackContext):
-    print(update.message.text)
 
-
-def get_age(person: Person):
-    pass
+def age_handler(update: Update, context: CallbackContext):
+    person, person_id = start_session(update.effective_user.id, update.effective_user.name)
+    if person.interval_to_get_age_is_open:
+        person.age = int(update.message.text)
+        person.interval_to_get_age_is_open = False  # Close Interval the bot now will no longer get text messages
+        person.save_person_data()  # DONE
+        context.bot.send_message(text="Registration Completed\nUse /menu to see what this bot can do", chat_id=person_id)
 
 
 def quiz_person(person: Person, context: CallbackContext):
