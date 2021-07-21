@@ -16,6 +16,7 @@ class Person:
         self.current_name = current_name
         self.name = current_name
         self.is_known = False
+        self.interval_to_get_age_is_open = False  # This variable would determine if the bot will get text messages from this person
         self.is_on_quiz = False
         self.left_questions = 0
         self._initialize()
@@ -29,7 +30,8 @@ class Person:
         self.touch()
 
     def save_person_data(self):
-        db_api.add_new_person(self.name, self.telegram_chat_id)
+        db_api.add_new_person(self.name, self.telegram_chat_id, self.gender, self.age)
+        self.is_known = True
 
     def read_person_data(self):
         """
