@@ -1,7 +1,7 @@
 # telegram_engprep_bot
 Simple telegram bot to help you memorize words in English (for Hebrew speakers)
 
-#Note:
+# Note:
 This bot was developed for hebrew speakers but with some slight changes, you can change the bot to be a trainer for any other language. For example for Spanish speakers all you have to do is
 1. to have a csv file with header id, word (english), translation(spanish) 
 2. name this file "new_dict.csv" 
