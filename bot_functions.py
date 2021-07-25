@@ -34,7 +34,7 @@ logger = logging.getLogger(__name__)
 def start_handler(update: Update, context: CallbackContext):
     person, person_id = start_session(update.effective_user.id, update.effective_user.name)
 
-    context.bot.send_chat_action(chat_id=person.telegram_chat_id, action=telegram.ChatAction.TYPING)
+    context.bot.send_chat_action(chat_id=person.id, action=telegram.ChatAction.TYPING)
     if not person.is_known:
         context.bot.send_message(chat_id=person_id, text="Welcome " + person.name +
                                                          "\nUse /register command to register\n"
@@ -59,7 +59,7 @@ def register_handler(update: Update, context: CallbackContext):
     if person.is_known:
         context.bot.send_message(text="you are already registered", chat_id=person_id)
     else:
-        context.bot.send_message(reply_markup=gender_markup, chat_id=person.telegram_chat_id, text="What's your gender")
+        context.bot.send_message(reply_markup=gender_markup, chat_id=person.id, text="What's your gender")
 
 
 def button_map_handler(update: Update, context: CallbackContext):
@@ -100,7 +100,7 @@ def quiz_me_handler(update: Update, context: CallbackContext):
         person.left_questions = 15
         quiz_person(person, context)
 
-        logger.info("%s started quiz id: %s", person.name, person.telegram_chat_id)
+        logger.info("%s started quiz id: %s", person.name, person.id)
 
 
 def quiz_handler(update: Update, context: CallbackContext):
@@ -126,7 +126,7 @@ def age_handler(update: Update, context: CallbackContext):
         context.bot.send_message(text="Registration Completed\nUse /menu to see what this bot can do",
                                  chat_id=person_id)
 
-        logger.info("%s registered id: %s", person.name, person.telegram_chat_id)
+        logger.info("%s registered id: %s", person.name, person.id)
 
 
 def quiz_person(person: Person, context: CallbackContext):
@@ -136,10 +136,10 @@ def quiz_person(person: Person, context: CallbackContext):
         answer = question['answer']
         options = question['options']
         q = f"What is the translation of the word '{word}'"
-        poll_message = context.bot.send_poll(chat_id=person.telegram_chat_id, question=q, options=options,
+        poll_message = context.bot.send_poll(chat_id=person.id, question=q, options=options,
                                              type=Poll.QUIZ,
                                              correct_option_id=answer, is_anonymous=False)
-        button_message = context.bot.send_message(chat_id=person.telegram_chat_id, reply_markup=next_button,
+        button_message = context.bot.send_message(chat_id=person.id, reply_markup=next_button,
                                                   text="_" * 45)
         context.bot_data[button_message.message_id] = poll_message
         context.bot_data[poll_message.poll.id] = poll_message.poll.correct_option_id
@@ -151,8 +151,8 @@ def quiz_person(person: Person, context: CallbackContext):
 def finish_quiz(person: Person, context: CallbackContext):
     person.is_on_quiz = False
     person.left_questions = 0
-    context.bot.send_message(chat_id=person.telegram_chat_id, text='Good job')
-    logger.info("%s finished quiz id: %s", person.name, person.telegram_chat_id)
+    context.bot.send_message(chat_id=person.id, text='Good job')
+    logger.info("%s finished quiz id: %s", person.name, person.id)
 
 
 def start_session(person_id, name):
@@ -166,7 +166,7 @@ def start_session(person_id, name):
     if not person:
         person = Person(person_id, name)
         sessions[person_id] = person
-        logger.info("%s started session with the bot id: %s", person.name, person.telegram_chat_id)
+        logger.info("%s started session with the bot id: %s", person.name, person.id)
 
     return person, person_id
 

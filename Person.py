@@ -12,7 +12,7 @@ class Person:
         :param telegram_chat_id:
         :param current_name:
         """
-        self.telegram_chat_id = telegram_chat_id
+        self.id = telegram_chat_id
         self.current_name = current_name
         self.name = current_name
         self.is_known = False
@@ -22,7 +22,7 @@ class Person:
         self._initialize()
 
     def _initialize(self):
-        person_data = db_api.get_person_data(self.telegram_chat_id)
+        person_data = db_api.get_person_data(self.id)
         if person_data:
             self.is_known = True
             self.name = person_data['name']
@@ -30,7 +30,7 @@ class Person:
         self.touch()
 
     def save_person_data(self):
-        db_api.add_new_person(self.name, self.telegram_chat_id, self.gender, self.age)
+        db_api.add_new_person(self.name, self.id, self.gender, self.age)
         self.is_known = True
 
     def read_person_data(self):
