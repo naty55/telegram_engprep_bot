@@ -1,3 +1,5 @@
+import time
+
 import telegram
 from telegram import \
     Update, InlineKeyboardButton, InlineKeyboardMarkup, Poll
@@ -7,6 +9,8 @@ from apis import dict_api
 from Person import Person
 from SessionsDict import SessionsDict
 import logging
+from threading import Thread
+from time import sleep
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
@@ -24,6 +28,7 @@ sessions = SessionsDict(lambda: False)
 
 #
 logger = logging.getLogger(__name__)
+
 
 
 def start_handler(update: Update, context: CallbackContext):
@@ -164,3 +169,15 @@ def start_session(person_id, name):
         logger.info("%s started session with the bot id: %s", person.name, person.telegram_chat_id)
 
     return person, person_id
+
+
+def clean_old_sessions():
+    while True:
+        sleep(30 * 60)
+        for i in sessions.keys():
+            if time.time() - sessions[i].time > 30 * 60:
+                person = sessions.pop(i)
+                logger.info("%s session expired id: %s", person.name, person.id)
+
+
+Thread(target=clean_old_sessions).start()
