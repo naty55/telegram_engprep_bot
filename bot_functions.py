@@ -174,7 +174,7 @@ def start_session(person_id, name):
 def clean_old_sessions():
     while True:
         sleep(30 * 60)
-        for i in sessions.keys():
+        for i in list(sessions.keys()):
             if time.time() - sessions[i].time > 30 * 60:
                 person = sessions.pop(i)
                 logger.info("%s session expired id: %s", person.name, person.id)
