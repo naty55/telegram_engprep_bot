@@ -3,7 +3,7 @@ from telegram import \
     Update, InlineKeyboardButton, InlineKeyboardMarkup, Poll
 from telegram.ext import CallbackContext
 from telegram.error import BadRequest
-from apis import dict_api, logger
+from apis import dict_api,db_api, logger
 from Person import Person
 from SessionsDict import SessionsDict
 from threading import Thread
@@ -179,6 +179,15 @@ def clean_old_sessions():
             if time() - sessions[i].time > interval:
                 person = sessions.pop(i)
                 logger.info("%s session expired id: %s", person.name, person.id)
+
+
+def notify_all_users(message, bot):
+    for _id in db_api.get_all_persons_id():
+        try:
+            bot.send_message(_id, message)
+        except Exception as e:
+            print(f"Couldn't send message for user {db_api.get_person_data(_id).get('name')}")
+            print(e)
 
 
 Thread(target=clean_old_sessions).start()

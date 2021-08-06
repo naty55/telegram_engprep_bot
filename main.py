@@ -4,7 +4,8 @@ from bot_functions import (start_handler,
                            quiz_me_handler,
                            quiz_handler,
                            menu_handler,
-                           age_handler)
+                           age_handler,
+                           notify_all_users)
 
 from telegram.ext import CommandHandler, Updater, CallbackQueryHandler, PollAnswerHandler, MessageHandler, Filters
 

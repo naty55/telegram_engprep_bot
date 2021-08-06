@@ -173,5 +173,8 @@ class DataBase:
         else:
             return None
 
+    def get_all_persons_id(self):
+        return (_[0] for _ in self.exec_read_query(f"SELECT telegram_id FROM persons"))
+
     def close(self):
         self.connection.close()
