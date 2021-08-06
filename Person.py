@@ -1,4 +1,4 @@
-from apis import dict_api, db_api
+from apis import db_api
 import time
 
 
@@ -17,19 +17,49 @@ class Person:
         self.name = current_name
         self.is_known = False
         self.interval_to_get_age_is_open = False  # This variable would determine if the bot will get text messages from this person
-        self.is_on_quiz = False
-        self.left_questions = 0
         self._initialize()
 
     def _initialize(self):
+        """
+        Initialize person settings
+        :return:
+        """
         person_data = db_api.get_person_data(self.id)
         if person_data:
             self.is_known = True
             self.name = person_data['name']
             self.gender = person_data['gender']
-        self.touch()
+        self.init_quiz()
+        # time
+        self.time = time.time()
+
+    def init_quiz(self):
+        """
+        Init quiz settings
+        :return:
+        """
+        self.is_on_quiz = False
+        self.left_questions = 0
+        self.quiz_on_heb_words = False
+
+    def start_quiz(self, on_heb_words):
+        """
+        start quiz - adjust settings for the quiz
+        :param on_heb_words: boolean flag to determine if the quiz is on hebrew or english words
+        :return:
+        """
+        self.is_on_quiz = True
+        self.left_questions = 15
+        self.failed = 15
+        self.quiz_on_heb_words = on_heb_words
 
     def save_person_data(self):
+        """
+        Save person data in db
+        :return:
+        """
+        # This method might be edited in future in order to
+        # also let users to update their details
         db_api.add_new_person(self.name, self.id, self.gender, self.age)
         self.is_known = True
 

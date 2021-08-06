@@ -8,12 +8,10 @@ from bot_functions import (start_handler,
 
 from telegram.ext import CommandHandler, Updater, CallbackQueryHandler, PollAnswerHandler, MessageHandler, Filters
 
-
 with open("keys.txt", 'r') as f:
     token = f.readline()
 
 updater = Updater(token=token)
-bot = updater.bot
 dispatcher = updater.dispatcher
 
 dispatcher.add_handler(CommandHandler('start', start_handler))

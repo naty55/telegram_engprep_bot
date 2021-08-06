@@ -1,34 +1,28 @@
-import time
-
 import telegram
 from telegram import \
     Update, InlineKeyboardButton, InlineKeyboardMarkup, Poll
 from telegram.ext import CallbackContext
 from telegram.error import BadRequest
-from apis import dict_api
+from apis import dict_api, logger
 from Person import Person
 from SessionsDict import SessionsDict
-import logging
 from threading import Thread
-from time import sleep
+from time import sleep, time
 
-logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
-)
 # CONSTANTS
-gender_kb = [[InlineKeyboardButton('Male', callback_data='gender_male')],
+gender_kb = ([InlineKeyboardButton('Male', callback_data='gender_male')],
              [InlineKeyboardButton('Female', callback_data='gender_female')],
-             [InlineKeyboardButton('Other', callback_data='gender_other')]]
-gender_markup = InlineKeyboardMarkup(gender_kb)
+             [InlineKeyboardButton('Other', callback_data='gender_other')])
+next_kb = ((InlineKeyboardButton('Finish Quiz', callback_data='finish_button'),
+            InlineKeyboardButton('Next', callback_data='next')),)
+lang_kb = ((InlineKeyboardButton('Quiz on English words', callback_data='lang_en_button'),),
+           (InlineKeyboardButton('Quiz on Hebrew words', callback_data='lang_he_button'),))
 
-next_button = InlineKeyboardMarkup(((InlineKeyboardButton('Finish Quiz', callback_data='finish_button'),
-                                     InlineKeyboardButton('Next', callback_data='next_button')),))
+next_button = InlineKeyboardMarkup(next_kb)
+gender_markup = InlineKeyboardMarkup(gender_kb)
+choose_lang_button = InlineKeyboardMarkup(lang_kb)
 #
 sessions = SessionsDict(lambda: False)
-
-#
-logger = logging.getLogger(__name__)
-
 
 
 def start_handler(update: Update, context: CallbackContext):
@@ -68,6 +62,11 @@ def button_map_handler(update: Update, context: CallbackContext):
     query = update.callback_query
     answer = query.data
 
+    try:
+        query.delete_message()
+    except BadRequest:
+        pass  # Ignore case; message couldn't be deleted
+
     if answer.startswith('gender_'):
         person.gender = answer.split('_')[1]
         person.interval_to_get_age_is_open = True
@@ -83,10 +82,12 @@ def button_map_handler(update: Update, context: CallbackContext):
                 quiz_person(person, context)
             else:
                 finish_quiz(person, context)
-    try:
-        query.delete_message()
-    except BadRequest:
-        pass  # Ignore case; message couldn't be deleted
+    elif answer.startswith('lang'):
+        on_heb_words = True if 'he' in answer else False
+        person.start_quiz(on_heb_words)
+        quiz_person(person, context)
+
+        logger.info("%s started quiz id: %s", person.name, person.id)
 
 
 def quiz_me_handler(update: Update, context: CallbackContext):
@@ -95,12 +96,11 @@ def quiz_me_handler(update: Update, context: CallbackContext):
         context.bot.send_message(chat_id=person_id, text="please use /register to register first")
     else:
         if person.is_on_quiz:
-            return  # to be decided
-        person.is_on_quiz = True
-        person.left_questions = 15
-        quiz_person(person, context)
-
-        logger.info("%s started quiz id: %s", person.name, person.id)
+            # To be decided
+            # context.bot.send_message(chat_id=person.id, reply_markup=next_button,
+            #                          text="You have to finish you quiz first")
+            return
+        context.bot.send_message(chat_id=person_id, reply_markup=choose_lang_button, text="Choose option: ")
 
 
 def quiz_handler(update: Update, context: CallbackContext):
@@ -112,7 +112,7 @@ def quiz_handler(update: Update, context: CallbackContext):
         pass  # Ignore case he poll is not registered
     else:
         if poll_correct_answer == user_answer:
-            pass
+            person.failed -= 1
         else:
             pass
 
@@ -131,7 +131,7 @@ def age_handler(update: Update, context: CallbackContext):
 
 def quiz_person(person: Person, context: CallbackContext):
     if person.left_questions > 0:
-        question = dict_api.get_question()
+        question = dict_api.get_question(on_heb_words=person.quiz_on_heb_words)
         word = question['word']
         answer = question['answer']
         options = question['options']
@@ -149,10 +149,10 @@ def quiz_person(person: Person, context: CallbackContext):
 
 
 def finish_quiz(person: Person, context: CallbackContext):
-    person.is_on_quiz = False
-    person.left_questions = 0
-    context.bot.send_message(chat_id=person.id, text='Good job')
-    logger.info("%s finished quiz id: %s", person.name, person.id)
+    person.init_quiz()
+    success_rate = round((15 - person.failed)/ 15 , 2)
+    context.bot.send_message(chat_id=person.id, text=f"You had {success_rate} success percentage")
+    logger.info("%s finished quiz with %s id: %s", person.name, str(success_rate), person.id)
 
 
 def start_session(person_id, name):
@@ -172,10 +172,11 @@ def start_session(person_id, name):
 
 
 def clean_old_sessions():
+    interval = 30 * 60
     while True:
-        sleep(30 * 60)
+        sleep(interval)
         for i in list(sessions.keys()):
-            if time.time() - sessions[i].time > 30 * 60:
+            if time() - sessions[i].time > interval:
                 person = sessions.pop(i)
                 logger.info("%s session expired id: %s", person.name, person.id)
 
