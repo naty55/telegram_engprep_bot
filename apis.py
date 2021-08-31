@@ -13,9 +13,10 @@ dict_api = DictAPI('new_dict.csv')
 format_string = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 formatter = logging.Formatter(format_string)
 logging.basicConfig(format=format_string, level=logging.INFO)
-logger = logging.getLogger(__name__)
+bot_logger = logging.getLogger('bot_logger')
 file_handler = logging.FileHandler('bot_log.log')
 file_handler.setFormatter(formatter)
-logger.addHandler(file_handler)
+bot_logger.addHandler(file_handler)
+
 
 

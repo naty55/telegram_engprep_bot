@@ -16,7 +16,7 @@ class Person:
         self.current_name = current_name
         self.name = current_name
         self.is_known = False
-        self.interval_to_get_age_is_open = False  # This variable would determine if the bot will get text messages from this person
+        self.interval_to_get_age_is_open = False  # This variable will determine if the bot will get text messages from this person
         self._initialize()
 
     def _initialize(self):

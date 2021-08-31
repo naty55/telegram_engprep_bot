@@ -1,9 +1,12 @@
-import telegram
-from telegram import \
-    Update, InlineKeyboardButton, InlineKeyboardMarkup, Poll
+from telegram import (Update,
+                      InlineKeyboardButton,
+                      InlineKeyboardMarkup,
+                      Poll,
+                      ChatAction
+                      )
 from telegram.ext import CallbackContext
 from telegram.error import BadRequest
-from apis import dict_api,db_api, logger
+from apis import dict_api, db_api, bot_logger
 from Person import Person
 from SessionsDict import SessionsDict
 from threading import Thread
@@ -28,7 +31,7 @@ sessions = SessionsDict(lambda: False)
 def start_handler(update: Update, context: CallbackContext):
     person, person_id = start_session(update.effective_user.id, update.effective_user.name)
 
-    context.bot.send_chat_action(chat_id=person.id, action=telegram.ChatAction.TYPING)
+    context.bot.send_chat_action(chat_id=person.id, action=ChatAction.TYPING)
     if not person.is_known:
         context.bot.send_message(chat_id=person_id, text="Welcome " + person.name +
                                                          "\nUse /register command to register\n"
@@ -87,7 +90,7 @@ def button_map_handler(update: Update, context: CallbackContext):
         person.start_quiz(on_heb_words)
         quiz_person(person, context)
 
-        logger.info("%s started quiz id: %s", person.name, person.id)
+        bot_logger.info("%s started quiz id: %s", person.name, person.id)
 
 
 def quiz_me_handler(update: Update, context: CallbackContext):
@@ -126,7 +129,7 @@ def age_handler(update: Update, context: CallbackContext):
         context.bot.send_message(text="Registration Completed\nUse /menu to see what this bot can do",
                                  chat_id=person_id)
 
-        logger.info("%s registered id: %s", person.name, person.id)
+        bot_logger.info("%s registered id: %s", person.name, person.id)
 
 
 def quiz_person(person: Person, context: CallbackContext):
@@ -152,7 +155,7 @@ def finish_quiz(person: Person, context: CallbackContext):
     person.init_quiz()
     success_rate = round((15 - person.failed)/ 15 , 2)
     context.bot.send_message(chat_id=person.id, text=f"You had {success_rate} success percentage")
-    logger.info("%s finished quiz with %s id: %s", person.name, str(success_rate), person.id)
+    bot_logger.info("%s finished quiz with %s id: %s", person.name, str(success_rate), person.id)
 
 
 def start_session(person_id, name):
@@ -166,7 +169,7 @@ def start_session(person_id, name):
     if not person:
         person = Person(person_id, name)
         sessions[person_id] = person
-        logger.info("%s started session with the bot id: %s", person.name, person.id)
+        bot_logger.info("%s started session with the bot id: %s", person.name, person.id)
 
     return person, person_id
 
@@ -178,10 +181,16 @@ def clean_old_sessions():
         for i in list(sessions.keys()):
             if time() - sessions[i].time > interval:
                 person = sessions.pop(i)
-                logger.info("%s session expired id: %s", person.name, person.id)
+                bot_logger.info("%s session expired id: %s", person.name, person.id)
 
 
 def notify_all_users(message, bot):
+    """
+    Send message to all users that are in the db
+    :param message: message to send
+    :param bot: The bot
+    :return: None
+    """
     for _id in db_api.get_all_persons_id():
         try:
             bot.send_message(_id, message)
