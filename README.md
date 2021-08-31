@@ -13,3 +13,7 @@ This bot was developed for hebrew speakers but with some slight changes, you can
 
 # Note 
 This bot is yet under development
+
+# Note 
+in newer versions of the bot - the bot assumes that you are Hebrew speaker. if you want to use it for other languages speakers, 
+some slight changes should be done in the code. 
