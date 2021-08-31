@@ -1,8 +1,9 @@
 import sqlite3
 from sqlite3 import Error
+import logging
 
-
-# ALL OF THIS SHOULD BE REFACTORED AS NOW IT IS NOT SECURE AGAINST SQL INJECTION
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
+db_logger = logging.getLogger('db_logger')
 
 
 class DataBase:
@@ -13,7 +14,7 @@ class DataBase:
     def __init__(self, filename):
         """
         Initialize the connection to DB
-        :param filename:
+        :param: database filename
         """
         self.connection = None
         self.create_connection(filename)
@@ -28,10 +29,12 @@ class DataBase:
         conn = None
         try:
             conn = sqlite3.connect(filename, check_same_thread=False)  # for now
-            print("[INFO] connection to DB successful")
+
         except Error as e:
-            print(f"[ERROR] error {e}")
-        self.connection = conn
+            db_logger.error("Couldn't Connect to DB")
+        else:
+            db_logger.info("Connection to DB successful")
+            self.connection = conn
 
     def initialize_tables(self):
         """
@@ -39,54 +42,56 @@ class DataBase:
         :return: None
         """
 
-        persons_table = "CREATE TABLE IF NOT EXISTS persons (" \
-                        "id INTEGER PRIMARY KEY AUTOINCREMENT," \
-                        "name TEXT NOT NULL," \
-                        "telegram_id INTEGER NOT NULL," \
-                        "age INTEGER NOT NULL, " \
-                        "gender INTEGER NOT NULL," \
-                        "dict_index INTEGER NOT NULL," \
-                        "last_seen STRING );"
+        persons_table = ("CREATE TABLE IF NOT EXISTS persons ("
+                         "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                         "name TEXT NOT NULL,"
+                         "telegram_id INTEGER NOT NULL,"
+                         "age INTEGER NOT NULL, "
+                         "gender INTEGER NOT NULL,"
+                         "dict_index INTEGER NOT NULL,"
+                         "last_seen STRING );")
 
-        scores_table = "CREATE TABLE IF NOT EXISTS scores (" \
-                       "word_id INTEGER NOT NULL," \
-                       "person_id INTEGER NOT NULL," \
-                       "duration INTEGER NOT NULL," \
-                       "failures INTEGER NOT NULL, " \
-                       "total INTEGER NOT NULL, " \
-                       "FOREIGN KEY (person_id) REFERENCES persons(id) );"
+        scores_table = ("CREATE TABLE IF NOT EXISTS scores ("
+                        "word_id INTEGER NOT NULL,"
+                        "person_id INTEGER NOT NULL,"
+                        "duration INTEGER NOT NULL,"
+                        "failures INTEGER NOT NULL, "
+                        "total INTEGER NOT NULL, "
+                        "FOREIGN KEY (person_id) REFERENCES persons(id) );")
 
-        success = self.exec_query(persons_table) + self.exec_query(scores_table)
+        success = self.exec_query(persons_table, ()) + self.exec_query(scores_table, ())
         if success == 0:
-            print("[INFO] Tables are all set")
+            db_logger.info('Tables are all set')
 
-    def exec_query(self, query: str) -> int:
+    def exec_query(self, query: str, params: tuple) -> int:
         """
         Generic function to execute read query on db
+        :param params: params
         :param query: query to execute
         :return: 0 for success; 1 otherwise
         """
         cursor = self.connection.cursor()
         try:
-            cursor.execute(query)
+            cursor.execute(query, params)
             self.connection.commit()
             return 0
         except Error as e:
-            print(f"[ERROR] The error {e} occurred")
+            db_logger.error(f'The error {e} occurred')
             return 1
 
-    def exec_read_query(self, query: str):
+    def exec_read_query(self, query: str, params: tuple):
         """
         Generic function to execute read query on db
         :param query: query to execute
+        :param params: tuple of params
         :return: list with the results; or empty list if there was no result
         """
         cursor = self.connection.cursor()
         try:
-            cursor.execute(query)
+            cursor.execute(query, params)
             return cursor.fetchall()
         except Error as e:
-            print(f"[ERROR] The error {e} occurred")
+            db_logger.error(f'The error {e} occurred')
             return []
 
     def check_for_person(self, conditions: dict) -> bool:
@@ -98,9 +103,10 @@ class DataBase:
         """
         if not len(conditions.items()):
             raise Exception("No conditions to work with")
-        conditions = " AND ".join([f"{str(key)}='{conditions.get(key)}'" for key in conditions.keys()])
-        query = f"SELECT * FROM persons WHERE ({conditions})"
-        result = self.exec_read_query(query)
+        keys = conditions.keys()
+        conditions_str = " AND ".join([f"{str(key)}=?" for key in keys])
+        query = f"SELECT * FROM persons WHERE ({conditions_str})"
+        result = self.exec_read_query(query, [conditions.get(key) for key in keys])
         return len(result) != 0
 
     def add_new_person(self, name: str, telegram_id: int, gender: str, age: int):
@@ -115,51 +121,53 @@ class DataBase:
         """
         if self.check_for_person({'telegram_id': telegram_id}):
             return
-        query = f"""INSERT INTO
-                      persons (name, telegram_id, gender, age, dict_index)
+        query = f"""INSERT INTO persons
+                    (name, telegram_id, gender, age, dict_index)
                    VALUES
-                       ('{name}', '{telegram_id}', '{gender}', '{age}', '{0}'); 
+                       (?, ?, ?, ?, ?); 
                 """
-        result = self.exec_query(query)
+        result = self.exec_query(query, (name, telegram_id, gender, age, 0))
         if result == 0:
-            print(f"[INFO] new person updated name : {name}, telegram_id : {telegram_id}")
+            db_logger.info(f"new person updated name : {name}, telegram_id : {telegram_id}")
 
     def update_score(self, person_id, word_id, duration, failure):
         if not self.check_for_person({'id': person_id}):
             raise Exception(f"No person with id={person_id}")
-        check_query = f"SELECT * FROM scores WHERE (person_id = '{person_id}' AND word_id = '{word_id}')"
-        result = self.exec_read_query(check_query)
+        check_query = f"SELECT * FROM scores WHERE (person_id=? AND word_id =?)"
+        result = self.exec_read_query(check_query, (person_id, word_id))
+        params = (word_id, person_id, duration, 1 if failure else 0, 1)
         if result:
             failures = result[0][3] + (1 if failure else 0)
             total = result[0][4] + 1
             duration = (result[0][2] * (total - 1) + duration) / total
             query = f"""UPDATE scores
-                    SET failures='{failures}', total='{total}', duration='{duration}'
-                    WHERE (word_id = '{word_id}' AND person_id = '{person_id}')"""
+                    SET failures=?, total=?, duration=?
+                    WHERE (word_id =? AND person_id = ?)"""
+            params = (failures, total, duration, word_id, person_id)
         else:
             total = 1
-            query = "INSERT INTO " \
-                    f"scores (word_id, person_id, duration, failures, total)" \
-                    f"VALUES " \
-                    f"({word_id}, {person_id}, {duration}, {1 if failure else 0}, 1);"
-        success = self.exec_query(query)
+            query = ("INSERT INTO scores"
+                     "(word_id, person_id, duration, failures, total)"
+                     "VALUES "
+                     "(?, ?, ?, ?, ?);")
+        success = self.exec_query(query, params)
         if success == 0:
-            print(f"[INFO] score successfully updated person_id: {person_id}, word_id : {word_id}, "
-                  f"duration : {duration}, failure : {failure}, total : {total}")
+            db_logger.info(f"[INFO] score successfully updated person_id: {person_id}, word_id : {word_id}, "
+                           f"duration : {duration}, failure : {failure}, total : {total}")
 
     def update_dict_index(self, person_id, dict_index):
         if not self.check_for_person({'id': person_id}):
             raise Exception(f"Trying to update person status of person that does not exist {person_id}")
-        query = f"UPDATE persons " \
-                f"SET dict_index='{dict_index}'" \
-                f"WHERE id = {person_id}"
-        if self.exec_query(query) == 0:
-            print(f"[INFO] successfully updated dict_index : {dict_index}, id : {person_id}")
+        query = ("UPDATE persons "
+                 "SET dict_index=?"
+                 "WHERE id = ?")
+        if self.exec_query(query, (dict_index, person_id)) == 0:
+            db_logger.info(f"[INFO] successfully updated dict_index : {dict_index}, id : {person_id}")
 
     def get_person_data(self, telegram_id):
         if self.check_for_person({'telegram_id': telegram_id}):
-            query = f"SELECT * FROM persons WHERE telegram_id={telegram_id}"
-            row = self.exec_read_query(query)[0]
+            query = f"SELECT * FROM persons WHERE telegram_id=?"
+            row = self.exec_read_query(query, (telegram_id,))[0]
             data = {
                 'id': row[0],
                 'name': row[1],
@@ -174,7 +182,7 @@ class DataBase:
             return None
 
     def get_all_persons_id(self):
-        return (_[0] for _ in self.exec_read_query(f"SELECT telegram_id FROM persons"))
+        return [_[0] for _ in self.exec_read_query(f"SELECT telegram_id FROM persons", ())]
 
     def close(self):
         self.connection.close()
