@@ -153,9 +153,9 @@ def quiz_person(person: Person, context: CallbackContext):
 
 def finish_quiz(person: Person, context: CallbackContext):
     person.init_quiz()
-    success_rate = round((15 - person.failed)/ 15 , 2)
-    context.bot.send_message(chat_id=person.id, text=f"You had {success_rate} success percentage")
-    bot_logger.info("%s finished quiz with %s id: %s", person.name, str(success_rate), person.id)
+    success_percentage = round((15 - person.failed)/ 15 , 2) * 100
+    context.bot.send_message(chat_id=person.id, text=f"You had {success_percentage} success percentage")
+    bot_logger.info("%s finished quiz with %s id: %s", person.name, str(success_percentage), person.id)
 
 
 def start_session(person_id, name):
