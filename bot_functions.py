@@ -11,6 +11,7 @@ from Person import Person
 from SessionsDict import SessionsDict
 from threading import Thread
 from time import sleep, time
+from functools import wraps
 
 # CONSTANTS
 gender_kb = ([InlineKeyboardButton('Male', callback_data='gender_male')],
@@ -24,11 +25,14 @@ lang_kb = ((InlineKeyboardButton('Quiz on English words', callback_data='lang_en
 next_button = InlineKeyboardMarkup(next_kb)
 gender_markup = InlineKeyboardMarkup(gender_kb)
 choose_lang_button = InlineKeyboardMarkup(lang_kb)
+
+default_not_known_message = "You are not registered please use /register to register first"
 #
 sessions = SessionsDict(lambda: False)
 
 
 def basic_handler_wrapper(func):
+    @wraps(func)
     def wrapper(update, context):
         person, person_id = start_session(update.effective_user.id, update.effective_user.name)
         context.bot.send_chat_action(chat_id=person.id, action=ChatAction.TYPING)
@@ -38,11 +42,25 @@ def basic_handler_wrapper(func):
 
 
 def update_handler_wrapper(func):
+    @wraps(func)
     def wrapper(update, context):
         person, person_id = start_session(update.effective_user.id, update.effective_user.name)
         context.bot.send_chat_action(chat_id=person.id, action=ChatAction.TYPING)
         func(person, update, context)
     return wrapper
+
+
+def registered_only(not_known_message=default_not_known_message):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(person, context):
+            if person.is_known:
+                func(person, context)
+            else:
+                context.bot.send_message(chat_id=person.id,
+                                         text=not_known_message)
+        return wrapper
+    return decorator
 
 
 @basic_handler_wrapper
@@ -108,17 +126,32 @@ def button_map_handler(person: Person, update: Update, context: CallbackContext)
 
         bot_logger.info("%s started quiz id: %s", person.name, person.id)
 
+
 @basic_handler_wrapper
+@registered_only()
 def quiz_me_handler(person: Person, context: CallbackContext):
-    if not person.is_known:
-        context.bot.send_message(chat_id=person.id, text="please use /register to register first")
-    else:
-        if person.is_on_quiz:
-            # To be decided
-            # context.bot.send_message(chat_id=person.id, reply_markup=next_button,
-            #                          text="You have to finish you quiz first")
-            return
-        context.bot.send_message(chat_id=person.id, reply_markup=choose_lang_button, text="Choose option: ")
+    if person.is_on_quiz:
+        # To be decided
+        # context.bot.send_message(chat_id=person.id, reply_markup=next_button,
+        #                          text="You have to finish you quiz first")
+        return
+    context.bot.send_message(chat_id=person.id, reply_markup=choose_lang_button, text="Choose option: ")
+
+
+@basic_handler_wrapper
+@registered_only()
+def quiz_me_en_handler(person: Person, context: CallbackContext):
+    person.start_quiz(False)
+    quiz_person(person, context)
+    bot_logger.info("%s started quiz id: %s", person.name, person.id)
+
+
+@basic_handler_wrapper
+@registered_only()
+def quiz_me_he_handler(person: Person, context: CallbackContext):
+    person.start_quiz(True)
+    quiz_person(person, context)
+    bot_logger.info("%s started quiz id: %s", person.name, person.id)
 
 
 @update_handler_wrapper
