@@ -1,0 +1,4175 @@
+id,English,Hebrew
+0,about,אודות
+1,as,כמו
+2,both,שניהם
+3,comparatively,באופן יחסי
+4,correspondingly,בהתאמה
+5,e.g.,לדוגמה
+6,equally,במידה שווה
+7,for example,לדוגמה
+8,for instance,לדוגמה
+9,identically,באופן זהה
+10,in other words,במילים אחרות
+11,in the same way,באותו אופן
+12,just as,בדיוק כמו
+13,like,כמו
+14,likewise,כמו כן באותו אופן
+15,similarly,באופן דומה
+16,such as,כמו למשל
+17,that,ש
+18,above all,מעל לכל
+19,absolutely,לחלוטין
+20,both... and ...,... גם... וגם...
+21,certainly,בהחלט בוודאי
+22,chiefly,בעיקר
+23,either... or ...,... או... או
+24,especially,במיוחד
+25,essentially,בעיקרו במהותו
+26,however,בכל דרך
+27,in fact,למעשה
+28,in general,באופן כללי
+29,in particular,במיוחד
+30,incidentally,דרך אגב
+31,indeed,בהחלט
+32,just as... so...,...בדיוק כמו... גם
+33,mainly,בעיקר
+34,markedly,בצורה ניכרת
+35,namely,במיוחד כלומר
+36,neither... nor...,... לא... ולא
+37,not only... but also ...,... לא רק... אלא גם
+38,not... but ...,... לא... אבל
+39,notably,ראוי לציון
+40,of course,כמובן בוודאי
+41,particularly,במיוחד בפרט
+42,primarily,בעיקר
+43,significantly,באופן משמעותי
+44,specifically,במיוחד
+45,surely,ללא ספק
+46,surprisingly,במפתיע
+47,too,יותר מידי
+48,truly,באמת
+49,undoubtedly,ללא ספק
+50,whether... or…  ... ...,... … בין אם... או...
+51,additionally,בנוסף
+52,along with,יחד עם
+53,also,גם
+54,and,ו
+55,as well as,כמו גם
+56,aside from,חוץ מ
+57,besides,בנוסף על
+58,besides,מלבד חוץ מ
+59,but,מלבד חוץ מ
+60,coupled with,יחד עם
+61,except,מלבד חוץ מ
+62,furthermore,זאת ועוד
+63,in addition,בנוסף
+64,including,כולל
+65,moreover,זאת ועוד
+66,not only,לא רק
+67,not to mention,שלא לדבר על
+68,together with,יחד עם
+69,too,גם
+70,with,באמצעות עם
+71,without,מבלי ללא
+72,despite,למרות
+73,even so,אף על פי כן
+74,even though,למרות ש
+75,however,למרות זאת
+76,in spite of,למרות
+77,nevertheless,למרות זאת
+78,nonetheless,למרות זאת
+79,after,אחרי
+80,afterwards,לאחר מכן
+81,again,שוב
+82,as,כאשר כש
+83,as long as,כל עוד
+84,as soon as,כאשר ברגע ש
+85,at first,בהתחלה
+86,at last,סוף סוף
+87,before,לפני
+88,by,עד לא יאוחר מ
+89,currently,כרגע נכון לעכשיו
+90,during,תוך כדי במשך
+91,earlier,קודם לכן
+92,eventually,לבסוף
+93,finally,לבסוף סוף סוף
+94,first of all,ראשית
+95,former,קודם לשעבר
+96,from,מ
+97,further,בהמשך
+98,immediately,מיד
+99,in a moment,בעוד רגע
+100,in due time,בבוא העת
+101,initially,בתחילה
+102,instantly,מיד
+103,last,אחרון
+104,later,מאוחר יותר
+105,meanwhile,בינתיים
+106,next,הבא
+107,now,עכשיו
+108,once,פעם (בעבר)
+109,once,ברגע ש
+110,past,עבר שעבר
+111,presently,כעת
+112,previously,הקודם לפני כן
+113,prior to,קודם ל  לפני
+114,shortly,בקיצור בקרוב
+115,simultaneously,בו זמנית
+116,since,מאז
+117,soon,בהקדם מוקדם
+118,still,עדיין למרות זאת
+119,suddenly,לפתע
+120,then,אז
+121,to begin with,בתור התחלה
+122,until,עד ש
+123,until now,עד עתה
+124,when,כאשר כש
+125,whenever,כש  מתישהו
+126,while,בזמן ש
+127,yet,עדיין בכל זאת
+128,backward,לאחור
+129,down,למטה
+130,forward,קדימה לפנים
+131,further,לקדם
+132,left,שמאלה
+133,right,ימינה
+134,sideways,הצידה
+135,toward,אל אל עבר
+136,upon,על
+137,upside down,הפוך
+138,about,ליד בערך
+139,above,מעל
+140,across,בצד השני לרוחב
+141,adjacent to,ליד
+142,against,כנגד ממול
+143,ahead of,לפני לפנים
+144,along,לאורך
+145,alongside,לצד במקביל
+146,amid,בקרב בין
+147,among,בקרב בין
+148,around,מסביב
+149,at,אצל ב
+150,before,לפני מול
+151,behind,מאחורי
+152,below,מתחת
+153,beneath,מתחת
+154,beside,ליד
+155,between,בין
+156,beyond,מעבר
+157,by,ליד בסמוך ל
+158,close,קרוב
+159,distant,מרוחק
+160,elsewhere,במקום אחר
+161,farther,הלאה יותר
+162,from,מ
+163,here,כאן
+164,in,ב  בתוך
+165,in front of,בחזית של מול
+166,inside,בתוך פנים
+167,into,אל תוך
+168,latter,שני אחרון
+169,near,קרוב
+170,nearby,ליד קרוב
+171,next to,ליד
+172,of,של מ
+173,on,על
+174,on top of,על מעל
+175,opposite,מנוגד ממול
+176,outside,חוץ
+177,outside,בחוץ
+178,over,על מעל
+179,there,שם
+180,under,מתחת
+181,underneath,מתחת
+182,up,למעלה
+183,where,היכן איפה
+184,wherever,בכל מקום לא משנה היכן
+185,within,בתוך
+186,albeit,אף על פי
+187,although,למרות ש
+188,but,אך אבל
+189,contradictory,סותר
+190,contrary,להפך בניגוד ל
+191,conversely,לעומת זאת
+192,different from,שונה מ
+193,in comparison,בהשוואה
+194,in contrast to,בניגוד ל
+195,instead,במקום
+196,instead of,במקום
+197,of course… but… ... ...,… … כמובן... אך...
+198,on the contrary,בניגוד לכך
+199,or,או
+200,otherwise,אחרת
+201,rather,עדיף
+202,rather than,במקום יותר מ
+203,regardless,למרות ללא קשר
+204,than,מ
+205,though,למרות זאת
+206,though,למרות ש
+207,unlike,שלא כמו
+208,vice versa,להיפך
+209,where,בעוד ש
+210,whereas,בעוד ש
+211,yet,אך אולם
+212,after all,אחרי הכל
+213,because,בגלל
+214,because of,בגלל
+215,being that,מכיוון ש
+216,due to,בגלל לאור
+217,given that,בהתחשב בכך
+218,in light of,לאור
+219,owing to,הודות ל
+220,since,מכיוון ש
+221,thanks to,תודות ל
+222,therefore,לכן
+223,why,מדוע
+224,after all,אחרי הכל
+225,all in all,בסך הכל
+226,altogether,בסך הכל
+227,besides,בכל מקרה
+228,i.e.,.. כלומר לדוגמה
+229,in a word,במילה אחת
+230,in conclusion,לסיכום
+231,in fact,למעשה
+232,overall,כולל באופן כללי
+233,to sum up,כדי לסכם
+234,according,לפי
+235,accordingly,בהתאם
+236,as a result,כתוצאה
+237,consequently,כתוצאה מכך
+238,for,מפני ש
+239,for,עבור
+240,hence,לפיכך לכן
+241,in that case,במקרה הזה
+242,led to,הוביל ל
+243,so,אז כך ש  ולכן
+244,so that,כך ש
+245,subsequently,כתוצאה מכך
+246,then,אז
+247,thus,לכן כך ש
+248,always,תמיד
+249,consistently,בעקביות
+250,constantly,באופן קבוע
+251,daily,יומיומי
+252,every day,כל יום
+253,every now and then,לפעמים
+254,for the most part,בדרך כלל
+255,forever,לנצח לתמיד
+256,frequently,לעיתים קרובות
+257,from time to time,מפעם לפעם
+258,hardly ever,כמעט אף פעם
+259,mostly,לרוב
+260,never,אף פעם
+261,occasionally,מידי פעם
+262,often,לעיתים קרובות
+263,once in a while,מידי פעם
+264,ordinarily,בדרך כלל
+265,permanently,קבוע
+266,perpetually,נצחי לנצח
+267,rarely,לעיתים נדירות
+268,regularly,באופן קבוע
+269,seldom,לעיתים רחוקות
+270,sometimes,לעיתים לפעמים
+271,usually,בדרך כלל
+272,as if,כאילו
+273,based on,מבוסס על
+274,even if,גם אם
+275,granted (that),בהנחה ש  נתון ש
+276,If,אם
+277,in case,במקרה
+278,in order to,על מנת בכדי
+279,only,רק
+280,provided that,בתנאי ש
+281,so long as,כל עוד
+282,unless,אלא אם כן
+283,which,אשר ש
+284,while,כל עוד
+285,how,איך כיצד
+286,what,מה איזה
+287,which,איזה
+288,who,מי ש
+289,whom,מי
+290,whose,אשר לו אשר הוא
+291,1st - first,1   ראשון
+292,2nd - second,2   שני
+293,3rd - third,3   שלישי
+294,4th - fourth,4   רביעי
+295,5th - fifth,5   חמישי
+296,6th - sixth,6   שישי
+297,7th - seventh,7   שביעי
+298,8th - eighth,8   שמיני
+299,9th - ninth,9   תשיעי
+300,tenth - 10th,10 עשירי
+301,ability,יכולת
+302,able,יכול מסוגל
+303,accept,לקבל
+304,acceptable,מקובל
+305,acceptance,הסכמה
+306,accident,תאונה
+307,achieve,להשיג
+308,activate,להפעיל
+309,active,פעיל
+310,actor,שחקן
+311,actual,ממשי
+312,actually,למעשה
+313,addition,תוספת הוספה
+314,address,לפנות לטפל
+315,address,כתובת
+316,adjust,להתרגל
+317,adjust,לכוונן
+318,afford,יכל לעמוד בהוצאות
+319,afraid,מפחד
+320,agree,להסכים
+321,agreement,הסכם
+322,aim,לכוון מטרה
+323,alarm,דאגה להדאיג
+324,alarm,אזעקה
+325,alive,חי
+326,almost,כמעט
+327,alone,לבד
+328,alternate,התחלף עבר מדבר אחד לשני וחזרה
+329,alternate,חלופי
+330,altogether,לגמרי
+331,ambassador,שגריר
+332,ambiguous,דו משמעי לא לגמרי ברור
+333,amount,כמות
+334,anger,כעס להכעיס
+335,angry,כועס
+336,animal,חיה
+337,another,נוסף
+338,another,אחר
+339,answer,תשובה
+340,apart,בנפרד
+341,apology,התנצלות
+342,appear,להופיע
+343,appear,נראה ש
+344,appearance,מראה הופעה
+345,appropriate,מתאים
+346,approve,לאשר
+347,architect,ארכיטקט
+348,architecture,אדריכלות ארכיטקטורה
+349,area,אזור תחום
+350,argue,להתווכח
+351,argument,ויכוח
+352,aristocrat,אציל אריסטוקרט
+353,arm,לחמש
+354,arm,זרוע
+355,army,צבא
+356,around,בערך
+357,arrange,לסדר
+358,arrest,מעצר לעצור
+359,arrive,להגיע
+360,art,אמנות
+361,article,פריט
+362,article,מאמר
+363,articulate,רהוט
+364,articulate,להביע
+365,artist,אמן
+366,artistic,אמנותי
+367,as far as,לגבי בכל הנוגע ל
+368,as proof of,כהוכחה ל
+369,ask,לשאול
+370,asked for,ביקש
+371,associate,לקשר
+372,association,אסוציאציה
+373,association,איגוד
+374,assume,להניח
+375,assumption,הנחה
+376,at least,לפחות
+377,athlete,ספורטאי אתלט
+378,attach,לחבר ליחס
+379,attack,לתקוף מתקפה
+380,attempt,ניסיון
+381,attitude,גישה
+382,attract,למשוך
+383,attraction,משיכה
+384,attractive,נאה מושך
+385,audience,קהל
+386,authentic,מקורי אותנטי
+387,availability,זמינות
+388,available,זמין
+389,average,ממוצע רגיל
+390,avoid,להתחמק להימנע
+391,awake,ער להתעורר
+392,bacteria,חיידקים
+393,badly,נואשות קשות
+394,baker,אופה
+395,band,להקה
+396,band,לחבוש תחבושת רצועה
+397,barely,בקושי
+398,base,בסיס
+399,bat,עטלף
+400,bat,מחבט
+401,bath,אמבטיה להתרחץ
+402,battle,מאבק להיאבק
+403,beach,חוף ים
+404,bear,דוב
+405,bear,לסבול לשאת
+406,beauty,יופי
+407,bedroom,חדר שינה
+408,begin/an/un  /  /,// להתחיל / התחיל / התחיל
+409,beginning,התחלה
+410,belong,שייך
+411,best,הכי טוב
+412,bestseller,רב מכר
+413,better,טוב יותר
+414,bicycle,אופניים
+415,birth,לידה
+416,bite,לנשוך נשיכה
+417,bizarre,מוזר
+418,blind,עיוור
+419,block,לבנה גוש חלק
+420,block,חסימה
+421,blood,דם
+422,blood vessel,כלי דם
+423,blow blew,לנשוף נשף
+424,blow blew,לפוצץ פוצץ
+425,boat,סירה
+426,body,גוויה גוף
+427,bone,עצם
+428,border,גבול
+429,boring,משעמם
+430,bottle,בקבוק
+431,bottom,תחתית
+432,bottom,ישבן
+433,bought,קנה
+434,brain,מוח שכל
+435,brainwash,לשטוף את המח
+436,brave,אמיץ
+437,bread,לחם
+438,break,לשבור
+439,breathe,לנשום
+440,bridge,גשר לגשר
+441,broad,נרחב
+442,budget,תקציב לתקצב
+443,build,לבנות
+444,build,מבנה
+445,building,בניין
+446,built,לבנות
+447,bullet,קליע
+448,by,באמצעות על ידי
+449,call,לקרוא להתקשר
+450,camera,מצלמה
+451,care,לחבב
+452,care,לדאוג לטפל
+453,carefully,בזהירות
+454,careless,לא זהיר רשלני
+455,carry,לסחוב
+456,catalogue,קטלוג רשימת פריטים
+457,catch caught,לתפוס תפס
+458,cause,מטרה
+459,cause,גורם סיבה
+460,cell,תא
+461,center,מרכז
+462,central,מרכזי
+463,challenge,לאתגר
+464,challenge,אתגר
+465,chance,סיכוי
+466,change,עודף
+467,change,שינוי לשנות
+468,characterize,לאפיין
+469,cheap,זול
+470,check,לבדוק
+471,child,ילד
+472,childhood,ילדות
+473,children,ילדים
+474,circle,להקיף בעיגול
+475,circle,מעגל
+476,clean,נקי לנקות
+477,clever,פיקח
+478,climb,לטפס
+479,clock,שעון
+480,close,סגור לסגור
+481,cloth,בגד בד
+482,coach,מאמן לאמן להדריך
+483,coach,קרון נוסעים כרכרה מחלקת תיירים (במטוס)
+484,code,קוד
+485,coexist,להתקיים בשותפות
+486,coin,מטבע
+487,cold,קר התקררות
+488,colonial,קולוניאלי
+489,color,לצבוע
+490,color,צבע
+491,complain,להתלונן
+492,complete,כולל
+493,complete,להשלים
+494,consist,מורכב מ
+495,contact,ליצור קשר מגע
+496,continue,להמשיך
+497,continuity,המשכיות רצף הגיוני
+498,continuous,מתמשך
+499,control,לוח בקרה פיקוח
+500,control,שליטה לשלוט
+501,cool,לצנן צונן
+502,copies,עותקים
+503,copy,להעתיק
+504,corner,פינה לדחוק לפינה
+505,correct,לתקן
+506,correct,נכון
+507,cost,מחיר עלות
+508,costly,יקר
+509,count,לספור
+510,count,רוזן
+511,country,ארץ
+512,country,כפר אזור
+513,cover,כיסוי מכסה
+514,cow,פרה
+515,culture,תרבות
+516,dance,לרקוד
+517,danger,סכנה לסכן
+518,dangerous,מסוכן
+519,daughter,בת
+520,death,מוות
+521,deep,עמוק
+522,deeply,מאוד במידה רבה
+523,define,להגדיר
+524,definite,מוחלט
+525,delete,למחוק
+526,desert,מדבר
+527,desert,לנטוש
+528,devastate,להחריב
+529,die,מת למות
+530,die (dice),קובייה (קוביות)
+531,difficult,קשה
+532,dirty,מלוכלך
+533,diverse,מגוון
+534,done,גמור עשוי
+535,dream,חלום לחלום
+536,drink,לשתות משקה
+537,drug,סם תרופה לסמם
+538,due,צריך להיעשות זמנו הגיע
+539,due,בשל
+540,early,מוקדם
+541,earth,אדמה
+542,Earth,כדור הארץ
+543,earthquake,רעידת אדמה
+544,educate,לחנך
+545,education,השכלה
+546,empty,ריק לרוקן
+547,enemy,אויב
+548,energy,אנרגיה כוח
+549,enjoy,ליהנות
+550,enjoyable,מהנה
+551,enter,נכנס
+552,error,שגיאה
+553,escape,לברוח בריחה
+554,evening,ערב
+555,event,אירוע
+556,exact,מדויק
+557,exactly,בדיוק
+558,example,דוגמה
+559,excessive,יתר מוגזם
+560,expert,מומחה
+561,extinct,נכחד
+562,fact,עובדה
+563,false,שקר
+564,farm,חווה
+565,farmer,חוואי
+566,father,אבא
+567,fear,פחד לפחד
+568,feel,להרגיש
+569,feeling,הרגשה
+570,few,מעט
+571,field,תחום שדה
+572,find,למצוא
+573,findings,ממצאים
+574,finger,אצבע
+575,fire,לפטר
+576,fire,אש להצית
+577,fire,לירות
+578,fix,לתקן
+579,flower,פרח
+580,forget,לשכוח
+581,friend,חבר
+582,friendly,ידידותי
+583,friendship,חברות
+584,front,חזית להתעמת
+585,full,מלא למלא
+586,gain,להרוויח להוסיף
+587,glad,שמח
+588,gradual,הדרגתי
+589,great,גדול מעולה
+590,half,חצי
+591,hand,יד
+592,hand,למסור
+593,hear,לשמוע
+594,hearsay,שמועה
+595,heat,חום לחמם
+596,hero,גיבור
+597,horse,סוס
+598,hot,חם
+599,hot,חריף
+600,house,לשכן
+601,house,בית
+602,impartial,אוביקטיבי ללא צד
+603,inconsistent,לא עקבי
+604,insert,להכניס
+605,jump,לקפוץ
+606,just,מדויק אמיתי
+607,just,צודק הוגן
+608,just,רק בלבד
+609,kill,להרוג לחסל הרג
+610,king,מלך
+611,kingdom,ממלכה
+612,kitchen,מטבח
+613,last,המשיך החזיק מעמד
+614,late,מאוחר לאחר
+615,light,קל
+616,light,אור
+617,like,לחבב להעדיף
+618,list,רשימה להכין רשימה
+619,lock,מנעול לנעול
+620,logic,הגיון
+621,main,עיקרי
+622,map,מפה למפות
+623,mark,לסמן
+624,maybe,אולי
+625,meeting,פגישה
+626,member,חבר (בקבוצה מסוימת)
+627,milk,חלב לחלוב
+628,mistake,טעות
+629,mistaken,שגוי לטעות
+630,money,כסף
+631,move,לזוז לעבור
+632,movement,תנועה
+633,must,חייב חובה הכרח
+634,number,מספר
+635,once,פעם אחת
+636,open,לפתוח פתוח
+637,over,מחדש שוב
+638,paragraph,ִפסקה
+639,pay,לשלם
+640,peace,שלום
+641,peaceful,ָׁשֵלו שקט
+642,pilot,טייס
+643,place,מקום למקם
+644,plan,לתכנן
+645,plan,תכנית
+646,plane,מטוס
+647,plane,מישור
+648,president,נשיא
+649,price,מחיר
+650,primary,יסודי עיקרי
+651,problem,בעיה
+652,program,תכנית
+653,program,תכניה
+654,program,לתכנת
+655,queen,מלכה
+656,question,להטיל ספק
+657,question,שאלה
+658,quick,זריז
+659,rates,שיעור  היקף תעריף
+660,rather,למדי
+661,react,להגיב
+662,region,מחוז אזור
+663,register,להירשם
+664,registration,הרשמה
+665,reject,לדחות
+666,rest,מנוחה
+667,rest,יתר שאר
+668,rich,עשיר
+669,right,זכות
+670,risk,סיכון לסכן
+671,river,נהר
+672,road,דרך
+673,safe,בטוח
+674,safety,בטיחות
+675,save,לשמור
+676,scare,פחד להפחיד
+677,school,בית ספר
+678,search,חיפוש לחפש
+679,select,לבחור
+680,sell,למכור
+681,send,לשלוח
+682,several,אחדים כמה
+683,short,קצר
+684,shortage,מחסור
+685,side,צד לצודד לתמוך
+686,sleep,שינה
+687,sleep,לישון
+688,slow,איטי לאט
+689,slow down,להאט
+690,so,כל כך מאוד
+691,space,חלל
+692,space,רווח
+693,speed,מהירות
+694,start,להתחיל
+695,still,נייח דומם שקט
+696,stone,אבן
+697,strong,חזק
+698,stronghold,מאחז
+699,system,מערכת
+700,system,שיטה
+701,target,מטרה
+702,teach taught,ללמד לימד
+703,think thought,לחשוב חשב
+704,time,זמן
+705,totally,לחלוטין
+706,town,עיר עיירה
+707,understand,להבין
+708,unusual,בלתי רגיל יוצא דופן
+709,use,תועלת תכלית
+710,use,לנצל
+711,use,להשתמש
+712,useful,שימושי
+713,useless,חסר תועלת
+714,usual,רגיל
+715,valuable,יקר ערך
+716,value,ערך להעריך
+717,view,לראות
+718,view,נוף שדה ראיה
+719,viewer,צופה
+720,visit,לבקר
+721,visitor,אורח מבקר
+722,voice,קול להשמיע קול
+723,wait,להמתין המתנה
+724,way,דרך
+725,weather,מזג אוויר
+726,abrupt,פתאומי
+727,absolute,מוחלט
+728,accessible,נגיש זמין
+729,accomplish,להשלים להשיג
+730,accomplished,מומחה מעולה
+731,accomplishment,הישג
+732,account,להתחשב ב  להתייחס ל
+733,account,חשבון
+734,accuracy,דיוק
+735,accurate,מדויק
+736,activist,פעיל אקטיביסט
+737,adapt,להתאים
+738,adapt,לעבד
+739,adapt,להסתגל
+740,administer,לנהל לפקח
+741,administer,לתת לחלק
+742,administration,מנהל
+743,admit,להודות
+744,admit,להכניס לקבל לתוך קבוצה
+745,adult,מבוגר
+746,adulthood,בגרות
+747,advance,מתקדם
+748,advancement,התקדמות
+749,advancement,מקדמה
+750,advantage,יתרון
+751,advice,עצה
+752,advise,לייעץ
+753,advisor,יועץ
+754,aesthetic,אסתטיקה
+755,allocate,להקצות
+756,announcement,הכרזה
+757,annually,שנתי
+758,appoint,למנות
+759,approach,גישה
+760,approximately,בערך בקירוב
+761,astronomy,אסטרונומיה
+762,attention,תשומת לב
+763,attribute,לייחס לקשר
+764,attribute,תכונה מאפיין
+765,aware,מודע
+766,balance,שיווי משקל
+767,balance,איזון לאזן
+768,ban,חרם איסור
+769,belief,אמונה
+770,bend,לכופף
+771,beware,היזהר
+772,borrow,להשאיל
+773,brief,תדריך תקציר
+774,briefly,בקצרה
+775,bright,בהיר ברור
+776,by no means,ללא ספק בשום אופן
+777,by now,עד עתה
+778,capable,מסוגל יכול
+779,capacity,יכולת סמכות תפקיד
+780,capacity,קיבולת
+781,capital,עיר בירה
+782,capital,ראשי משמעותי
+783,capital,הון
+784,capital,אות גדולה
+785,capital punishment,עונש מוות
+786,capitalize,לנצל
+787,certain,מסוים
+788,certain,בטוח
+789,certainty,וודאות
+790,character,אות תו
+791,character,אופי
+792,character,דמות
+793,characteristic,מאפיין
+794,choice,בחירה
+795,choose,לבחור
+796,circumstance,מצב תנאי נסיבות
+797,civil,אזרחי
+798,civil,אדיב
+799,class,כיתה
+800,class,מעמד
+801,class,סוג
+802,classify,לסווג מסווג
+803,colony,מושבה
+804,combine,לצרף לשלב
+805,common,נפוץ משותף
+806,communal,משותף ציבורי
+807,communicate,לתקשר
+808,community,קהילה
+809,company,חברה
+810,comparable,בר השוואה
+811,compare,להשוות
+812,comparison,השוואה
+813,comprehend,להבין
+814,comprehension,הבנה
+815,concentrate,להתרכז
+816,conclude,לסיים
+817,conclude,להסיק
+818,conclusion,מסקנה
+819,conclusively,סופית באופן החלטי
+820,confirm,לאשר לאמת
+821,continuation,המשך
+822,cooperation,שיתוף פעולה
+823,core,ליבה
+824,crisis,משבר
+825,cure,מרפא
+826,decide,להחליט
+827,decline,לרדת
+828,decline,לדחות
+829,decline,ירידה
+830,decrease,ירידה הפחתה
+831,decrease,להפחית לצמצם
+832,deduce,להסיק
+833,demand,לדרוש דרישה
+834,deny,לסרב
+835,deny,להכחיש
+836,depart,לעזוב
+837,derive,לשאוב להפיק לגזור מ
+838,descend,ירד הדרדר
+839,descendent,צאצא
+840,deserve,מגיע (לו)
+841,destiny,גורל
+842,devote,להקדיש
+843,direct,לכוון
+844,direct,לביים
+845,direct,ישיר כנה
+846,direction,כיוון
+847,disadvantage,חסרון
+848,disclose,לגלות לחשוף
+849,discover,לגלות
+850,discoveries,תגליות
+851,discuss,לדון להתווכח
+852,disprove,להפריך
+853,distinct,ברור נפרד
+854,distress,מצוקה
+855,diverge,לסטות
+856,diversity,מגוון
+857,divide,לחלק
+858,doubt,ספק להטיל ספק
+859,edit,לערוך
+860,edition,מהדורה
+861,editor,עורך
+862,emperor,שליט קיסר
+863,empire,אימפריה
+864,enable,לאפשר
+865,enormous,עצום
+866,enough,מספיק
+867,era,עידן
+868,essential,חיוני
+869,evaluate,להעריך לאמוד
+870,evaluation,הערכה
+871,even,אפילו
+872,even,זוגי (מספר)
+873,even,ליישר להשוות
+874,evenly,באופן שווה
+875,except for,למעט
+876,exercise,תרגיל
+877,exercise,להתאמן
+878,exercise,לממש ליישם
+879,expect,לצפות
+880,expectations,ציפיות
+881,explain,להסביר
+882,explanation,הסבר
+883,express,לבטא
+884,express,מהיר
+885,expression,ביטוי
+886,extreme,קיצוני
+887,face,פונה ל  עם הפנים ל
+888,face,פנים
+889,facial,שקשור בפנים
+890,financial,כספי
+891,forbid,לאסור
+892,form,צורה
+893,form,ליצור להקים
+894,formal,רשמי
+895,forth,הלאה קדימה
+896,general,כללי
+897,General,גנרל (דרגה צבאית)
+898,generally,באופן כללי
+899,gross,ענק דוחה
+900,gross,ברוטו גלמי
+901,growth,צמיחה גדילה
+902,habit,הרגל
+903,habitat,סביבת מגורים
+904,health,בריאות
+905,heavily,מאוד במידה רבה
+906,heavy,כבד
+907,hope,תקווה לקוות
+908,human,אנושי
+909,human being,בן אדם אנוש
+910,identical,זהה
+911,implicate,לסבך לערב
+912,implications,השלכות משמעות
+913,importance,חשיבות
+914,important,חשוב
+915,inadequate,לקוי לא מספיק
+916,income,הכנסה
+917,incomprehensible,לא מובן
+918,indicate,להצביע על
+919,indication,אינדיקציה סימן ל
+920,inhabit,ליישב לאכלס
+921,inhabitants,תושבים
+922,initial,התחלתי ראשוני
+923,initial,ראשי תיבות
+924,initiated,יזם התחיל ִאְתֵחל
+925,international,בינלאומי
+926,island,אי
+927,isle,אי
+928,issue,גיליון
+929,issue,להוציא לאור להפיץ
+930,issue,נושא עניין סוגיה
+931,jewel,תכשיט
+932,join,להצטרף לחבר
+933,joint,משותף
+934,joint,מפרק חיבור
+935,judge,לשפוט
+936,judge,שופט
+937,lack,מחסור
+938,language,שפה
+939,large,גדול
+940,largest,הגדול ביותר
+941,law,חוק
+942,lawyer,עורך דין
+943,legal,משפטי
+944,legal,חוקי
+945,legalize,להפוך חוקי לאשר
+946,less,פחות
+947,lethal,קטלני
+948,level,רמה דרגה מפלס
+949,level,לאזן להשוות
+950,likely,סביר
+951,local,מקומי
+952,locate,לאתר
+953,malfunction,כשל ליקוי
+954,massacre,ֶטַבח
+955,medicine,רפואה תרופה
+956,medieval,מתקופת ימי הביניים
+957,merchandise,מוצרים סחורה
+958,mere,רק לא יותר מ
+959,merely,רק לא יותר מ
+960,middle,אמצע
+961,mortal,אנושי בן תמותה
+962,mortal,קטלני
+963,mortality,תמותה
+964,most,הכי
+965,most,רוב
+966,mutually  /,באופן שווה/הדדי
+967,nation,אומה
+968,nationality,לאום
+969,nationalize,להלאים
+970,native,יליד מקומי טבעי
+971,natural,טבעי
+972,nature,טבע
+973,need,צריך צורך
+974,negative,שלילי
+975,network,רשת
+976,new,חדש
+977,newscaster,מגיש חדשות
+978,newspaper,עיתון
+979,note,הערה פתק
+980,note,לציין
+981,noted,ידוע מפורסם
+982,obviously,ברור
+983,occasion,אירוע סיבה הזדמנות
+984,occasional,מדי פעם מקרי
+985,occasions,הזדמנויות מקרים
+986,occur,קרה התרחש
+987,offer,הצעה להציע
+988,official,רשמי מאושר
+989,officiate,לכהן לערוך
+990,oil,נפט שמן לשמן
+991,ongoing,מתמשך
+992,option,אפשרות אופציה
+993,order,מסדר דתי
+994,order,להזמין
+995,order,לצוות
+996,orderly,מסודר
+997,orientation,התמצאות
+998,origin,מקור מוצא
+999,original,מקורי
+1000,originality,מקוריות
+1001,originate,התחיל התהווה
+1002,outcome,תוצאה
+1003,overcome,להתגבר
+1004,part,חלק
+1005,partial,חלקי
+1006,patient,סבלני
+1007,patient,חולה
+1008,per,לכל
+1009,percent,אחוז
+1010,perfect,להשלים לשפר
+1011,perfect,מושלם
+1012,pollution,זיהום
+1013,population,אוכלוסייה
+1014,possess,להיות בעלים של להחזיק ב
+1015,possession,בעלות חזקה
+1016,precise,מדויק
+1017,precision,דיוק
+1018,presence,נוכחות
+1019,present,להציג
+1020,present,מתנה
+1021,present,הווה נוכח קיים
+1022,prime,ראשוני עיקרי מובחר
+1023,primitive,קדום חסר תרבות
+1024,prior,קודם
+1025,priority,עדיפות
+1026,progress,התקדמות להתקדם
+1027,progressive,מתקדם ומתמשך
+1028,proper,מתאים הולם
+1029,properly,כראוי
+1030,protect,להגן
+1031,provide,לספק
+1032,provide,לפרנס
+1033,purpose,כוונה מטרה
+1034,purposely,בכוונה
+1035,quiet,שקט
+1036,quite,למדי
+1037,quote,ציטוט
+1038,raise,להעלות
+1039,range,מטווח
+1040,range,רכס
+1041,range,טווח
+1042,rational,הגיוני רציונאלי
+1043,rationalize,להצדיק להסביר
+1044,reality,מציאות
+1045,reason,סיבה
+1046,reason,הגיון
+1047,recession,מיתון
+1048,recommend,להמליץ
+1049,recycle,למחזר
+1050,recycling,מחזור
+1051,reduce,להפחית
+1052,refer,מתייחס
+1053,reference,התייחסות הפניה
+1054,refuse,אשפה זבל
+1055,refuse,לסרב
+1056,regime,שלטון משטר
+1057,regulation,תקנה
+1058,reign,שלטון
+1059,reigned,משל שלט
+1060,relative,יחסי
+1061,relative,קרוב משפחה
+1062,relatively,בקרוב באופן יחסי
+1063,religion,דת
+1064,repeat,לחזור
+1065,repeat /,שידור/מאורע חוזר
+1066,repetition,חזרה
+1067,reply,להשיב
+1068,research,מחקר
+1069,resist,להתנגד
+1070,resistance,התנגדות מחתרת
+1071,resolve,נחוש
+1072,resolve,לפתור
+1073,result,תוצאה
+1074,result in,הסתיים ב
+1075,reveal,לחשוף
+1076,review,ביקורת
+1077,review,לסקור סקירה
+1078,rigid,נוקשה מחמיר
+1079,rise,עליה לעלות
+1080,rising,זריחה
+1081,rising,עולה
+1082,rocket,טיל
+1083,scene,סצנה
+1084,scene,זירה
+1085,scenery,נוף
+1086,science,מדע
+1087,scientist,מדען
+1088,section,יחידה חלק
+1089,seem,נראה כ  דומה ל
+1090,sense,היגיון תודעה
+1091,sense,חוש לחוש
+1092,sensible,נבון
+1093,serious,רציני חמור
+1094,shuttle,מעבורת
+1095,sign,לחתום
+1096,sign,סימן לסמן
+1097,sign,ֶׁשֶלט
+1098,signal,אות סימן לאותת
+1099,similar,דומה
+1100,simple,פשוט
+1101,simplify,לפשט
+1102,simply,בפשטות
+1103,social,חברתי
+1104,spacious,מרווח
+1105,square,כיכר
+1106,square,ריבוע
+1107,stand,לעמוד
+1108,standardize,לתקנן
+1109,subject,נתון ל  בכפוך ל
+1110,subject,למסור להעביר לבעלות אחר
+1111,subject,נתין אזרח אדם
+1112,subject,נושא
+1113,subjective,אישי משוחד בדעתו
+1114,suburban,פרברי
+1115,succeed,הצליח
+1116,success,הצלחה
+1117,sum,סכום סך לסכם
+1118,sum up,לסכם
+1119,summarize,לסכם
+1120,summary,סיכום תמצית
+1121,surround,להקיף
+1122,surrounding,מקיף סובב
+1123,task,משימה
+1124,territory,תחום שטח
+1125,thereby,ולכן גרם ל
+1126,title,כותרת
+1127,touch,מגע לגעת
+1128,trade,להחליף
+1129,trade,לסחור מסחר
+1130,train,להכשיר לאמן
+1131,train,רכבת
+1132,trial,נסיון
+1133,trial,משפט
+1134,turn,לפנות סיבוב
+1135,uncharted,לא מתועד
+1136,uniform,מדים
+1137,uniform,אחיד
+1138,unify,לאחד
+1139,union,איגוד איחוד
+1140,universe,יקום
+1141,uphold,להחזיק לתמוך לדגול
+1142,volume,כרך
+1143,volume,עוצמת קול
+1144,volume,נפח
+1145,war,מלחמה
+1146,warfare,לוחמה
+1147,warrior,לוחם
+1148,waste,בזבוז לבזבז
+1149,waste,הפסולת
+1150,watch,להסתכל להשגיח
+1151,watch,שעון
+1152,widespread,נפוץ
+1153,wild,פראי טבע
+1154,wilderness,ערבה שממה
+1155,wool,צמר
+1156,abandon,לנטוש לזנוח
+1157,abduct,חטיפה לחטוף
+1158,abide,לציית
+1159,absence,מחסור
+1160,absent,חסר לא נוכח
+1161,absorb,לספוג
+1162,abundance,שפע
+1163,abuse,התעללות ניצול
+1164,abuse,להתעלל לנצל
+1165,accumulate,לצבור לאסוף
+1166,acquire,לרכוש להשיג
+1167,acquisition,רכישה
+1168,adopt,לאמץ
+1169,adventure,הרפתקה
+1170,affect,להשפיע
+1171,affection,חיבה
+1172,affluence,שפע
+1173,affluent,שופע עשיר
+1174,aid,עזרה לסייע
+1175,airborne,נישא באוויר
+1176,airline,חברת תעופה
+1177,airplane,אווירון מטוס
+1178,alike,דומה
+1179,allow,להרשות
+1180,ally (allies),בן ברית (בנות ברית)
+1181,alter,שינה  לשנות
+1182,alterations,שינויים
+1183,alternately,לסירוגין
+1184,amateur,חובבן
+1185,amend,תיקון שינוי לטובה
+1186,analyze,לנתח
+1187,anticipate,לצפות
+1188,anxious,להוט
+1189,anxious,חרד
+1190,apparent,גלוי
+1191,apparently,כנראה
+1192,apply,לפנות
+1193,appreciate,עליה בערך
+1194,appreciation,הערכה
+1195,appropriately,בהתאם
+1196,arise,להופיע לעלות
+1197,arise arose,לקום קם
+1198,artificial,מלאכותי
+1199,aside,במאמר מוסגר מלבד
+1200,aside,הצידה
+1201,assess,להעריך לאמוד
+1202,asset,נכס
+1203,assign,למנות להקצות
+1204,assignment,משימה מטלה
+1205,attain,להשיג להגיע
+1206,attend,להשתתף להיות נוכח
+1207,attendant,משרת מטפל מלווה
+1208,authority,סמכות
+1209,authorize,להרשות להסמיך
+1210,autumn,סתיו
+1211,await,להמתין
+1212,awareness,מודעות
+1213,bare,חשוף ריק לחשוף
+1214,behave,להתנהג
+1215,behavior,התנהגות
+1216,bounce,לקפץ ניתור
+1217,brilliant,מבריק
+1218,burden,עול
+1219,bush,שיח
+1220,bush,ערבה
+1221,cable,כבל
+1222,calculate,לחשב
+1223,calculator,מחשבון
+1224,campaign,מערכה מסע
+1225,candid,כנה ישיר
+1226,candidate,מועמד
+1227,case,מקרה טיעון
+1228,case,תיבה
+1229,categorize,לקטלג למיין לסווג
+1230,cautious,זהיר
+1231,century,מאה שנים
+1232,charge,להאשים
+1233,charge,לחייב
+1234,charge,להסתער
+1235,charge,לגבות
+1236,charge,להאשים
+1237,chart,גיליון תרשים
+1238,claim,טענה טוען
+1239,claim,תביעה
+1240,coincide,להקביל לחפוף
+1241,colossal,עצום
+1242,commence,להתחיל
+1243,compress,לדחוס
+1244,comprise,לכלול
+1245,concept,רעיון מושג
+1246,conception,תפיסה
+1247,confer,להתייעץ
+1248,confer,להעניק להסביר
+1249,conference,ועידה
+1250,confide,לשתף לספר (סוד)
+1251,confident,בטוח בעצמו
+1252,conflict,עימות סכסוך
+1253,conjecture,סברה לשער
+1254,connect,לחבר
+1255,consequence,תוצאה
+1256,consider,לקחת בחשבון לשקול
+1257,considerable,הרבה רבות
+1258,consume,לצרוך
+1259,consumers,צרכנים
+1260,contain,להכיל מכיל
+1261,contemporary,עכשווי
+1262,convenient,נוח
+1263,conveniently,באופן נח
+1264,convention,ועידה כנס
+1265,convention,מוסכמה
+1266,conventional,שגרתי קונבנציונאלי
+1267,convert,מומר
+1268,convert,להמיר
+1269,convey,למסור להעביר
+1270,courageous,אמיץ
+1271,create,ליצור
+1272,creator,יוצר
+1273,creature,יצור
+1274,currency,מטבע
+1275,custom,מנהג
+1276,custom,מותאם אישית
+1277,customer,לקוח צרכן
+1278,customize,להתאים באופן אישי
+1279,damage,נזק לגרום נזק
+1280,decade,עשור
+1281,defeat,תבוסה
+1282,defeated,הובס
+1283,defend,להגן
+1284,defense,הגנה
+1285,deficiency,מחסור
+1286,deliver,לשלוח
+1287,delivery,משלוח
+1288,demographic,דמוגרפי
+1289,demonstrate,להפגין
+1290,demonstrate,להדגים
+1291,destination,יעד
+1292,detach,להתנתק
+1293,deteriorate,להידרדר
+1294,diagnose,לאבחן
+1295,director,מנהל
+1296,director,במאי
+1297,discriminate,להפלות
+1298,dismiss,לבטל לפטר לשחרר
+1299,disposable,חד פעמי
+1300,disrupt,להפריע לשבש
+1301,distribute,להפיץ
+1302,distribution,הפצה
+1303,document,לתעד
+1304,document,מסמך
+1305,duty,תפקיד חובה
+1306,earn,להרוויח
+1307,economy,כלכלה
+1308,edge,קצה חספוס
+1309,elaborate,לפרט להרחיב
+1310,elect,לבחור
+1311,emerge,להגיח להופיע
+1312,emigrate,להגר
+1313,eminent,בולט בכיר
+1314,enclose,לצרף
+1315,enlarge,להגדיל
+1316,ensure,להבטיח
+1317,environment,סביבה
+1318,epidemic,מגיפה אפידמיה
+1319,equivalent,מקבילה
+1320,erase,למחוק
+1321,eraser,מחק
+1322,establish,לייסד
+1323,estimate,להעריך לאמוד
+1324,ethical,אתי מוסרי
+1325,evade,התחמק
+1326,evidence,ראיה
+1327,exception,יוצא מהכלל
+1328,execute,להוציא לפועל
+1329,execute,להוציא להורג
+1330,facility,מתקן
+1331,fail,להיכשל
+1332,failure,כשלון
+1333,faith,אמון
+1334,fall,סתיו
+1335,feature,להציג
+1336,feature,סרט באורך מלא
+1337,feature,תכונה מאפיין
+1338,flourish,לשגשג לפרוח
+1339,follow,לעקוב לציית
+1340,for the sake of,למען
+1341,force,לכפות
+1342,force,כוח
+1343,forsake,לזנוח
+1344,found,מצא גילה
+1345,found,לייסד
+1346,foundation,יסוד
+1347,function,תפקוד לתפקד
+1348,future,עתיד
+1349,gather,אסף
+1350,global,עולמי גלובאלי
+1351,goal,מטרה
+1352,goods,סחורה טובין
+1353,grasp,לתפוס להבין
+1354,grasp,אחיזה
+1355,group,קבוצה לקבץ
+1356,hardly,בקושי
+1357,hesitate,להסס
+1358,hold back,לעכב למנוע
+1359,homeland,מולדת
+1360,honest,הגון
+1361,honor,לכבד כבוד
+1362,huge,עצום ענק
+1363,idea,רעיון
+1364,identify,לזהות
+1365,illegal,לא חוקי
+1366,image,דמות תמונה
+1367,imagination,דמיון
+1368,imagine,לדמיין
+1369,impair,לפגום להחליש
+1370,impart,להעביר להקנות
+1371,impartially,באופן הוגן ללא אפליה
+1372,import,לייבא
+1373,impose,לכפות
+1374,impossible,בלתי אפשר
+1375,imprisoned,כלוא
+1376,improve,לשפר
+1377,improvise,לאלתר
+1378,in order,תקין מסודר
+1379,increase,להגדיל להגביר
+1380,incredible,מדהים
+1381,individual,יחיד אינדיבידואל
+1382,industry,תעשייה
+1383,inferred,נגזר משתמע
+1384,inform,להודיע לעדכן
+1385,information,מידע
+1386,innovate,לחדש להמציא
+1387,intention,כוונה
+1388,intentional,מכוון
+1389,interact,לתקשר להשפיע
+1390,interest,עניין
+1391,interest,ריבית
+1392,internal,פנימי
+1393,interpretation,פרשנות
+1394,involve,לערב
+1395,isolate,לבודד
+1396,judgment,שיפוט
+1397,know knew,לדעת ידע
+1398,knowledge,ֶיַדע
+1399,known,ידוע
+1400,laid,מונח
+1401,lane,מסלול
+1402,launch,לשגר להוציא לדרך
+1403,launch,להשיק להתחיל
+1404,limit,גבול לשים גבול מוגבל
+1405,limitation,מגבלה
+1406,lobby,לובי מבואה
+1407,lobby,לשדל
+1408,mammal,יונק
+1409,moderate,לתווך לפשר
+1410,moderate,מתון
+1411,modernize,להפוך למודרני
+1412,mold,עובש
+1413,mold,לעצב
+1414,motivate,לדרבן
+1415,negate,לשלול
+1416,neutral,ניטרלי
+1417,numerous,מרובה
+1418,nutrition,תזונה
+1419,object,להתנגד
+1420,object,פריט אובייקט
+1421,obtain,להשיג
+1422,operate,לנתח
+1423,operate,לפעול להפעיל לתפעל
+1424,operation,מבצע פעולה
+1425,operation,ניתוח
+1426,opposition,אופוזיציה התנגדות
+1427,ordinary,רגיל
+1428,organ,אורגן (כלי נגינה)
+1429,organ,איבר
+1430,organization,ארגון
+1431,organize,לארגן
+1432,outbreak,התפרצות
+1433,overdo,להפריז להגזים
+1434,overdue,שעבר זמן ההגשה שלו
+1435,pace,קצב
+1436,pair,זוג
+1437,parent,הורה
+1438,parenting,הורות
+1439,participate,השתתף
+1440,particular,מיוחד לא רגיל
+1441,particulars,פריטים
+1442,pause,הפסקה להפסיק
+1443,persist,להתמיד להתעקש
+1444,person,אדם
+1445,personal,אישי
+1446,personality,אישיות
+1447,phase,שלב דרגה
+1448,phenomenon,תופעה
+1449,pioneer,חלוץ
+1450,position,מיקום למקם
+1451,position,תנוחה
+1452,position,תפקיד משרה
+1453,possible,אפשרי
+1454,poverty,עוני
+1455,poverty-stricken,מוכה עוני
+1456,precedent,תקדים
+1457,preceding,קודם
+1458,predecessors,קודמים
+1459,predestined,נקבע מראש
+1460,predict,לצפות מראש
+1461,prediction,חיזוי ניבוי
+1462,predictive,נבואי
+1463,premature,מוקדם מדי
+1464,private,פרטי
+1465,produce,לייצר
+1466,produce,תוצר ירקות ופירות
+1467,product,מוצר
+1468,profession,מקצוע
+1469,professional,מקצועי
+1470,profound,מעמיק
+1471,profound,מוחלט מאוד
+1472,profoundly,עמוקות
+1473,promise,הבטחה להבטיח
+1474,property,רכוש
+1475,property,תכונה
+1476,protest,למחות הפגנה
+1477,prove,להוכיח
+1478,public,ציבורי
+1479,race,מרוץ
+1480,race,גזע
+1481,rail,מעקה מסילה
+1482,railroad,מסילת רכבת
+1483,random,מקרי אקראי
+1484,randomly,באקראיות
+1485,reaction,תגובה
+1486,reasonable,הגיוני
+1487,reconstruct,לשחזר
+1488,refute,להפריך
+1489,regain,להשיג מחדש
+1490,regard,להתייחס להחשיב
+1491,relate,להתייחס לקשר
+1492,release,לשחרר
+1493,relevant,רלוונטי קשור
+1494,relocate,למקם מחדש
+1495,reluctant,מסויג לא מעוניין
+1496,rely,להסתמך
+1497,remote,מרוחק
+1498,report,דיווח לדווח
+1499,reporter,עיתונאי
+1500,request,בקשה לבקש
+1501,require,לדרוש דרישה
+1502,restore,לשקם לשחזר
+1503,resume,להמשיך
+1504,resumption,חידוש
+1505,rule,כלל חוק שלטון
+1506,rule,לשלוט לפסוק להחליט
+1507,ruler,סרגל
+1508,ruler,מושל שליט
+1509,season,לתבל
+1510,season,עונה
+1511,secure,להבטיח לשמור להגן
+1512,selective,סלקטיבי
+1513,service,שירות
+1514,share,מניה
+1515,share,לחלוק
+1516,ship,אוניה
+1517,ship,לשלוח
+1518,shipment,משלוח
+1519,significance,משמעות חשיבות
+1520,significant,משמעותי
+1521,simulate,לדמות לחקות
+1522,size,גודל
+1523,soar,להמריא
+1524,soil,לכלוך
+1525,soil,אדמה
+1526,solicit /,לבקש/לחפש בתחינה
+1527,solicit  /,לשדל / להדיח
+1528,solitude,בדידות
+1529,solution,פתרון
+1530,sort,למיין
+1531,source,מקור
+1532,span,להימתח להקיף
+1533,span,מרווח
+1534,splendid,נהדר מהולל
+1535,spring,מעיין
+1536,spring,אביב
+1537,spring sprang,קפיץ  לקפוץ קפץ
+1538,stability,יציבות
+1539,stamina,כושר עמידה סיבולת
+1540,standard,רמה תקן מקובל
+1541,state,מצב
+1542,state,מדינה
+1543,statement,הצהרה
+1544,steady,קבוע יציב
+1545,stimulate,לעורר להמריץ
+1546,stock,מלאי
+1547,stock,לאחסן
+1548,stock,מניה
+1549,strange,מוזר
+1550,strive,לשאוף
+1551,successor,יורש
+1552,summer,קיץ
+1553,superior,עליון
+1554,supervise,לפקח
+1555,support,תמיכה לתמוך
+1556,supportive,תומך
+1557,survey,לבחון לסקור
+1558,survey,סקר
+1559,survive,לשרוד
+1560,swift,מהיר
+1561,temporary,זמני
+1562,thick,סמיך
+1563,thick,עבה
+1564,thrive,לשגשג
+1565,tradition,מסורת
+1566,traffic,תנועה
+1567,traffic jam,פקק תנועה
+1568,transfer,להעביר
+1569,transfer,העברה
+1570,tribe,שבט
+1571,unaware,לא מודע
+1572,uncertain,לא בטוח
+1573,unclear,לא ברור
+1574,uncover,לחשוף לגלות
+1575,unfold,לפתוח קיפול
+1576,unfold,נפרש נפתח התגלה
+1577,unit,יחידה
+1578,unstable,לא יציב
+1579,update,עדכון לעדכן
+1580,upgrade,לשדרג
+1581,valid,תקף
+1582,validate,אימת נתן תוקף
+1583,violence,אלימות
+1584,violent,אלים
+1585,widely,בצורה נרחבת
+1586,widen,להרחיב
+1587,winter,חורף
+1588,admirable,נערץ ראוי להערצה
+1589,admire,להעריץ
+1590,adore,העריץ אהב
+1591,adverse,שלילי
+1592,analog,אנלוגי (ההיפך מדיגיטלי)
+1593,analogy,אנלוגיה הקבלה
+1594,ancestor,אב קדמון
+1595,ancestry,מוצא
+1596,ancient,קדום עתיק
+1597,assemble,להרכיב להתאסף
+1598,assist,לעזור לסייע
+1599,astonishment,תדהמה השתאות
+1600,astound,להדהים
+1601,at your disposal,לרשותך
+1602,author,סופר מחבר
+1603,avert,להסיט להפנות למנוע
+1604,background,רקע
+1605,benefactors,נדבנים תורמים
+1606,beneficial,מועיל רווחי
+1607,bold,אמיץ חצוף
+1608,bold,מודגש
+1609,botanist,בוטנאי
+1610,boundary,גבול
+1611,branch,ענף סניף
+1612,broaden,להרחיב
+1613,canal,תעלה
+1614,cast,להשליך לגרש
+1615,cast,צוות שחקנים
+1616,caste,מעמד חברתי
+1617,castle,טירה
+1618,casual,אגבי רגיל יומיומי
+1619,chief,ראשי בכיר מנהיג
+1620,chief ',צ'יף
+1621,citizen,אזרחים
+1622,clarify,להבהיר
+1623,climate,אקלים
+1624,coast,חוף
+1625,coastline,קו/רצועת חוף
+1626,coat,מעיל
+1627,coat,שכבה (של צבע בטון וכו')
+1628,coexistence,דו קיום
+1629,collaborate,לשתף פעולה
+1630,collapse,להתמוטט
+1631,column,עמוד
+1632,column,טור
+1633,comfort,נחמה
+1634,comfortable,נוח
+1635,commerce,מסחר
+1636,commercial,מסחרי
+1637,commercial,סרטון פרסומת
+1638,commit /,ביצוע/ לבצע
+1639,commit,להתחייב
+1640,committee,ועדה
+1641,complex,מסובך
+1642,complication,סיבוך
+1643,comply,להסכים לציית
+1644,compromise,להתפשר
+1645,concern,דאגה עניין
+1646,condition,תנאי מצב מעמד
+1647,condition,להכשיר להתאים
+1648,conduct,לנהל לקיים
+1649,confront,להתעמת לעמת
+1650,confrontation,עימות
+1651,consideration,התחשבות
+1652,considering,מתחשב
+1653,consistent,עקבי
+1654,constant,קבוע רצוף
+1655,constitute,להקים לייסד
+1656,constitute,מהווים
+1657,construct,לבנות
+1658,consult,להתייעץ
+1659,context,הקשר
+1660,contract,ללקות להידבק (במחלה)
+1661,contract,חוזה הסכם
+1662,contract,להתכווץ
+1663,contradiction,סתירה
+1664,convoy,שיירה
+1665,criteria,אמת מידה אבן בחן
+1666,critic,מבקר
+1667,criticize,לבקר
+1668,declaration,הכרזה הצהרה
+1669,declare,להכריז
+1670,dedicate,להקדיש
+1671,dedicated,מוקדש ל
+1672,dedicated,מסור
+1673,degenerate,להתנוון
+1674,degree,דרגה
+1675,degree,מעלה
+1676,delay,עיכוב לאחר לדחות
+1677,delight,תענוג
+1678,design,תכנית דוגמה תרשים
+1679,design,לתכנן לעצב
+1680,designer,מעצב
+1681,detect,לאתר לגלות
+1682,determine,לקבוע
+1683,determined,נחוש נחרץ
+1684,develop,לפתח
+1685,development,התפתחות פיתוח
+1686,diagram,תרשים דיאגרמה
+1687,dialect,ניב
+1688,difference,הבדל
+1689,differences,חילוקי דעות
+1690,different,שונה
+1691,differentiate,להבדיל להבחין
+1692,diminish,לצמצם
+1693,disaster,אסון
+1694,disobey,להפר לא לציית
+1695,dispose,להיפטר
+1696,distance,מרחק
+1697,drastic,דרסטי
+1698,effective,יעיל אפקטיבי
+1699,efficient,יעיל
+1700,effort,מאמץ
+1701,electricity,חשמל
+1702,emotion,רגש
+1703,enact,לחוקק
+1704,episode,פרק
+1705,ethnic,אתני
+1706,excel,להצטיין
+1707,excellent,מצוין
+1708,exhausting,מתיש מעייף
+1709,experience,ניסיון לחוות
+1710,experiment,ניסוי להתנסות
+1711,exploit,פעולות מעשים
+1712,exploit,לנצל להפיק תועלת
+1713,export,ייצוא
+1714,extensive,נרחב
+1715,facilitate,לסייע לעזור להקל
+1716,fall apart,להתפרק
+1717,fast,צום
+1718,fast,מהיר
+1719,fasten,להדק
+1720,feminine,נשי
+1721,fine,קנס
+1722,fine,קטן עדין דקיק
+1723,fine,משביע רצון
+1724,fine,משובח מצוין
+1725,fit,להתאים
+1726,fit,בכושר
+1727,flight,בריחה מנוסה
+1728,flight,טיסה
+1729,forceful,חזק
+1730,forecast,תחזית
+1731,foreign,חוץ
+1732,foreign,זר נוכרי
+1733,forfeit,לוותר להפסיד
+1734,fortunate,בעל מזל
+1735,fortune,מזל
+1736,fortune,עושר
+1737,frame,מסגרת למסגר
+1738,fund,קרן
+1739,fund,לממן
+1740,fundamental,בסיסי (פונדמנטלי)
+1741,fundraiser,מגייס כספים
+1742,funds,כסף הון מקור מימון
+1743,gap,פער
+1744,generated,יצר
+1745,generation,דור
+1746,govern,למשול
+1747,government,ממשל
+1748,governor,מושל
+1749,gratify,לרצות
+1750,ground,בסיס אדמה
+1751,grow,לגדול לגדל
+1752,grow up,להתבגר לגדול
+1753,guilty,אשם
+1754,harsh,נוקשה אכזרי
+1755,hollow,חלול
+1756,hundred,מאה
+1757,hunt,לצוד ציד
+1758,hunter,צייד
+1759,ignorance,בורות
+1760,ignorant,בור חסר השכלה
+1761,ignore,להתעלם
+1762,illiterate,בור אנאלפבית
+1763,impact,התנגשות
+1764,impact,השפעה
+1765,impatient,חסר סבלנות
+1766,impress,להרשים
+1767,impressive,מרשים
+1768,inactivity,חוסר פעילות
+1769,include,לכלול
+1770,inclusive,כולל
+1771,industrious,חרוץ שקדן
+1772,infected,הודבק
+1773,infection,זיהום
+1774,innocent,תמים
+1775,innocent,חף מפשע
+1776,institute,מוסד מכון
+1777,institute,לכונן
+1778,instruction,הוראה הדרכה
+1779,insurance,ביטוח
+1780,insure,להבטיח
+1781,investing,להשקיע
+1782,investment,השקעה
+1783,investor,משקיע
+1784,irrigation,השקיה
+1785,lapse,מעידה פליטת פה
+1786,lapse,פרק זמן פקיעה סיום
+1787,leather,עור
+1788,lecture,הרצאה
+1789,legislate,לחוקק
+1790,legislation,חקיקה
+1791,length,אורך
+1792,lower,להנמיך
+1793,lung,ריאה
+1794,maintain,לשמר
+1795,major,מסלול לימודים
+1796,major,ראשי עיקרי
+1797,major  ',סולם מז'ור (במוזיקה)
+1798,majority,רוב
+1799,male,זכר
+1800,manage,לנהל
+1801,management,ניהול
+1802,manuscript,כתב יד
+1803,marine,ימי
+1804,maritime,ימי
+1805,market,שוק
+1806,marketing,שיווק לשווק
+1807,mass,המון המוני
+1808,mass,מסה
+1809,material,חומר חומרני
+1810,measure,למדוד
+1811,measure,אמצעי
+1812,merge,למזג לחבר
+1813,merger,מיזוג
+1814,message,הודעה
+1815,method,שיטה
+1816,mild,מתון עדין
+1817,military,צבא צבאי
+1818,minor,קטין
+1819,minor,סולם מינור (במוזיקה)
+1820,minor,קטן שולי
+1821,minority,מיעוט
+1822,misconception,דעה מוטעית
+1823,mission,משימה
+1824,mode,אופנה מודה
+1825,mode,מצב אופן צורה
+1826,model,דגם מודל דוגמן
+1827,modest,צנוע
+1828,modify,לשנות להתאים
+1829,monumental,גדול אדיר
+1830,negotiate,לשאת ולתת
+1831,negotiation,משא ומתן
+1832,nominated,מועמד
+1833,nuclear,גרעיני
+1834,observer,משקיף
+1835,obsolete,מיושן
+1836,occupy,לתפוס לאכלס
+1837,occupy,להעסיק
+1838,occurrence,התרחשות
+1839,odd,מוזר
+1840,odd,אי זוגי
+1841,omission,השמטה הזנחה
+1842,omit,להשמיט להזניח
+1843,opinion,דעה
+1844,opponent,יריב מתנגד
+1845,opportunity,הזדמנות
+1846,organic,אורגני
+1847,overlaps,חופף
+1848,own,משלו
+1849,own,בעלות על משהו
+1850,owner,בעלים
+1851,paramount,בעל חשיבות עליונה
+1852,pass,לוותר
+1853,pass,להעביר למסור
+1854,pedestrian,הולך רגל
+1855,perhaps,אולי
+1856,period,משך זמן מחזור
+1857,period,תקופה
+1858,period,נקודה
+1859,permanent,קבוע
+1860,persecution,רדיפה (דתית)
+1861,planet,כוכב לכת
+1862,plant,צמח עציץ לשתול
+1863,poll,סקר הצבעה
+1864,populous,מאוכלס בצפיפות
+1865,post,לפרסם  פרסום
+1866,post,לשלוח בדואר  דואר
+1867,post,להציב למנות  עמדה משרה תפקיד
+1868,post,עמוד
+1869,postage,דבר דואר
+1870,postpone,לדחות
+1871,powerful,רב כוח
+1872,preferable,עדיף
+1873,presume,להניח
+1874,priest,כומר
+1875,privilege,זכות יתר פריביליגיה
+1876,profit,רווח
+1877,profitable,רווחי
+1878,publication,הוצאה לאור
+1879,publicized,פורסם
+1880,publish,לפרסם להוציא לאור
+1881,publisher,מוציא לאור
+1882,qualify,להיות מוסמך
+1883,quality,איכות
+1884,quarter,רבע
+1885,radiation,קרינה
+1886,rare,נדיר
+1887,rare,נא (בשר)
+1888,raw,חי נא (בשר)
+1889,raw,גולמי גס
+1890,receive,לקבל
+1891,recent,שארע לאחרונה
+1892,recently,לאחרונה
+1893,recognition,הכרה
+1894,record,להקליט
+1895,record,שיא
+1896,record,רשומה
+1897,record,לתעד
+1898,recover,להתאושש
+1899,recreate,לשחזר ליצור מחדש
+1900,relax,להירגע
+1901,reliance,הסתמכות
+1902,remains,שרידים
+1903,remains,נשאר עדיין
+1904,remove,להסיר
+1905,renew,לחדש
+1906,renown,ידוע
+1907,repair,לתקן
+1908,replace,להחליף
+1909,replacement,מחליף
+1910,rescue,להציל
+1911,resemble,דומה
+1912,residence,מגורים
+1913,resident,תושב קבע
+1914,resource,משאב
+1915,resourceful,בעל תושייה
+1916,restrain,לרסן
+1917,retain,להחזיק לשמור
+1918,retrieve,להשיב
+1919,revenue,הכנסה רווח
+1920,route,מסלול דרך
+1921,ruin,להרוס
+1922,ruins,הריסות עיי חורבות
+1923,sample,דוגמית
+1924,satisfaction,שביעות רצון
+1925,scatter,לפזר
+1926,schedule,לוח זמנים
+1927,sensitive,רגיש
+1928,sensitivity,רגישות
+1929,sentence,משפט
+1930,sentence,גזר דין
+1931,servant,משרת
+1932,serve,להגיש לשרת
+1933,serve,לשרת
+1934,serve,ְלַרּצֹות (עונש)
+1935,session,מושב
+1936,sharp,חד
+1937,sheer,מוחלט לחלוטין
+1938,sheer,שקוף
+1939,sheer,משופע תלול
+1940,single,רווק
+1941,single,יחיד
+1942,skepticism,ספקנות
+1943,skill,יכולת מיומנות
+1944,sophisticated,מתוחכם
+1945,spare,מיותר עודף
+1946,specialize,להתמחות
+1947,species,מין זן
+1948,specify,לפרט
+1949,spectator,צופה משקיף
+1950,speech,דיבור
+1951,spoil,לבזוז שלל
+1952,spoil,להרוס
+1953,spoil,לפנק
+1954,spoil,לקלקל
+1955,stack,ערמה
+1956,staple,להדק
+1957,station,תחנה
+1958,station,להציב
+1959,stem,גזע
+1960,stomach,בטן קיבה
+1961,strategy,אסטרטגיה
+1962,subdue,להכניע
+1963,submit,להגיש
+1964,submit,להיכנע
+1965,subtle,מעודן
+1966,suitable,ראוי מתאים יאה
+1967,superb,מעולה (איכותי)
+1968,superficial,שטחי
+1969,suppression,דיכוי
+1970,sustain,סבל מ
+1971,sustain,להמשיך באותה צורה
+1972,sustain,לתמוך
+1973,symbol,סמל
+1974,symbolize,לסמל
+1975,take place,התרחש
+1976,temple,מקדש
+1977,terms,תנאים
+1978,terms,מונחים
+1979,thousand,אלף
+1980,tormented,לייסר לענות
+1981,tour,סיור
+1982,tourist,תייר
+1983,trust,אמון לבטוח
+1984,type,להקליד
+1985,type,סוג
+1986,typically,אופייני
+1987,unbelievable,לא יאמן
+1988,underlies,מונח ביסוד נמצא מתחת ל
+1989,undertake,לקחת על עצמך
+1990,unemployed,מובטל
+1991,unexplored,לא נחקר לא נבדק
+1992,unfamiliar,לא מוכר
+1993,unfortunate,מצער
+1994,unfortunately,למרבה הצער
+1995,unimaginable,בלתי נתפס
+1996,unique,מיוחד
+1997,unite,לאחד
+1998,unlock,לפתוח לשחרר
+1999,unnecessary,לא הכרחי
+2000,uprising,התקוממות מרד
+2001,urban,עירוני
+2002,urge,לעודד לדחוף  דחף רצון תשוקה
+2003,urgent,דחוף
+2004,vaccine,חיסון
+2005,variable,משתנה
+2006,variation,שינוי וריאציה
+2007,variety,מבחר מגוון
+2008,various,מגוון
+2009,vast,גדול
+2010,vertical,מאונך
+2011,vigorously,במרץ
+2012,violate,להפר לחלל
+2013,violation,עבירה הפרה
+2014,volunteer,להתנדב מתנדב
+2015,vote,קול הצבעה להצביע
+2016,wage,לערוך לנהל
+2017,wage,משכורת
+2018,ward,מחלקה
+2019,wide,רחב
+2020,willing,מוכן
+2021,wise,חכם פיקח
+2022,wish,משאלה לבקש
+2023,withhold,לעכב לעצור לא לתת
+2024,worldwide,כלל עולמי בכל העולם
+2025,worse,גרוע יותר
+2026,worthy,ראוי
+2027,yield,להיכנע לוותר לסגת
+2028,yield,להניב להפיק
+2029,zone,אזור
+2030,absurd,מגוחך לא סביר
+2031,accelerate,להאיץ
+2032,acclaim,להריע לשבח
+2033,accommodate,לאכסן לשכן
+2034,accompany,ללוות
+2035,accustomed,מורגל
+2036,aggressive,תוקפני אלים
+2037,agriculture,חקלאות
+2038,allergic,אלרגי
+2039,amass,לצבור לערום
+2040,amaze,להדהים
+2041,appeal,לערער
+2042,appeal,מדבר אל מושך
+2043,appeal,לבקש
+2044,applicant,מועמד
+2045,arousing,מעורר
+2046,as many as,רבים כמו (מספר גדול)
+2047,ascertain,לוודא
+2048,aspiration,שאיפה חלום
+2049,audit,ביקורת
+2050,award,פרס להעניק פרס
+2051,bank,לערום
+2052,bank,בנק
+2053,bank,גדה
+2054,betray,לבגוד
+2055,blank,ריק רווח
+2056,boost,דחף המריץ
+2057,broadcast,לשדר
+2058,cage,כלוב לכלוא
+2059,cancer,סרטן (מחלה)
+2060,capture,ללכוד
+2061,cargo,מטען
+2062,carve,לחרוט
+2063,cemetery,בית קברות
+2064,certify,להצהיר לאשר
+2065,chapter,פרק
+2066,church,כנסיה
+2067,circulate,לנוע במחזוריות
+2068,circulate,להפיץ
+2069,colleague,עמית קולגה
+2070,collect,לאסוף
+2071,collide,להתנגש
+2072,collision,התנגשות
+2073,commendably,באופן ראוי לשבח
+2074,commends,לציין לשבח
+2075,commentary,פרשנות
+2076,companion,בן זוג
+2077,compatible,מתאים ראוי
+2078,compel,לאלץ לחייב
+2079,compensate,לפצות
+2080,compile,לאסוף לקבץ
+2081,conceal,להסתיר
+2082,conceive,להרהר
+2083,conceive,לעבר
+2084,concerted,מתואם
+2085,concur,להסכים
+2086,concurrence,להתרחש בו זמנית
+2087,condemned,לגנות
+2088,condemned,נידון ל
+2089,confess,להודות
+2090,confession,וידוי
+2091,confinement,מאסר ריתוק
+2092,confiscate,להחרים
+2093,conform,להתאים להסתגל
+2094,confuse,לבלבל
+2095,confusion,בלבול
+2096,conquer,לכבוש
+2097,conquest,כיבוש
+2098,conscious,מודע
+2099,conservation,שימור
+2100,conservative,שמרני
+2101,conserve,לשמר
+2102,contend,להתמודד לטעון להיאבק
+2103,content,שביעות רצון
+2104,content,תוכן
+2105,continent,יבשת
+2106,contrast,להוות ניגוד
+2107,contrast,ניגוד
+2108,contribute,לתרום
+2109,controversial,שנוי במחלוקת
+2110,controversy,מחלוקת
+2111,convene,לכנס
+2112,conversation,שיחה
+2113,convince,לשכנע
+2114,coordination,קואורדינציה תיאום
+2115,coordinator,מתאם
+2116,correspond,להתכתב
+2117,correspond,להתאים
+2118,correspondence,התכתבות
+2119,crack,סדק לסדוק
+2120,crave,להשתוקק
+2121,crime,פשע
+2122,crude,וולגרי גס
+2123,crude,גולמי
+2124,cuisine,מטבח בישול
+2125,curse,קללה לקלל
+2126,darkness,חשיכה
+2127,debate,ויכוח דיון
+2128,deceased,נפטר
+2129,deceive,להונות
+2130,deliberate,מכוון
+2131,deliberate,לשקול לבחון לדון
+2132,deliberation,דיון
+2133,delusions,אשליות הזיות
+2134,denial,הכחשה
+2135,depend on,תלוי ב
+2136,describe,לתאר
+2137,desolate,הרוס
+2138,desolate,שומם נטוש
+2139,destroy,להרוס
+2140,destructive,הרסני
+2141,detract,להפחית לגרוע
+2142,deviant,סוטה
+2143,device,מכשיר
+2144,devise,לתכנן להמציא
+2145,dictate,להכתיב לפקד
+2146,disorder,הפרעה
+2147,display,להציג
+2148,disregard,להתעלם
+2149,dissolve,להתמוסס
+2150,distract,להסיח את הדעת
+2151,district,מחוז
+2152,divine,אלוהי
+2153,divinity,אלוהות
+2154,downhill,מדרון מורד
+2155,ease,להקל קלּות
+2156,easily,בקלות
+2157,effect,תוצאה אפקט
+2158,effect,רושם השפעה
+2159,emblem,סמל
+2160,encourage,לעודד
+2161,engrave,לחרוט
+2162,enhance,להעצים
+2163,entirely,לחלוטין
+2164,enzyme,אנזים
+2165,equality,שוויון במידה שווה
+2166,equates,להשוות להתאים
+2167,evoke,לעורר להעלות
+2168,evolutionary,התפתחותי
+2169,evolved,התפתח
+2170,excessively,בצורה מוגזמת
+2171,exchange,להחליף חלופה
+2172,exclude,למנוע לשלול להרחיק לגרש
+2173,exclusive,בלעדי
+2174,exclusively,באופן בלעדי רק
+2175,excuse,לסלוח
+2176,excuse,תירוץ
+2177,explicit,מפורש ברור בוטה
+2178,explore,לחקור ללמוד
+2179,exposure,חשיפה
+2180,exquisite,מצוין
+2181,exquisite,חד מעודן אנין
+2182,extend,להאריך להרחיב
+2183,extension,שלוחה
+2184,exterior,חיצוני
+2185,external,חיצוני
+2186,extinction,הכחדה
+2187,extract,לתמצת להפיק
+2188,factor,גורם
+2189,favor,טובה
+2190,favor,להעדיף
+2191,favored,מועדף
+2192,fight fought,לריב רב
+2193,figure,לחשב להניח להסיק
+2194,figure,גזרה צורה
+2195,figure,ספרה מספר
+2196,figure,דמות
+2197,flat,שטוח
+2198,flat,דירה
+2199,flew,עף
+2200,fly,לעוף
+2201,fly,זבוב
+2202,foil,לסכל
+2203,forerunner,אות סימן מבשר באות
+2204,forerunner,שליח חלוץ מבשר
+2205,fossil,מאובן
+2206,genius,גאון
+2207,gentle,עדין
+2208,genuine,אמיתי מקורי
+2209,grant,להעניק מענק
+2210,guard,שומר לשמור
+2211,halt,לעצור להפסיק עצירה
+2212,handle,להתמודד
+2213,harder,קשה יותר
+2214,harmful,מזיק
+2215,harmless,שאינו מזיק
+2216,hazardous,מסוכן
+2217,hectic,קדחתני
+2218,heir,יורש
+2219,heredity,תורשה
+2220,hospital,בית חולים
+2221,hospitalize,לאשפז
+2222,hunger,רעב
+2223,ideal,אידיאל אידיאלי
+2224,immense,כביר עצום
+2225,immigrate,להגר
+2226,impulse,דחף
+2227,impulsively,ללא שיקול דעת
+2228,in favor of,לטובת
+2229,incentive,תמריץ
+2230,incidence,כמות ִהָּקרּות (משהו שקורה)
+2231,indifference,אדישות
+2232,infinite,אינסופי
+2233,innate,מולד
+2234,inner,פנימי
+2235,inquire,לתשאל
+2236,inquiry,חקירה
+2237,insist,להתעקש
+2238,inspiration,השראה
+2239,inspiring,נותן השראה
+2240,interior,פנימי
+2241,interrupt,להפריע
+2242,intersection,צומת הצטלבות
+2243,intervene,להתערב
+2244,intervention,התערבות
+2245,invent,להמציא
+2246,inventor,ממציא
+2247,inventory,מצאי
+2248,invisible,בלתי נראה
+2249,invite,להזמין
+2250,Jew,יהודי
+2251,kind,סוג
+2252,kind,טוב לב אדיב נעים
+2253,landmark,אבן דרך
+2254,landscape,נוף
+2255,lean,להישען
+2256,legible,קריא
+2257,lens,עדשה
+2258,license,רישיון
+2259,license,לאשר להתיר
+2260,lifetime,תקופת החיים במשך החיים
+2261,literary,ספרותי
+2262,literate,משכיל מלומד
+2263,literature,ספרות
+2264,load,להעמיס
+2265,losing,מפסיד
+2266,mail,דואר
+2267,mailman,דוור
+2268,malnutrition,תת תזונה
+2269,mate,בן זוג חבר
+2270,mate,להזדווג
+2271,maturity,בגרות
+2272,mayor,ראש עיר
+2273,mediate,לגשר לתווך
+2274,mediocre,בינוני (במובן שלילי)
+2275,miserable,אומלל
+2276,moist,לחות
+2277,moral,מוסר
+2278,morale,מורל
+2279,necessary,הכרחי
+2280,neglect,להזניח הזנחה
+2281,negligence,הזנחה רשלנות
+2282,nocturnal,לילי
+2283,noon,צהריים (12:00)
+2284,notable,נכבד
+2285,notice,לשים לב
+2286,notice,התראה
+2287,notify,להודיע ליידע
+2288,obedience,ציות
+2289,obey,לציית
+2290,objective,אוביקטיבי
+2291,obstacle,מכשול
+2292,offshore,"חו""ל"
+2293,orbit,לחוג להסתובב
+2294,orient,להתמצא
+2295,oriented,מכוון מונחה
+2296,outer,חיצוני
+2297,outline,תוואי מתאר קווים כלליים
+2298,overlooked,העלים עין
+2299,parallel,מקביל
+2300,party,מפלגה
+2301,party,מסיבה
+2302,pattern,דוגמה
+2303,penned,ָּכַתב
+2304,perceive,להבחין לראות
+2305,perform,לבצע להציג
+2306,performance,ביצוע
+2307,performance,הופעה
+2308,performer,מבצע מציג
+2309,permission,רשות היתר
+2310,permit,אישור רישיון
+2311,permit,להרשות
+2312,persuade,לשכנע
+2313,persuasion,שכנוע
+2314,piece,יצירה
+2315,piece,חתיכה חלק
+2316,pipe,צינור
+2317,plausible,סביר מתקבל על הדעת
+2318,plot,להכין תרשים
+2319,plot,לזמום לקשור קשר
+2320,plot,חלקה (חלקת אדמה)
+2321,plot,עלילה
+2322,poacher,מסיג גבול צייד לא מורשה
+2323,practical,מעשי
+2324,practice,לתרגל תרגול
+2325,prescribe,לרשום מרשם
+2326,prescription,מרשם
+2327,preserve,לשמר
+2328,pretext,אמתלה תואנה
+2329,prevent,למנוע
+2330,prevention,מניעה
+2331,previous,קודם
+2332,probable,סביר מתקבל על הדעת
+2333,probably,כנראה קרוב לוודאי
+2334,process,לעכל לעבד
+2335,process,תהליך
+2336,prohibit,לאסור למנוע
+2337,project,לתכנן
+2338,project,פרוייקט מיזם
+2339,project,להשליך להקרין
+2340,promote,לקדם
+2341,promotion,קידום
+2342,prompted,הביא לידי
+2343,proponent,תומך
+2344,proportion,שיעור מידה
+2345,prosperity,צמיחה שגשוג
+2346,prosperous,משגשג מצליח
+2347,pump,משאבה לשאוב
+2348,pursue,לרדוף
+2349,pursuit,מרדף
+2350,quantify,לכמת
+2351,quantity,כמות
+2352,radically,באופן קיצוני
+2353,rank,דרגה
+2354,ray,קרן אלומת אור
+2355,razor,סכין גילוח
+2356,rear,אחורי
+2357,rear,לטפח לגדל
+2358,reconcile,להתפייס
+2359,reform,שינוי רפורמה
+2360,reinvigorate,לרענן להמריץ מחדש
+2361,relationship,מערכת יחסים
+2362,religious,דתי
+2363,remainder,שארית
+2364,renovate,לחדש לשפץ
+2365,respective,שייך בהתאמה
+2366,respectively,בהתאמה
+2367,restrict,להגביל
+2368,restriction,הגבלה
+2369,retire,לפרוש
+2370,revoke,לבטל לשלול
+2371,reward,פרס לתגמל
+2372,ritual,טקס פולחן
+2373,rough,קשה מחוספס
+2374,rudimentary,יסודי בסיסי
+2375,sacred,קדוש
+2376,sacrifice,להקריב קורבן
+2377,sake,תועלת עניין
+2378,screen,לסרוק
+2379,screen,מסך צג וילון
+2380,screen,לסנן
+2381,seek,לבקש
+2382,seek sought,לחפש חיפש
+2383,seismic,ססמי (קשור לרעידות אדמה)
+2384,series,סדרה
+2385,settle,להסדיר
+2386,settle,להתיישב
+2387,severe,חמור
+2388,shape,צורה לעצב (צורה)
+2389,shift,משמרת
+2390,shift,להזיז
+2391,shiny,נוצץ בוהק
+2392,side effect,תופעת לוואי
+2393,simplicity,פשטות
+2394,sketch,שרטוט איור סקיצה
+2395,skyrocket,להאמיר
+2396,skyscraper,גורד שחקים
+2397,sorrow,עצב צער
+2398,spark,גיץ ניצוץ
+2399,spectacular,מדהים
+2400,spirit,כוונה רוח הדברים
+2401,spirit,רוח רפאים נפש
+2402,spiritual,רוחני
+2403,spontaneously,ללא תכנון
+2404,stabilize,לייצב
+2405,stable,יציב
+2406,steam,אד לאדות
+2407,steamship,אוניית קיטור
+2408,straightforward,ישיר
+2409,stream,לזרום נחל זרם
+2410,stricken,מוכה
+2411,stride,צעד לצעוד
+2412,strife,מאבק עימות
+2413,strike,הכה התקיף
+2414,strike,שביתה
+2415,stripes,פסים
+2416,structure,מבנה לבנות
+2417,stumble,למעוד
+2418,substitute,תחליף
+2419,sufficient,מספיק
+2420,superfluous,מיותר עודף
+2421,surface,פני שטח
+2422,suspect,חשוד (מישהו)
+2423,suspect,לחשוד
+2424,suspicious,חשוד (משהו)
+2425,sympathetic,אוהד
+2426,team,צוות
+2427,tendency,נטייה
+2428,terminate,לסיים לחסל
+2429,terrain,שטח
+2430,terrify,להפחיד להבעית
+2431,theme,נושא
+2432,threat,איום
+2433,tight,הדוק לחוץ צמוד
+2434,tolerance,סובלנות
+2435,tolerate,לסבול
+2436,ultimate,מוחלט סופי
+2437,unbearable,בלתי נסבל
+2438,uncountable,אינספור
+2439,undergo,לעבור להתנסות לחוות
+2440,unforgettable,בלתי נשכח
+2441,unsafe,לא בטוח
+2442,vain,לשווא
+2443,vain,שחצן
+2444,vary,משתנה
+2445,venture,סיכון
+2446,verify,לוודא לאמת
+2447,versions,גרסאות
+2448,vessel,כלי שיט
+2449,village,כפר
+2450,virtual,מדומה וירטואלי
+2451,virtually,למעשה בעצם
+2452,visual,חזותי
+2453,visualize,לדמיין
+2454,wealthy,עשיר
+2455,weigh,לשקול
+2456,weight,משקל
+2457,wickedly,ברשעות
+2458,wisdom,חכמה בינה
+2459,abstain,להתנזר להימנע ממשהו
+2460,accentuate,להבליט להדגיש
+2461,accusation,האשמה
+2462,acknowledge,להכיר לדעת
+2463,adequate,הולם
+2464,advertise,פרסום
+2465,advertisement,מודעה פרסום
+2466,affinity,זיקה קירבה
+2467,affinity,משיכה
+2468,agitate,להסעיר לזעזע לעצבן
+2469,agonize,לענות לייסר
+2470,agony,ייסורים
+2471,aisle,מעבר
+2472,alien,חייזר
+2473,alienation,ניכור הרחקה
+2474,anchor,עוגן
+2475,annihilate,להשמיד
+2476,antique,עתיק ענתיקה
+2477,apparatus,מנגנון
+2478,auction,מכירה פומבית
+2479,augment,להרחיב
+2480,autograph,חתימה
+2481,beg,להתחנן
+2482,burn,לשרוף להישרף
+2483,cater,לספק
+2484,cathedral,קתדרלה
+2485,cattle,בקר
+2486,chariot,מרכבה
+2487,charity,צדקה
+2488,chase,לרדוף מרדף
+2489,cheer,לעודד
+2490,cheerful,עליז שמח
+2491,chemical,כימיקל כימי
+2492,circuit,מסלול להקיף
+2493,circuit,מעגל חשמלי
+2494,combat,לתקוף
+2495,combat,קרב
+2496,compete,להתחרות להתמודד
+2497,competition,תחרות
+2498,components,חלקים מרכיבים
+2499,compulsory,מהווה חובה
+2500,concise,תמציתי תכליתי
+2501,concrete,בטון
+2502,concrete,קונקרטי מוחשי
+2503,congregate,לאסוף קהל לאסוף
+2504,conspicuous,בולט
+2505,conspiracy,קשר מזימה
+2506,contagious,מדבק
+2507,contaminate,לזהם
+2508,correlate,לתאם לקשר
+2509,corrupt,להשחית מושחת
+2510,council,מועצה
+2511,counsel,לייעץ להדריך
+2512,counsel,פרקליט יועץ
+2513,counterpart,בעל תפקיד מקביל עמית בן זוג
+2514,couple,זוג לצמד
+2515,courage,אומץ
+2516,court,מגרש (ספורט)
+2517,court,בית משפט
+2518,courteous,אדיב
+2519,courtesy,נימוס אדיבות
+2520,craft,אומנות מלאכה
+2521,craft,כלי טייס / כלי שייט
+2522,craftsmen,אומן בעל מלאכה
+2523,critique,ביקורת
+2524,cross,לחצות
+2525,cross,צלב להצליב
+2526,crossroad,צומת
+2527,cruel,אכזרי
+2528,cult,כת
+2529,dawn,שחר
+2530,deal,עסקה
+2531,deal,להתמודד
+2532,dealt,עסק ב חולק (קלפים ניירת)
+2533,debt,חוב
+2534,decay,ריקבון
+2535,decipher,לפענח
+2536,delegate,להאציל להסמיך
+2537,delinquent,נזנח נשכח
+2538,delinquent,עבריין
+2539,depression,דיכאון
+2540,described,מתואר
+2541,description,תיאור
+2542,desirable,נחשק
+2543,desire,תשוקה חשק לחפוץ
+2544,despair,להתייאש
+2545,desperate,נואש
+2546,desperation,ייאוש
+2547,dimension,מימד
+2548,disagreement,חוסר הסכמה
+2549,disappear,להעלם
+2550,disappoint,לאכזב
+2551,disapproving,לא מאשר לא מסכים לא מרוצה
+2552,disciples,תלמידים
+2553,discipline,תחום לימוד/מחקר
+2554,discipline,להעניש לחנך משמעת
+2555,disciplined,חינך העניש
+2556,disciplined,ממושמע
+2557,discontent,חוסר שביעות רצון
+2558,discourage,לשכנע שלא לעשות משהו
+2559,discrepancy,סתירה פער
+2560,disease,מחלה
+2561,disinfection,חיטוי
+2562,dislocate,לפרוק לנקוע
+2563,disparage,לזלזל להמעיט בערך
+2564,dissent,להתנגד חילוקי דעות
+2565,distinction,מצוינות
+2566,distinction,הפרדה
+2567,distinctive,מיוחד
+2568,distinguish,להבדיל להבחין
+2569,disturb,להפריע
+2570,disturbance,הפרעה
+2571,dominate,לשלוט
+2572,dozen,תריסר
+2573,drought,בצורת
+2574,duel,דו קרב
+2575,duplicate,לשכפל
+2576,durable,יציב מתמשך
+2577,dynasty,שושלת
+2578,eliminate,לחסל לפסול
+2579,eloquent,רהוט
+2580,elude,לברוח להתחמק
+2581,embrace,לחבק לאמץ לקרבו
+2582,emission,פליטה
+2583,employ,להעסיק
+2584,employer,מעסיק מעביד
+2585,enclosing,לסגור להקיף
+2586,enclosure,סגירה כיתור שטח מגודר
+2587,encounter,מפגש
+2588,endanger,לסכן
+2589,endangered,בסכנת הכחדה
+2590,endurance,כוח סבל
+2591,endure,לסבול להחזיק מעמד
+2592,enforce,לאכוף לכפות
+2593,Equator,קו המשווה
+2594,equip,לצייד
+2595,equipment,ציוד
+2596,erupt,התפרץ
+2597,estate,אחוזה
+2598,estate,נכס
+2599,expense,הוצאות
+2600,expensive,יקר
+2601,fabric,בד
+2602,fabricate,לבדות
+2603,family,משפחה
+2604,fatal,סופני (פטלי)
+2605,fate,גורל חרץ גורל
+2606,fellow,חבר עמית
+2607,fiction,בדיון לא אמיתי
+2608,file,תיק קובץ
+2609,fingerprint,טביעת אצבע
+2610,flame,להבה
+2611,flatter,שטוח יותר
+2612,flatter,להחמיא
+2613,flattery,חנופה
+2614,flock,לנהור עדר המון
+2615,flood,שיטפון
+2616,fragile,עדין שביר
+2617,gauge,למדוד להעריך מידה
+2618,generous,נדיב
+2619,genes,גנים
+2620,gesture,מחווה
+2621,given,נתון
+2622,grade,כיתה
+2623,grade,ציון דרגה מעמד
+2624,grade,שיפוע
+2625,gradually,בהדרגה
+2626,graduate,לסיים לימודים
+2627,grand,גדול כולל מרשים
+2628,granddaughter,נכדה
+2629,grandfather,סבא
+2630,grandmother,סבתא
+2631,grandson,נכד
+2632,guess,ניחוש לנחש
+2633,guidance,הנחיה הכוונה הנהגה
+2634,guide,להדריך
+2635,gunpowder,אבק שריפה
+2636,hail,לשבח
+2637,hail,ברד
+2638,hall,מסדרון
+2639,hall,היכל
+2640,harm,לפגוע להזיק
+2641,harness,לרתום
+2642,herb,עשב
+2643,herd,לאסוף
+2644,herd,עדר לרעות
+2645,heritage,מורשת
+2646,husband,בעל
+2647,illness,מחלה
+2648,illustrate,להמחיש להדגיש
+2649,illustrator,מאייר
+2650,immersion,שקיעה
+2651,immoral,לא מוסרי
+2652,implement,ליישם להוציא לפועל
+2653,implementation,מימוש יישום ביצוע
+2654,incident,תקרית
+2655,incompetence,חוסר יכולת
+2656,incorporate,לכלול לשתף לאגד
+2657,indefinitely,ללא הגבלה
+2658,independence,עצמאות
+2659,independent,עצמאי
+2660,inevitable,בלתי נמנע
+2661,infectious,מדבק
+2662,inferior,נחות
+2663,infiltrate,להסתנן
+2664,influence,השפעה להשפיע
+2665,insight,תובנה
+2666,instrument,כלי
+2667,insurmountable,שאין להתגבר עליו
+2668,intellectual,אינטלקטואלי
+2669,interview,לראיין ראיון
+2670,introduce,להציג לעשות היכרות
+2671,introduction,הקדמה מבוא היכרות
+2672,invade,לחדור לפלוש
+2673,invaders,פולשים
+2674,investigate,לחקור
+2675,invoke,לעורר לזמן
+2676,irregular,לא רגיל
+2677,irresistible,שלא ניתן לעמוד בפניו
+2678,justify,להצדיק
+2679,knife (knives),סכין (סכינים)
+2680,label,תגית
+2681,label,לתייג
+2682,labor,להתאמץ
+2683,labor,עבודה עמל לעמול
+2684,laboratory,מעבדה
+2685,laborer,פועל
+2686,layer,שכבה
+2687,lead led,להוביל הוביל
+2688,leader,מנהיג
+2689,leadership,מנהיגות
+2690,lie,לשקר ֶשֶקר
+2691,lie lay,לשכב שכב
+2692,listen,להקשיב
+2693,loosely,באופן רפוי
+2694,loud,חזק
+2695,loudspeaker,רמקול
+2696,luxury,מותרות
+2697,machine,מכונה
+2698,manufacture,ייצר
+2699,march,לצעוד
+2700,margin,שוליים מרווח
+2701,martial,צבאי קרבי
+2702,master,להתמחות לשלוט
+2703,master,אדון שליט
+2704,masterpiece,יצירת מופת
+2705,mastery,מומחיות
+2706,match,גפרור
+2707,match,התאמה להתאים
+2708,melt,להמיס
+2709,mind,שכל
+2710,mind,אכפת
+2711,mind,לשים לב לשמור
+2712,missile,טיל
+2713,mobilize,לנייד להניע
+2714,mole,חפרפרת
+2715,mole,שומה
+2716,myriad,רב הרבה
+2717,narrow,צר
+2718,navigate,לנווט
+2719,nervous,עצבני לחוץ מתוח
+2720,nobility,אצולה
+2721,noble,אציל אצילי
+2722,notion,רעיון מושג נטיה
+2723,novel,רומן סיפור
+2724,novel,חדש
+2725,observation,אבחנה
+2726,observe,להתבונן להבחין
+2727,obstinate,עקשן
+2728,offend,להעליב
+2729,offender,פושע פוגע
+2730,offensive,מעליב פוגעני
+2731,oppressive,אכזרי
+2732,oppressive,מדכא מעיק
+2733,ornament,קישוט
+2734,outdated,מיושן
+2735,outspoken,מדבר גלויות ישיר
+2736,outstanding,יוצא מן הכלל מצוין
+2737,overtake,לעקוף להשיג
+2738,pain,כאב להכאיב
+2739,passive,סביל
+2740,pervasive,מתפשט מחלחל
+2741,petition,עצומה עתירה לעתור
+2742,picture,תמונה לצלם
+2743,picture,לדמיין
+2744,play,משחק לשחק
+2745,play,מחזה
+2746,playwright,מחזאי
+2747,policy,מדיניות
+2748,potent,חזק בעל כוח השפעה
+2749,potential,אפשרי פוטנציאלי
+2750,prejudice,דעה קדומה
+2751,prevalent,נפוץ שכיח רווח
+2752,pride,גאווה
+2753,prison,כלא
+2754,prophecy,נבואה
+2755,prosper,לשגשג
+2756,province,מחוז אזור
+2757,provoke,להתגרות להסית
+2758,punctuate,הדגשה
+2759,punctuation,ניקוד פיסוק
+2760,pure,טהור
+2761,purification,טיהור
+2762,query,שאלה חקירה
+2763,rapid,מהיר
+2764,rapid,ֶאֶשד זרם מים מהיר בנהר
+2765,rapidly,במהירות
+2766,reader,קורא
+2767,rebuttal,הפרכה סתירה
+2768,recognize,לזהות
+2769,recollection,זיכרון
+2770,recordings,הקלטות
+2771,recruit,לגייס
+2772,recur,קרה שוב
+2773,recurring,חוזר נשנה
+2774,refined,מעודן מלוטש
+2775,reflect,להרהר
+2776,reflect,לשקף להחזיר אור
+2777,reflection,השתקפות
+2778,refugee,פליט
+2779,reinforce,לתגבר לחזק
+2780,relapse,הדרדר הישנות
+2781,relating,מתייחס
+2782,relations,יחסים
+2783,remarkable,ראוי לציון יוצא דופן
+2784,rival,יריב
+2785,rivalry,יריבות
+2786,rodent,מכרסם
+2787,role,תפקיד
+2788,rural,כפרי
+2789,satellite,לווין
+2790,satisfy,לרצות לספק
+2791,scarce,נדיר
+2792,scholar,אקדמאי בעל מלגה מלומד
+2793,score,לחתוך לחרוץ
+2794,score,לזכות בניקוד
+2795,score,תוצאה
+2796,secular,חילוני
+2797,senior,בכיר
+2798,senior,זקן
+2799,sensation,תחושה
+2800,sensations,חדשות מרעישות
+2801,set up,להרכיב לארגן לסדר
+2802,sheet,דף
+2803,sheet,סדין
+2804,sight,ראייה כוונת
+2805,sighting,תצפית מראה
+2806,silver,כסף כסוף
+2807,sink,כיור
+2808,sink,לשקוע
+2809,skin,עור
+2810,skinned,פשט עור
+2811,slander,השמצה להשמיץ
+2812,slight,קל מעט
+2813,speak spoke,לדבר דיבר
+2814,speaker,דובר
+2815,spell,כישוף קסם
+2816,spell,איות לאיית
+2817,spend,לבלות להעביר
+2818,spend,לבזבז לפזר
+2819,spill,לשפוך
+2820,spot,כתם
+2821,spot,לזהות
+2822,sprang,נבע
+2823,stadium,אצטדיון
+2824,stark,שומם עזוב
+2825,stark,בוטה מוחלט גמור
+2826,statue,פסל
+2827,steel,פלדה
+2828,stiff,נוקשה
+2829,storage,אחסון
+2830,strain,מתח נפשי
+2831,strain,להתאמץ למתוח לנקוע
+2832,strength,חוזק
+2833,strengthen,לחזק
+2834,struggle,מאבק מאמץ
+2835,stuck,תקוע
+2836,suffer,לסבול
+2837,sundown,שקיעה
+2838,sunlight,אור יום
+2839,supreme,עליון
+2840,surprise,הפתעה
+2841,swing,לנדנד נדנדה
+2842,switch,מתג
+2843,switch,להחליף
+2844,symptom,סימפטום
+2845,tempt,לפתות
+2846,tend,נוטה
+2847,tender,רך
+2848,threaten,לאיים
+2849,tilt,להטות שיפוע
+2850,timid,ביישן
+2851,topic,נושא
+2852,tower,מגדל
+2853,toxic,רעיל
+2854,trace,לעקוב למצוא
+2855,trace,סימן ִעְקָבה
+2856,track,מסילה מסלול
+2857,track,לעקוב
+2858,transform,לשנות צורה
+2859,translate,לתרגם
+2860,translator,מתרגם
+2861,transmit,לשדר
+2862,transmitter,משדר
+2863,transplant,לשתול
+2864,trap,מלכודת
+2865,triumph,ניצחון
+2866,tropical,טרופי
+2867,truth,אמת
+2868,tube,צינור
+2869,twist,סיבוך סיבוב
+2870,unconscious,מחוסר הכרה
+2871,unjust,לא צודק
+2872,vagueness,עמימות ערפול
+2873,vanish,להיעלם
+2874,vegetable,ירק
+2875,vegetarian,צמחוני
+2876,vehicle,כלי רכב
+2877,veracity,יושר הגינות
+2878,verdict,פסק דין פסיקה
+2879,voyage,מסע
+2880,want,לרצות
+2881,wanted,מבוקש
+2882,warmth,חום
+2883,wealth,עושר
+2884,welfare,סעד
+2885,wheat,חיטה
+2886,wildlife,חיות בר
+2887,wind,למתוח
+2888,wind,רוח
+2889,wing,כנף
+2890,withstand,להתמודד לעמוד ב
+2891,abroad,"חו""ל"
+2892,accomplices,שותף לדבר עבירה
+2893,acquitted,זוכה מאשמה
+2894,adhere,לדבוק ב  לדגול ב
+2895,advocate,לייעץ
+2896,advocate,פרקליט
+2897,align,להסתדר בשורה
+2898,allowance,דמי כיס הקצבה
+2899,allusion,אזכור רמיזה
+2900,ample,מספיק שופע גדול
+2901,amputation,קטיעה
+2902,amusement,שעשוע
+2903,anesthesia,הרדמה
+2904,annoy,להציק
+2905,appraise,להעריך (שווי) לאמוד
+2906,ark,תיבה
+2907,arrogant,יהיר שחצן
+2908,artifact,חפץ פריט אומנות
+2909,atrocity,זוועה
+2910,attire,לבוש
+2911,baffled,מבולבל
+2912,baggage,מטען מזוודה
+2913,bandage,תחבושת
+2914,barrier,מחסום
+2915,bashful,ביישן
+2916,bent,כופף
+2917,blend,לערבב
+2918,blur,טשטוש לטשטש
+2919,boil,להרתיח
+2920,bolster,לתמוך
+2921,boot,מגף
+2922,bore,לשעמם שעמום
+2923,bore,לקדוח (חור)
+2924,bury,לקבור
+2925,cabin,בקתה
+2926,ceremony,טקס מסכת
+2927,coal,פחם
+2928,command,פקודה לפקוד
+2929,commute,לנסוע בקביעות לעבודה
+2930,commute,להמתיק (עונש)
+2931,commute,להחליף להמיר
+2932,composed,הלחין
+2933,condense,לדחוס
+2934,condone,לסלוח למחול
+2935,congenial,נעים ידידותי
+2936,congenital,מולד
+2937,consolidate,לאחד לגבש
+2938,container,מיכל קונטיינר
+2939,contest,תחרות
+2940,contest,למחות
+2941,convict,להרשיע
+2942,convict,אסיר
+2943,cope,להתמודד
+2944,cord,מיתר
+2945,cornerstone,אבן פינה
+2946,crash,להתנגש התנגשות
+2947,credibility,אמינות מהימנות
+2948,crown,כתר להכתיר
+2949,cultivate,לעבד לטפח
+2950,curiosity,סקרנות
+2951,curious,סקרן
+2952,curve,עקומה פניה
+2953,damp,לח
+2954,dampen,לדכא
+2955,dare,להעיז תעוזה
+2956,dare,אתגר
+2957,daydream,לחלום בהקיץ
+2958,deaf,חרש
+2959,defer,לעכב לדחות
+2960,deflate,להוציא אוויר מ
+2961,deform,לעוות
+2962,deformity,מום עיוות
+2963,delicate,עדין
+2964,demean,להנמיך להשפיל
+2965,department,מחלקה
+2966,department-store,חנות כלבו
+2967,deposit,להפקיד פיקדון
+2968,depreciate,להפחית
+2969,despise,לתעב
+2970,dessert,קינוח
+2971,devoid,חסר נטול
+2972,disdain,זלזול בוז
+2973,disgrace,בושה
+2974,disguise,תחפושת
+2975,disloyal,לא נאמן
+2976,disparagement,זלזול
+2977,dispatch,לשגר
+2978,displacement,עקירה
+2979,disseminate,להפיץ
+2980,docile,צייתן כנוע נח
+2981,domestic,ביתי
+2982,donate,לתרום
+2983,donor,תורם
+2984,draw,תיקו שוויון
+2985,draw,לצייר
+2986,draw (drew),לשלוף (שלף)
+2987,drawback,חסרון עיכוב
+2988,drift,זרם סחף
+2989,eager,נחוש נלהב
+2990,embryo,עּוָּבר
+2991,engage,להעסיק ליצור מגע
+2992,engagement,התחייבות
+2993,engagement,אירוסין
+2994,enlist,להתגייס
+2995,enrage,להרגיז להכעיס
+2996,entertain,לשעשע לבדר
+2997,entertainment,בידור
+2998,entitled,זכאי
+2999,entrance,כניסה
+3000,envision,לחזות לצפות
+3001,esteemed,מכובד
+3002,exaggerate,להגזים
+3003,examination,בחינה בדיקה
+3004,examine,לבחון
+3005,excitement,התרגשות
+3006,exert,להפעיל
+3007,exert,להתאמץ
+3008,exhaust,פליטה צינור מפלט
+3009,exist,קיים
+3010,existence,קיום
+3011,expedite,לזרז
+3012,expend,לגמור לבזבז לפזר
+3013,expendable,שניתן לוותר עליו
+3014,eyesight,ראייה כוונת
+3015,factory,מפעל בית חרושת
+3016,familiar,מוכר
+3017,familiarize,להתוודע
+3018,fascinate,לרתק
+3019,fertile,פורה
+3020,fetus,עובר (ברחם)
+3021,fiber,סיב
+3022,figurative,סמלי
+3023,finalize,לסכם לגבש
+3024,firm,מוצק
+3025,firm,נחוש תקיף
+3026,firm,חברה (פירמה)
+3027,flagrant,בוטה
+3028,flexible,גמיש
+3029,fluctuation,חוסר יציבות
+3030,fluency,שטף
+3031,fluent,שוטף
+3032,fluid,נוזל
+3033,footprints,עקבות טביעות רגל
+3034,foresee,לצפות מראש
+3035,fort,מצודה מבצר
+3036,fortify,לחזק לבצר
+3037,fragrance,ניחוח
+3038,freeze froze,להקפיא הקפיא
+3039,fruit,פרי
+3040,fulfill,להגשים
+3041,garment,בגד לבוש
+3042,gasoline,בנזין
+3043,genre ',ז'אנר סוגה
+3044,genus,סוג מין
+3045,giant,ענק
+3046,goblet,גביע
+3047,greet,לברך לקבל פנים
+3048,grief,יגון צער
+3049,grievance,טרוניה התמרמרות
+3050,growled,נהם
+3051,guarantee,להבטיח ערבות
+3052,halve,לחצות
+3053,harass,להציק
+3054,hasten,למהר להחפז
+3055,hasty,מהיר בהול
+3056,hatch,לבקוע (מביצה)
+3057,hatch,פתח צוהר
+3058,haul,לגרור
+3059,heed,לשים לב
+3060,hegemony,הגמוניה
+3061,height,גובה
+3062,heresy,כפירה
+3063,hibernate,לישון שנת חורף
+3064,hid from,התחבא מ
+3065,hidden,חבוי נסתר
+3066,highway,כביש ראשי
+3067,hinder,לעכב
+3068,hint,רמז
+3069,historian,היסטוריון
+3070,hive,כוורת
+3071,horrific,ָאיֹום
+3072,horror,אימה
+3073,hospitality,הכנסת אורחים
+3074,host,מארח
+3075,hostility,עוינות
+3076,hypocrisy,צביעות
+3077,idolize,להעריץ
+3078,ill,חולה
+3079,illuminate,להאיר
+3080,illusion,אשליה
+3081,imaginative,דמיוני
+3082,imitate,לחקות
+3083,implore,להתחנן להפציר
+3084,imply,לרמוז
+3085,imprisonment,מאסר כליאה
+3086,inadvertently,בלי משים בלי כוונה
+3087,incline,שיפוע
+3088,incline,להתאים
+3089,indebted,חייב ל  אסיר תודה
+3090,induce,לגרום לייצר
+3091,infancy,ינקות
+3092,inherit,לרשת
+3093,inhibit,לרסן
+3094,inject,להזריק
+3095,injury,פציעה
+3096,insanity,אי שפיות
+3097,inspect,לבחון לבדוק
+3098,insult,עלבון
+3099,insult,להעליב
+3100,integrate,לשלב
+3101,intelligence,מודיעין
+3102,intelligence,אינטליגנציה
+3103,interface,ממשק
+3104,interjection,הערה הפרעה לשיחה
+3105,keystone,אבן מפתח
+3106,lackluster,העדר ברק העדר כוח
+3107,leisure,פנאי
+3108,leisurely,נינוח רגוע
+3109,lucrative,ריווחי
+3110,luggage,מזוודות
+3111,luminous,זוהר בוהק
+3112,lurking,אורב מתגנב
+3113,magnitude,גודל חשיבות
+3114,malformation,עיוות פגם
+3115,manner,התנהגות אופן
+3116,manners,נימוס
+3117,marriage,נישואין
+3118,masculine,גברי
+3119,merit,ערך הישג
+3120,metal,מתכת מתכתי
+3121,meticulous,קפדני
+3122,migrate,להגר
+3123,mimic,לחקות
+3124,minister,שר (בממשלה)
+3125,monarch,מלך
+3126,morose,קודר עגמומי
+3127,muscle,שריר
+3128,mutation,מוטציה
+3129,mystery,תעלומה
+3130,narcotic,סם
+3131,neighbor,שכן
+3132,neighborhood,שכונה
+3133,noise,רעש
+3134,nuisance,מטרד
+3135,nurse,אחות
+3136,nursery,חדר ילדים
+3137,nurture,לטפח להזין לחנך
+3138,obligation,התחייבות
+3139,oblige,לחייב להכריח
+3140,ocean,אוקיינוס
+3141,offset,לקזז
+3142,overly,יותר מידי
+3143,oversee,לפקח
+3144,overwhelm,מהמם
+3145,package,חפיסה חבילה
+3146,painter,צייר
+3147,painting,ציור
+3148,passion,תשוקה
+3149,path,דרך נתיב
+3150,patience,סבלנות
+3151,patiently,בסבלנות
+3152,patients,מטופלים
+3153,peddler,רוכל סוחר
+3154,penalty,קנס
+3155,people,אנשים
+3156,perpetuate,להנציח
+3157,pest,מטרד מזיק (חרקים)
+3158,petroleum,נפט
+3159,plague,מגפה
+3160,plentiful,מלא שופע
+3161,poet,משורר
+3162,polar,קוטבי הפוך לחלוטין
+3163,pole,מוט
+3164,pole,קוטב
+3165,poor,עני מסכן
+3166,poorly,בצורה גרועה
+3167,portrait,דיוקן
+3168,posterity,הדורות הבאים
+3169,pot,סיר קדרה
+3170,potato,תפוח אדמה
+3171,potter,קדר
+3172,praise,לשבח
+3173,prepare,התכונן
+3174,preside,לנהל
+3175,prestigious,יוקרתי
+3176,pretend,להעמיד פנים
+3177,principal,מנהל בית ספר
+3178,principle,עיקרון
+3179,principle,עיקרי
+3180,probation,תקופת מבחן
+3181,proliferate,התפשט במהירות
+3182,prolific,פורה שופע
+3183,prolong,מתמשך
+3184,prominent,בולט חשוב
+3185,prone,נוטה
+3186,proof,חסין עמיד (סיומת)
+3187,proof,הוכחה ראיה
+3188,propel,להניע לדחוף
+3189,proposal,הצעה
+3190,propose,להציע
+3191,propose,להציע להציע נישואין
+3192,proposition,הצעה
+3193,prospective,צפוי עתידי
+3194,punish,להעניש
+3195,readily,ללא קושי
+3196,readiness,מוכנות
+3197,realize,הבין
+3198,rearing,גידול טיפוח
+3199,reassurance,הבטחה הרגעה
+3200,reborn,נולד מחדש
+3201,recall,להיזכר
+3202,recall,להחזיר להשיב צלצול
+3203,recruitment,גיוס
+3204,reliable,אמין שניתן לסמוך עליו
+3205,relic,שארית שריד
+3206,relieve,להקהל
+3207,remedy,תרופה
+3208,reorganize,לארגן מחדש
+3209,repelled,דחה הגעיל
+3210,replica,העתק מדויק
+3211,represent,לייצג מייצג
+3212,repressive,מדכא
+3213,reproduce,להתרבות לשכפל
+3214,reputation,שם מוניטין
+3215,resent,להתנגד להתרעם
+3216,reservation,שריון מקום
+3217,reservation,שמורה
+3218,reserve,לשמור
+3219,reserve,שמורה
+3220,reserve,עתודה מילואים
+3221,reservoir,מאגר
+3222,resigned,התפטר
+3223,respect,כבוד לכבד
+3224,respectfully,בכבוד
+3225,respond,להגיב תגובה תשובה
+3226,responsibility,אחריות
+3227,responsible,אחראי
+3228,retirement,פרישה
+3229,retreat,לסגת נסיגה
+3230,revise,לתקן לשפר
+3231,revision,בדיקה מחדש לצורך שיפור
+3232,ridicule,ללעוג
+3233,ridiculous,מגוחך
+3234,rim,שפה
+3235,rope,חבל
+3236,rub,לשפשף
+3237,rumor,שמועה
+3238,salary,שכר
+3239,sanction,קנס עונש עידוד
+3240,saw,מסור
+3241,saw see,ראה לראות
+3242,seeds,זרעים
+3243,segment,קטע מקטע
+3244,self-confidence -,בטחון עצמי
+3245,self-indulgence -,סיפוק עצמי
+3246,sequel,המשך
+3247,sequence,רצף
+3248,shatter,לנפץ להרוס לקעקע
+3249,shell,קליפה מעטפת
+3250,shell,פגז
+3251,shelter,מקלט
+3252,shield,מגן להגן
+3253,signature,חתימה
+3254,silent,דומם שקט
+3255,silently,בשקט
+3256,slant,אלכסון נטייה
+3257,slate,להכניס מישהו לרשימה
+3258,slate,רעף לוח
+3259,slaughter,לטבוח לשחוט ֶטַבח
+3260,slave,עבד
+3261,slavery,עבדות
+3262,slender,רזה
+3263,slope,שיפוע מדרון
+3264,snicker,גיחוך
+3265,soldier,חייל
+3266,solitary,מבודד
+3267,solve,לפתור
+3268,soul,נשמה
+3269,sound,קול
+3270,sound,בריא
+3271,special,מיוחד
+3272,spike,יתד
+3273,splendor,פאר
+3274,spotlight,זרקור
+3275,stage,במה לביים
+3276,starve,לרעוב
+3277,store,חנות לאחסן
+3278,store,לאחסן
+3279,stress,להדגיש
+3280,stress,מתח לחץ מצוקה
+3281,strict,נוקשה
+3282,stubborn,עקשן
+3283,subsequent,עוקב
+3284,supplement,תוסף
+3285,supply,אספקה
+3286,susceptible,רגישות
+3287,suspend,להשעות
+3288,suspense,השהיה מתח
+3289,tact,טקט
+3290,tension,מתח
+3291,testify,להעיד
+3292,texture,מרקם טקסטורה
+3293,tie,עניבה
+3294,tie,לקשור קשר
+3295,timber,עץ
+3296,tomb,קבר
+3297,trait,תכונה
+3298,tranquilize,להרגיע להרדים
+3299,transaction,עסקה
+3300,transcend,להתעלות
+3301,transition,מעבר שינוי
+3302,transparent,שקוף
+3303,transport,הובלה
+3304,transport,להוביל
+3305,transportation,תחבורה
+3306,unconventional,לא שיגרתי
+3307,underestimate,הערכה נמוכה לזלזל
+3308,vacant,פנוי ריק
+3309,veteran,חייל משוחרר יוצא צבא
+3310,veteran,ותיק
+3311,virtue,מעלה
+3312,vital,חיוני
+3313,vivid,חד בהיר ססגוני שופע
+3314,vulnerable,פגיעות
+3315,warn,להזהיר
+3316,warning,אזהרה
+3317,weaken,להחליש
+3318,withdraw,לסגת לפרוש
+3319,witness,עד להעיד
+3320,worry,דאגה לדאוג
+3321,zoo,גן חיות
+3322,abhor,לשנוא לתעב
+3323,adolescence,גיל ההתבגרות
+3324,agency,סוכנות
+3325,apathetic,אדיש
+3326,apathy,אפאתיה אדישות
+3327,appease,לפייס
+3328,appetite,תיאבון רצון עז
+3329,applaud,מחא כפיים הריע
+3330,arable,מתאים לעיבוד
+3331,attorney,עורך דין
+3332,aura,הילה
+3333,awe,יראת כבוד
+3334,awkward,מגושם
+3335,awkward,מוזר מביך
+3336,bail,ערבות לשחרר בערבות
+3337,bald,קרח
+3338,bargain,מציאה עסקה
+3339,bargain,להתמקח
+3340,barn,אסם
+3341,basin,אגן כיור
+3342,beard,זקן
+3343,beast,חיה מפלצת
+3344,beat,מכה להכות
+3345,beat,מקצב
+3346,behind,ישבן
+3347,"biblical ""","תנ""כי"
+3348,bland,תפל
+3349,blink,למצמץ
+3350,bond,קשר
+3351,breed,להרביע להפרות
+3352,breed,מין גזע
+3353,burglar,פורץ
+3354,butcher,קצב
+3355,butcher,לשחוט
+3356,cavity,חור
+3357,celebrate,לחגוג
+3358,charm,קסם
+3359,cheat,לרמות לבגוד
+3360,clash,התנגשות
+3361,cliff,צוק
+3362,cloak,מסווה להסוות
+3363,coma,תרדמת
+3364,comic,קומי (מהמילה קומדיה)
+3365,cosmopolitan,אוניברסלי
+3366,cough,שיעול להשתעל
+3367,course,קורס
+3368,course,מנה
+3369,course,מסלול
+3370,cousin,בן דוד
+3371,cripple,להטיל מום
+3372,croak,קרקור
+3373,crop,לקצץ
+3374,crop,יבול
+3375,crowd,להצטופף
+3376,crowd,קהל
+3377,curtain,וילון
+3378,dagger,פגיון
+3379,dairy,מחלבה
+3380,dandy,גנדרני
+3381,decorate,לקשט
+3382,decorative,קישוטי דקורטיבי
+3383,deer,איל
+3384,demented,משוגע מטורף
+3385,densely,בצפיפות
+3386,density,צפיפות
+3387,depict,לתאר להציג לשרטט
+3388,derision,לעג
+3389,detail,פרט לפרט
+3390,detrimental,מזיק
+3391,devastated,הרוס מפורק
+3392,diet,דיאטה תזונה
+3393,dim,לעמעמם
+3394,disarmament,פירוק מנשק
+3395,discord,סכסוך מחלוקת צרימה
+3396,disgust,גועל להגעיל
+3397,dissect,לנתח לבתר
+3398,dissection,חיתוך ביתור
+3399,disuse,חוסר שימוש
+3400,dose,מנה מינון
+3401,double standard,מוסר כפול
+3402,draft,גיוס
+3403,draft,טיוטה
+3404,draft,משיכה
+3405,draft,רוח פרצים
+3406,drag,לגרור
+3407,dread,פחד לפחד
+3408,drench,להרטיב להספיג
+3409,drip,לטפטף
+3410,dull,סתום
+3411,dull,עמום
+3412,dull,משעמם
+3413,dump,לשפוך
+3414,dwell,להתגורר
+3415,dwelling,משכן בית
+3416,dye,צבע לצבוע
+3417,East,מזרח
+3418,eccentric,מוזר אקסצנטרי
+3419,ecological,אקולוגי
+3420,elastic,גמיש אלסטי גומיה
+3421,elderly,זקן
+3422,embalm,לחנוט לשמר
+3423,embarrass,להביך
+3424,embitter,גורם התמרמרות
+3425,emit,לפלוט להוציא
+3426,empathy,הזדהות אמפתיה
+3427,emphasize,להדגיש
+3428,enchant,לכשף להקסים
+3429,encroach,להסיג גבול לפלוש
+3430,engine,מנוע
+3431,engineer,מהנדס להנדס
+3432,enrich,להעשיר
+3433,enroll,להירשם
+3434,ensue,נבע
+3435,enthusiasm,התלהבות
+3436,envious,קנאי
+3437,envy,קנאה לקנא
+3438,epitomize,לייצג לאפיין
+3439,erosion,סחף כרסום
+3440,erroneous,שגוי
+3441,evocative,מעורר מעלה מזכיר
+3442,exhale,לנשוף
+3443,exhibit,להציג מוצג
+3444,exhibition,תערוכה
+3445,exile,להגלות לגרש
+3446,expand,להרחיב
+3447,expansion,התפתחות
+3448,expatriate,להגלות לגרש
+3449,expel,להשעות להרחיק
+3450,explode,להתפוצץ
+3451,extortion,סחיטה
+3452,extraordinary,בלתי רגיל
+3453,extrapolate,לאמוד על סמך מידע קיים
+3454,faint,קלוש
+3455,faint,להתעלף
+3456,famine,רעב קשה
+3457,famous,מפורסם
+3458,fatigue,לעייף
+3459,fatigue,עייפות תשישות
+3460,fault,אשמה
+3461,fault,פגם תקלה
+3462,faulty,לקוי לא תקין
+3463,fever,חום (של מחלה)
+3464,flavor,לתבל
+3465,flavor,טעם
+3466,flee fled,להימלט נמלט
+3467,flip,להפוך צד
+3468,flip,סלטה
+3469,flip,לזרוק להעיף
+3470,flow,זרם
+3471,focus,להתמקד מיקוד
+3472,forgettable,שאפשר לשכוח אותו
+3473,foster,אומן מאומץ
+3474,fraction,שבר
+3475,fracture,שבר
+3476,fraud,מרמה הונאה
+3477,frequency,תדר תדירות
+3478,frequent,תדיר שכיח
+3479,frightening,מפחיד
+3480,fringes,שוליים
+3481,frugal,חסכני
+3482,frustration,תסכול
+3483,fuel,דלק
+3484,fume,אדים עשן
+3485,fungus,פטרת
+3486,fur,פרווה
+3487,fury,זעם
+3488,gamble,הימר
+3489,gene,גן (תורשתי)
+3490,genesis,ספר בראשית
+3491,genesis,היווצרות התהוות
+3492,genetic,תורשתי גנטי
+3493,genial,ידידותי
+3494,glance,מבט חטוף
+3495,glitch,תקלה הפרעה
+3496,glorify,להאדיר
+3497,grace,חסד חינניות
+3498,gracious,חינני אדיב
+3499,grain,גרעין לטחון
+3500,grain,תבואה
+3501,hike,הליכה טיול
+3502,hobby,תחביב
+3503,humiliate,להשפיל
+3504,humility,ענוה
+3505,ice cream,גלידה
+3506,iceberg,קרחון
+3507,icicle,נטיף קרח
+3508,indigenous,ילידים מולד
+3509,inflammation,דלקת
+3510,inflate,לנפח
+3511,infraction,עבירה
+3512,ingest,להכניס משהו לגוף דרך הפה
+3513,ingredients,מרכיבים
+3514,injure,לפצוע
+3515,insect,חרק
+3516,installation,התקנה
+3517,instant,בהרף עין
+3518,instant,מיידי
+3519,instill,להחדיר להשריש
+3520,insulate,לבודד
+3521,insurrection,התקוממות
+3522,intact,ללא פגע
+3523,intermediary,מתווך אמצעי
+3524,interminable,נצחי
+3525,intimidate,להפחיד
+3526,intrusive,פולשני
+3527,invariably,ללא שינוי
+3528,ironic,אירוני
+3529,jagged,משונן
+3530,journey,מסע
+3531,joyous,שמח עליז
+3532,keep,לשמור
+3533,keep,חלק מהמצודה
+3534,kick,לבעוט בעיטה
+3535,knees,ברכיים
+3536,knot,קשר
+3537,lamentable,מצער מעציב
+3538,laugh,לצחוק
+3539,lend,להלוות להשאיל
+3540,liberal,ליברלי מתירני
+3541,library,ספריה
+3542,limb,קצה
+3543,limb,גף איבר
+3544,limber,גמיש
+3545,lineage,ייחוס שושלת
+3546,linger,להתעכב להשתהות
+3547,link,קישור לקשר חוליה
+3548,lodge,להתאכסן אכסנייה
+3549,log,בול עץ
+3550,log,יומן לתעד ביומן
+3551,lone,בודד יחיד
+3552,loneliness,בדידות
+3553,lumber,גזע עץ
+3554,maximize,למקסם
+3555,maze,מבוך
+3556,mechanize,למכן להתקין מכונות
+3557,media,מדיה תקשורת
+3558,Mediterranean,ים תיכוני
+3559,memorial,מצבה תזכיר
+3560,memorize,לשנן לזכור בעל פה
+3561,memory,זיכרון לזכר
+3562,mental,נפשי
+3563,mention,להזכיר לאזכר
+3564,mentor,מדריך רוחני
+3565,mercy,רחמים
+3566,midair,באוויר
+3567,minimize,למזער
+3568,mirror,מראה
+3569,misbehave,להתנהג בצורה לא הולמת
+3570,mischief,נזק מעשה קונדס
+3571,miss,להתגעגע
+3572,miss,לפספס
+3573,misty,מעורפל
+3574,mix,לערבב ערבוב
+3575,monitor,להשגיח מוניטור
+3576,monument,אנדרטה
+3577,motif,מוטיב
+3578,mountain,הר
+3579,mountainside,מדרון
+3580,mountaintop,פסגת הר
+3581,mourning,אבל מתאבל
+3582,narration,קריינות
+3583,naval,ימי
+3584,neck,צוואר
+3585,nest,קן לקונן
+3586,norm,נורמה תקן
+3587,North,צפון
+3588,nose,אף חרטום
+3589,nowadays,כיום
+3590,numb,רדום חסר תחושה
+3591,obsession,אובססיה דיבוק
+3592,odor,ריח ניחוח
+3593,old-fashioned,מיושן
+3594,outweigh,עולה על שוקל יותר מ
+3595,owe,להיות חייב
+3596,oxygen,חמצן
+3597,palm,כף יד
+3598,palm,דקל
+3599,pardon,סליחה לסלוח
+3600,pardon,לחון חנינה
+3601,peek,להציץ
+3602,petty,קטן חסר חשיבות
+3603,petty,קטנוני
+3604,phobia,פוביה פחד כרוני
+3605,pivot,ציר לסובב על ציר
+3606,plate,צלחת לוח
+3607,plead,לעתור להתחנן
+3608,pleasure,תענוג לענג
+3609,pledge,להתחייב
+3610,plight,צרה סכנה
+3611,plunge,טבילה
+3612,poignant,חריף נוקב
+3613,poisonous,רעיל
+3614,polish,פולני
+3615,polish,להבריק לצחצח
+3616,polite,מנומס
+3617,portray,לתאר לצייר
+3618,precious,יקר
+3619,predominantly,באופן ניכר
+3620,prey,טרף לטרוף
+3621,prize,פרס
+3622,probe,לחטט לברר לגשש
+3623,proverb,פתגם אמרה
+3624,pupil,תלמיד
+3625,purchase,לקנות לרכוש
+3626,puzzle,חידה פאזל
+3627,puzzled,מבולבל
+3628,quake,רעד
+3629,quench,לספק להרוות
+3630,rage,זעם
+3631,raid,פשיטה
+3632,reap,לקצור
+3633,rebel,מורד
+3634,rebellion,מרד
+3635,rebellious,סורר מרדני
+3636,recipe,מתכון
+3637,recipient,נמען
+3638,reciprocal,מספר הופכי (במתמטיקה)
+3639,reciprocate,הדדי
+3640,recreation,בילוי
+3641,refund,החזר
+3642,regret,להתחרט חרטה
+3643,regulate,לווסת
+3644,rehabilitation,שיקום
+3645,relegated,הורד בדרגה
+3646,resort,אתר נופש
+3647,resort,לנקוט באמצעים
+3648,revitalize,להחיות
+3649,revived,קם לתחייה התחדש
+3650,revolt,מרד
+3651,revolution,מהפכה
+3652,rhythm,ֶקֶצב
+3653,root,שורש
+3654,rotary,נע על ציר סיבובי
+3655,rubber,גומי
+3656,sailor,ימאי
+3657,salvation,ישועה גאולה
+3658,saturated,רווי
+3659,scale,סולם סקלה
+3660,scale,לעלות לטפס
+3661,scale,מאזניים
+3662,scales,קשקשים (של דג)
+3663,scan,סריקה לסרוק
+3664,scorn,לבוז לזלזל מנודה
+3665,scrutinize,בדק בחן
+3666,sculpture,פסל
+3667,sedative,סם הרגעה משכך
+3668,segregation,הפרדה
+3669,seizure,התקף
+3670,separately,בנפרד
+3671,separation,הפרדה
+3672,shrink,לכווץ  כיווץ
+3673,shroud,תכריך עטיפה
+3674,sin,חטא
+3675,sincerity,כנות
+3676,situation,מצב סיטואציה
+3677,slaughterhouse,בית מטבחיים
+3678,sober,פיכח
+3679,solely,בלבד רק
+3680,sperm,זרע
+3681,spewing,להזרים
+3682,spice,תבלין לתבל
+3683,spicy,פיקנטי
+3684,spray,לרסס לפזר
+3685,stain,כתם
+3686,stamp,בול חותמת
+3687,step,צעד לצעוד
+3688,storm,סערה
+3689,straighten,ליישר
+3690,study,מחקר
+3691,study,חדר עבודה
+3692,stunned,נדהם היה המום
+3693,substance,חומר תוכן
+3694,suggest,להציע
+3695,suicide,התאבדות
+3696,summits,פסגות
+3697,surgery,ניתוח
+3698,surpass,להצטיין לעלות על
+3699,surrender,להיכנע
+3700,surveillance,מעקב
+3701,survival,הישרדות
+3702,swallow,לבלוע
+3703,sweep,לטאטא
+3704,symmetry,סימטריה התאמה
+3705,taint,לזהם
+3706,taint,להכתים להכפיש
+3707,tainted,מוכתם מזוהם
+3708,talent,כשרון
+3709,tame,לאלף לבית
+3710,tentative,ניסיוני טנטטיבי
+3711,thief,גנב
+3712,thriller,מותחן
+3713,tone,טון
+3714,transcript,תמליל פרוטוקול
+3715,trip,למעוד
+3716,trip,טיול
+3717,unofficial,בלתי רשמי
+3718,unorganized,לא מאורגן
+3719,unpardonable,בלתי נסלח
+3720,unrealistic,לא מציאותי
+3721,unrest,חוסר שקט
+3722,unwilling,לא מוכן ממאן
+3723,upheaval,מהפך
+3724,uproar,רעש מהומה
+3725,urine,שתן
+3726,utilize,השתמש
+3727,utter,לבטא להגות
+3728,valley,עמק
+3729,valve,שסתום
+3730,verbal,ורבלי מילולי
+3731,via,דרך
+3732,victim,קורבן
+3733,vocabulary,אוצר מילים
+3734,vocation,מקצוע
+3735,wagon,עגלה
+3736,wander,להסתובב לשוטט
+3737,West,מערב
+3738,wine,יין
+3739,wonder,פלא
+3740,wonder,לתהות להטיל ספק
+3741,wonderful,נפלא
+3742,wood,עץ
+3743,woods,יער
+3744,wound,פצע
+3745,wound,מתוח נמתח
+3746,wrap,לעטוף מעטפת
+3747,wrought,מעוצב מחושל
+3748,young,צעיר
+3749,abacus,חשבונייה
+3750,academic,אקדמי
+3751,actress,שחקנית (בהצגה או סרט)
+3752,adorn,לקשט
+3753,agenda,סדר יום
+3754,air conditioner,מזגן
+3755,algae,אצות
+3756,antler,קרן
+3757,automobile,כלי רכב אוטו
+3758,bass,בס (במוזיקה)
+3759,bead,חרוז
+3760,beak,מקור
+3761,bee,דבורה
+3762,bell,פעמון
+3763,berry,גרגרי יער
+3764,blade,להב
+3765,blame,להאשים
+3766,blanket,שמיכה
+3767,bleak,עגום
+3768,blew,נשב (רוח) ניפח פוצץ
+3769,brick,לבנה
+3770,bully,בריון
+3771,butterfly,פרפר
+3772,cadaver,גופה
+3773,camel,גמל
+3774,cancel,לבטל
+3775,candy,ממתק
+3776,canvass,לבדוק לסקור
+3777,carpet,שטיח
+3778,cash,מזומן
+3779,cash,לפדות
+3780,cashier,קופאי
+3781,casino,קזינו
+3782,caterpillar,זחל
+3783,cave,מערה
+3784,caviar,קוויאר
+3785,cereal,דגני בוקר
+3786,cigarette,סיגריה
+3787,citrus,פרי הדר
+3788,clay,חימר
+3789,cloud,ענן
+3790,club,מועדון
+3791,cockroach  ',מקק ג'וק
+3792,coffin,ארון מתים
+3793,cologne,קולון בושם (של גבר)
+3794,compost,זבל אורגני
+3795,conductor,מנצח (תזמורת)
+3796,conquistador,כובש
+3797,consonant,עיצור (לשון)
+3798,coop,לכלוא
+3799,coop,לול
+3800,copper,נחושת
+3801,cotton,כותנה
+3802,cougar,פומה סוג של טורף
+3803,coupon,קופון
+3804,cucumber,מלפפון
+3805,culminate,הגיע לשיא
+3806,czar,צאר (שליט רוסי)
+3807,dart,חץ
+3808,date,תאריך
+3809,date,תמר
+3810,date,יציאה פגישה דייט
+3811,Dead Sea,ים המלח
+3812,denominator,מכנה (של שבר)
+3813,dental,שקשור בשיניים
+3814,dentist,רופא שיניים
+3815,diary,יומן
+3816,dictator,עריץ דיקטטור
+3817,dilemma,דילמה בעיה
+3818,diurnal,יומי
+3819,divorce,גירושין
+3820,doorstep,מפתן הדלת
+3821,dovecote,שובך
+3822,dust,אבק לאבק
+3823,Dutch,הולנדי
+3824,dwarf,לגמד גמד
+3825,dwindle,הידלדל התמעט
+3826,eagle,נשר
+3827,echo,הד
+3828,edible,אכיל
+3829,eel,צלופח
+3830,elephant,פיל
+3831,envelope,מעטפה
+3832,exotic,אקזוטי מארץ זרה
+3833,explosive,חומר נפץ
+3834,fairy,פיה
+3835,fairytale,אגדה
+3836,fan,מאוורר לאוורר
+3837,fan,מעריץ אוהד
+3838,fancy,מגונדר
+3839,fancy,מחבב
+3840,fashion,אופנה
+3841,fashion,לעצב
+3842,filmmaker,יוצר סרטים
+3843,filter,פילטר מסנן
+3844,fisherman,דייג
+3845,fishing,דיג
+3846,flimsy,עדין שביר
+3847,folk,עממי
+3848,folklore,פולקלור
+3849,fool,טיפש לשטות במישהו
+3850,footage,קטע צילום
+3851,forest,יער
+3852,forgive,לסלוח
+3853,fork,מזלג
+3854,formula,נוסחה פורמולה
+3855,formulate,לנסח
+3856,fraternal,אחוותי של אחים
+3857,frog,צפרדע
+3858,furnish,לרהט
+3859,garbage,זבל
+3860,garden,גן
+3861,garlic,שום
+3862,gate,שער
+3863,gift,מתנה
+3864,glacier,קרחון
+3865,gland,בלוטה
+3866,glass,כוס
+3867,glass,זכוכית
+3868,glaze,זיגוג
+3869,glove,כפפה
+3870,golden,מוזהב
+3871,grammatical,דקדוקי
+3872,grapes,ענבים
+3873,grit,גרגרים לכלוך
+3874,grocery,מכולת
+3875,groom,לטפח לטפל
+3876,groom,חתן
+3877,guillotine,גיליוטינה
+3878,Gulf War,מלחמת המפרץ
+3879,gym,אולם ספורט
+3880,gymnasium,אולם ספורט
+3881,handicap,נכה
+3882,harmony,הרמוניה
+3883,heart,לב
+3884,heartbeat,דופק פעימות לב
+3885,heroine,גיבורה
+3886,hilarious,מצחיק
+3887,hill,גבעה
+3888,horn,"קרן (של בע""ח)"
+3889,horn,צופר
+3890,housemaid,עוזרת בית מנקה
+3891,howl,יללה לילל
+3892,index,אינדקס תוכן עניינים
+3893,inexpensive,לא יקר זול
+3894,inn,פונדק
+3895,intense,עז אינטנסיבי
+3896,intoxicate,להרעיל לשכר
+3897,intoxicate,להלהיב
+3898,intuition,אינטואיציה
+3899,invertebrate,חסר חוליות
+3900,ivory,שנהב
+3901,janitor,שרת
+3902,jog  ',ריצה ג'וגינג לרוץ
+3903,joke,בדיחה
+3904,jug,כד קנקן
+3905,juice,מיץ
+3906,jungle ',ג'ונגל
+3907,junkyard,מגרש גרוטאות
+3908,kettle,קומקום
+3909,kite,עפיפון
+3910,lake,אגם
+3911,lame,צולע
+3912,launder,לכבס
+3913,leaf (leaves),עלה (עלים)
+3914,league,ליגה
+3915,league,מידת אורך קדומה
+3916,leniency,חמלה רחמים
+3917,leopard,נמר
+3918,lifestyle,אורח חיים
+3919,lip,שפה
+3920,liver,כבד
+3921,loan,הלוואה
+3922,loathe,לתעב
+3923,loyalty,נאמנות
+3924,luck,מזל
+3925,lunch,ארוחת צהריים
+3926,made,עשה
+3927,magical,קסום
+3928,magnificent,מדהים
+3929,make sure,להבטיח לוודא
+3930,makeup,איפור
+3931,marble,גּוָּלה
+3932,marble,שיש
+3933,marsupial,חיית כיס
+3934,mathematician,מתמטיקאי
+3935,miracle,נס פלא
+3936,mock,ללעוג
+3937,monk,נזיר
+3938,monkey,קוף
+3939,monster,מפלצת
+3940,mood,מצב רוח
+3941,mosquito,יתוש
+3942,moth,עש
+3943,mouse (mice),עכבר (עכברים)
+3944,mouth,פה
+3945,nausea,בחילה
+3946,nickname,כינוי חיבה
+3947,no longer,לא עוד
+3948,numerator,מונה (של שבר)
+3949,numeric,מספרי
+3950,nut,אגוז
+3951,octopus,תמנון
+3952,ode,שיר הלל
+3953,olive,זית
+3954,onion,בצל
+3955,orchestra,תזמורת
+3956,orchestrate,לתאם לתזמר
+3957,oven,תנור בישול
+3958,overhaul,שיפוץ אוברול
+3959,pad,לרפד
+3960,paddle,מחבט
+3961,paddle,משוט דוושה
+3962,pan,מחבת
+3963,paradox,סתירה פרדוקס
+3964,pathology,פתולוגיה ענף ברפואה
+3965,peach,אפרסק
+3966,pepper,פלפל
+3967,perch,ענף
+3968,perch,נח ישב על ענף
+3969,pet,חיית מחמד
+3970,pharmacy,בית מרקחת
+3971,philosophy,פילוסופיה
+3972,photograph,צילום לצלם
+3973,physical,פיזי גופני
+3974,physicist,פיזיקאי
+3975,pick,מפרט לגיטרה
+3976,pick,לקטוף לבחור
+3977,pigeon,יונה
+3978,pinch,לצבוט
+3979,pit,בור
+3980,plaster,טיח
+3981,pool,בריכה
+3982,pothole,מהמורה בור
+3983,pottery,קדרות
+3984,poultry,עוף
+3985,prank,מתיחה
+3986,pregnancy,הריון
+3987,pregnant,הרה (בהריון)
+3988,prehistoric,קדמון פרה היסטורי
+3989,preparation for,הכנות לקראת
+3990,presentation,מצגת
+3991,prick,לדקור
+3992,printer,מדפסת ַּדָּפס
+3993,propaganda,תעמולה
+3994,prowess,מיומנות יכולת
+3995,purse,ארנק
+3996,quarrelsome,וכחני
+3997,rain,גשם
+3998,rainbow,קשת
+3999,rainfall,ירידת גשמים
+4000,rainstorm,סערת גשמים
+4001,rat,עכברוש
+4002,redhead,ג'ינג'י (סלנג)
+4003,rehearsal,חזרה
+4004,rehearse,לחזור לתרגל
+4005,reincarnation,גלגול נשמות
+4006,restaurant,מסעדה
+4007,resurgence,תחייה
+4008,retroactive,רטרואקטיבי למפרע
+4009,rhyme,חרוז
+4010,rice,אורז
+4011,ride,רכיבה לרכוב
+4012,ring,זירה
+4013,ring,טבעת
+4014,ring rang,לצלצל צלצל
+4015,roast,לקלות צלי
+4016,robbery,שוד
+4017,robe,חלוק
+4018,roof,גג
+4019,rubbish,זבל
+4020,rubbish,שטויות
+4021,run ran,לרוץ רץ
+4022,saga,סיפור סאגה
+4023,salt,מלח
+4024,sarcophagus,ארון קבורה קדום
+4025,savanna,ערבה סוואנה
+4026,script,תסריט
+4027,seafood,פירות ים
+4028,seat,מושב להושיב
+4029,secret,סוד
+4030,sentiments,רגשות
+4031,shadow,צל להאפיל
+4032,shave,גילוח לגלח
+4033,shelf (shelves),מדף (מדפים)
+4034,shepherd,רועה צאן
+4035,shingles,רעף
+4036,shop,חנות
+4037,shop,לקנות
+4038,shoulder,כתף
+4039,show,הופעה
+4040,show,להראות
+4041,shy,ביישן
+4042,silk,משי
+4043,silkworm,תולעת משי
+4044,singer,זמר
+4045,sir,אדון תואר אצולה אנגלי
+4046,sky,שמיים רקיע
+4047,smog,ערפיח
+4048,smoke,עשן לעשן
+4049,snake,נחש
+4050,snap,במהירות (סלנג)
+4051,snap,להישבר
+4052,snarl,לרטון לנחור
+4053,sneeze,להתעטש
+4054,snow,שלג
+4055,soccer,כדורגל
+4056,sold,מכר
+4057,South,דרום
+4058,southern,דרומי
+4059,speck,כתם
+4060,spider,עכביש
+4061,spinach,תרד
+4062,sponsor,נותן חסות
+4063,spontaneous,ללא מחשבה
+4064,spread,התפשטות פיזור
+4065,spread,ממרח למרוח
+4066,spy,מרגל לרגל
+4067,staircase,גרם מדרגות
+4068,stalk,לעקוב להטריד
+4069,star,כוכב לככב
+4070,staunch,לעצור לחסום
+4071,staunch,חזק מוצק
+4072,steal,לגנוב
+4073,stereotype,סטריאוטיפ
+4074,sticky,דביק
+4075,stove,תנור כיריים
+4076,stroke,מכה
+4077,stroke,ליטוף
+4078,stroke,שבץ/אירוע מוחי
+4079,studio,סטודיו
+4080,stuff,דברים
+4081,stuff,למלא לפחלץ
+4082,stunt,פעלול
+4083,stupid,טיפש
+4084,subtraction,חיסור (חשבון)
+4085,sugar,סוכר
+4086,sweet,מתוק ממתק
+4087,swept away,נסחף
+4088,swindler,רמאי
+4089,sword,חרב
+4090,syllable,הברה
+4091,syndrome,תסמונת
+4092,syrup,סירופ
+4093,tale,סיפור אגדה
+4094,taste,טעם לטעום
+4095,tax,מס
+4096,teeth tooth,שיניים שן
+4097,tent,אוהל
+4098,thank,תודה להודות
+4099,theater,תיאטרון
+4100,theater,בית קולנוע
+4101,theoretically,תיאורטית לכאורה
+4102,theory,תיאוריה
+4103,thimble,אצבעון (לתפירה)
+4104,through,דרך מבעד
+4105,throughout,במשך בכל
+4106,throw,לזרוק זריקה
+4107,ticket,כרטיס
+4108,timeline,ציר זמן
+4109,tin,בדיל עשוי מפח
+4110,tiny,קטנטן
+4111,toad,קרפדה
+4112,toes,בהונות
+4113,tongue,לשון
+4114,treasure,אוצר לנצור
+4115,treat,להתייחס
+4116,treat,פינוק ממתק
+4117,treat,לפנק
+4118,treatment,טיפול
+4119,treaty,אמנה הסכם חוזה
+4120,trigger,הדק
+4121,triggered,גרם עורר הוביל ל
+4122,trim,לגזום
+4123,triple  3,פי 3
+4124,truck,משאית קרון משא
+4125,tutor,מורה פרטי להדריך
+4126,twig,ענף קטן זרד
+4127,twins,תאומים
+4128,ugly,מכוער
+4129,unattractive,לא מושך
+4130,uncle,דוד
+4131,unconcerned,לא מודאג
+4132,uncritical,לא ביקורתי
+4133,unearth,לחשוף לחפור
+4134,unfair,לא הוגן
+4135,unholy,לא קדוש לא מוסרי
+4136,unwanted,לא רצוי
+4137,upbringing,גידול חינוך
+4138,upholstery,ריפוד
+4139,usher,סדרן
+4140,using up,לכלות לנצל עד תום
+4141,vacation,חופשה
+4142,vertebrate,בעל חוליות
+4143,vest,אפודה
+4144,victory,ניצחון
+4145,villain,רשע נבל
+4146,vinegar,חומץ
+4147,viper,צפע
+4148,vociferous,רעשני
+4149,vowel,תנועה (לשון)
+4150,wall,קיר
+4151,wart,יבלת
+4152,wasp,צרעה
+4153,waterfall,מפל
+4154,wave,גל
+4155,weapon,נשק
+4156,wear,ללבוש
+4157,weave,לטוות לארוג
+4158,wedding,חתונה
+4159,weekend,סוף שבוע
+4160,well,באר
+4161,well,טוב היטב
+4162,well,בריא
+4163,whale,לוויתן
+4164,whistle,משרוקית לשרוק
+4165,wholesale,סיטונאות
+4166,wife,אישה רעיה
+4167,win,ניצחון לנצח
+4168,wolf (wolves),זאב (זאבים)
+4169,work,עבודה לעבוד
+4170,worm,תולעת
+4171,writer,סופר
+4172,yawn,לפהק פיהוק
+4173,zealot,קנאי פנט
