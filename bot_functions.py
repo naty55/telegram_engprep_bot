@@ -89,7 +89,7 @@ def button_map_handler(person: Person, update: Update, context: CallbackContext)
     if answer.startswith('gender_'):
         person.gender = answer.split('_')[1]
         person.interval_to_get_age_is_open = True
-        context.bot.send_message(text="How old are you ? ", chat_id=person_id)
+        context.bot.send_message(text="How old are you ? ", chat_id=person.id)
 
     elif answer.startswith('next') or answer.startswith('finish'):
         try:
@@ -133,6 +133,7 @@ def quiz_handler(person: Person,update: Update, context: CallbackContext):
             person.failed -= 1
         else:
             pass
+
 
 @update_handler_wrapper
 def age_handler(person: Person,update: Update, context: CallbackContext):
