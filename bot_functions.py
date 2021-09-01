@@ -28,39 +28,55 @@ choose_lang_button = InlineKeyboardMarkup(lang_kb)
 sessions = SessionsDict(lambda: False)
 
 
-def start_handler(update: Update, context: CallbackContext):
-    person, person_id = start_session(update.effective_user.id, update.effective_user.name)
+def basic_handler_wrapper(func):
+    def wrapper(update, context):
+        person, person_id = start_session(update.effective_user.id, update.effective_user.name)
+        context.bot.send_chat_action(chat_id=person.id, action=ChatAction.TYPING)
+        func(person, context)
 
-    context.bot.send_chat_action(chat_id=person.id, action=ChatAction.TYPING)
+    return wrapper
+
+
+def update_handler_wrapper(func):
+    def wrapper(update, context):
+        person, person_id = start_session(update.effective_user.id, update.effective_user.name)
+        context.bot.send_chat_action(chat_id=person.id, action=ChatAction.TYPING)
+        func(person, update, context)
+    return wrapper
+
+
+@basic_handler_wrapper
+def start_handler(person: Person, context: CallbackContext):
     if not person.is_known:
-        context.bot.send_message(chat_id=person_id, text="Welcome " + person.name +
+        context.bot.send_message(chat_id=person.id, text="Welcome " + person.name +
                                                          "\nUse /register command to register\n"
                                                          "Use /menu to get all options of this bot")
     else:
-        context.bot.send_message(chat_id=person_id, text="Welcome back " + person.name + "\n"
-                                                                                         "Use /menu to get all options "
-                                                                                         "of this bot")
+        context.bot.send_message(chat_id=person.id,
+                                 text="Welcome back " + person.name + "\n"
+                                                                      "Use /menu to get all options "
+                                                                      "of this bot")
 
 
-def menu_handler(update: Update, context: CallbackContext):
-    person, person_id = start_session(update.effective_user.id, update.effective_user.name)
+@basic_handler_wrapper
+def menu_handler(person: Person, context: CallbackContext):
     text = "/start start conversion with the bot\n" \
            "/menu get all options of this bot\n" \
            "/register register in order to use the bot\n" \
            "/quiz_me quiz yourself (15 questions)"
-    context.bot.send_message(chat_id=person_id, text=text)
+    context.bot.send_message(chat_id=person.id, text=text)
 
 
-def register_handler(update: Update, context: CallbackContext):
-    person, person_id = start_session(update.effective_user.id, update.effective_user.name)
+@basic_handler_wrapper
+def register_handler(person: Person, context: CallbackContext):
     if person.is_known:
-        context.bot.send_message(text="you are already registered", chat_id=person_id)
+        context.bot.send_message(text="you are already registered", chat_id=person.id)
     else:
         context.bot.send_message(reply_markup=gender_markup, chat_id=person.id, text="What's your gender")
 
 
-def button_map_handler(update: Update, context: CallbackContext):
-    person, person_id = start_session(update.effective_user.id, update.effective_user.name)
+@update_handler_wrapper
+def button_map_handler(person: Person, update: Update, context: CallbackContext):
     update.callback_query.answer()
     query = update.callback_query
     answer = query.data
@@ -92,22 +108,21 @@ def button_map_handler(update: Update, context: CallbackContext):
 
         bot_logger.info("%s started quiz id: %s", person.name, person.id)
 
-
-def quiz_me_handler(update: Update, context: CallbackContext):
-    person, person_id = start_session(update.effective_user.id, update.effective_user.name)
+@basic_handler_wrapper
+def quiz_me_handler(person: Person, context: CallbackContext):
     if not person.is_known:
-        context.bot.send_message(chat_id=person_id, text="please use /register to register first")
+        context.bot.send_message(chat_id=person.id, text="please use /register to register first")
     else:
         if person.is_on_quiz:
             # To be decided
             # context.bot.send_message(chat_id=person.id, reply_markup=next_button,
             #                          text="You have to finish you quiz first")
             return
-        context.bot.send_message(chat_id=person_id, reply_markup=choose_lang_button, text="Choose option: ")
+        context.bot.send_message(chat_id=person.id, reply_markup=choose_lang_button, text="Choose option: ")
 
 
-def quiz_handler(update: Update, context: CallbackContext):
-    person, person_id = start_session(update.effective_user.id, update.effective_user.name)
+@update_handler_wrapper
+def quiz_handler(person: Person,update: Update, context: CallbackContext):
     user_answer = update.poll_answer.option_ids[0]
     try:
         poll_correct_answer = context.bot_data.pop(update.poll_answer.poll_id)
@@ -119,15 +134,14 @@ def quiz_handler(update: Update, context: CallbackContext):
         else:
             pass
 
-
-def age_handler(update: Update, context: CallbackContext):
-    person, person_id = start_session(update.effective_user.id, update.effective_user.name)
+@update_handler_wrapper
+def age_handler(person: Person,update: Update, context: CallbackContext):
     if person.interval_to_get_age_is_open:
         person.age = int(update.message.text)
         person.interval_to_get_age_is_open = False  # Close Interval the bot now will no longer get text messages
         person.save_person_data()  # DONE
         context.bot.send_message(text="Registration Completed\nUse /menu to see what this bot can do",
-                                 chat_id=person_id)
+                                 chat_id=person.id)
 
         bot_logger.info("%s registered id: %s", person.name, person.id)
 
@@ -153,7 +167,7 @@ def quiz_person(person: Person, context: CallbackContext):
 
 def finish_quiz(person: Person, context: CallbackContext):
     person.init_quiz()
-    success_percentage = round((15 - person.failed)/ 15 , 2) * 100
+    success_percentage = round((15 - person.failed) / 15, 2) * 100
     context.bot.send_message(chat_id=person.id, text=f"Your score is {success_percentage}")
     bot_logger.info("%s finished quiz with score %s id: %s", person.name, str(success_percentage), person.id)
 
