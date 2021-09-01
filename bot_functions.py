@@ -2,16 +2,14 @@ from telegram import (Update,
                       InlineKeyboardButton,
                       InlineKeyboardMarkup,
                       Poll,
-                      ChatAction
                       )
 from telegram.ext import CallbackContext
 from telegram.error import BadRequest
-from apis import dict_api, db_api, bot_logger
+from apis import dict_api, db_api, bot_logger, sessions, message_logger
 from Person import Person
-from SessionsDict import SessionsDict
+from bot_decorators import basic_handler_wrapper, update_handler_wrapper, registered_only, update_registered_only
 from threading import Thread
 from time import sleep, time
-from functools import wraps
 
 # CONSTANTS
 gender_kb = ([InlineKeyboardButton('Male', callback_data='gender_male')],
@@ -25,42 +23,6 @@ lang_kb = ((InlineKeyboardButton('Quiz on English words', callback_data='lang_en
 next_button = InlineKeyboardMarkup(next_kb)
 gender_markup = InlineKeyboardMarkup(gender_kb)
 choose_lang_button = InlineKeyboardMarkup(lang_kb)
-
-default_not_known_message = "You are not registered please use /register to register first"
-#
-sessions = SessionsDict(lambda: False)
-
-
-def basic_handler_wrapper(func):
-    @wraps(func)
-    def wrapper(update, context):
-        person, person_id = start_session(update.effective_user.id, update.effective_user.name)
-        context.bot.send_chat_action(chat_id=person.id, action=ChatAction.TYPING)
-        func(person, context)
-
-    return wrapper
-
-
-def update_handler_wrapper(func):
-    @wraps(func)
-    def wrapper(update, context):
-        person, person_id = start_session(update.effective_user.id, update.effective_user.name)
-        context.bot.send_chat_action(chat_id=person.id, action=ChatAction.TYPING)
-        func(person, update, context)
-    return wrapper
-
-
-def registered_only(not_known_message=default_not_known_message):
-    def decorator(func):
-        @wraps(func)
-        def wrapper(person, context):
-            if person.is_known:
-                func(person, context)
-            else:
-                context.bot.send_message(chat_id=person.id,
-                                         text=not_known_message)
-        return wrapper
-    return decorator
 
 
 @basic_handler_wrapper
@@ -78,10 +40,13 @@ def start_handler(person: Person, context: CallbackContext):
 
 @basic_handler_wrapper
 def menu_handler(person: Person, context: CallbackContext):
-    text = "/start start conversion with the bot\n" \
-           "/menu get all options of this bot\n" \
-           "/register register in order to use the bot\n" \
-           "/quiz_me quiz yourself (15 questions)"
+    text = ("/start start conversion with the bot\n"
+            "/menu get all options of this bot\n"
+            "/register register in order to use the bot\n"
+            "/quiz_me quiz yourself (15 questions)\n"
+            "/quiz_me_en quiz yourself on English words\n"
+            "/quiz_me_he quiz yourself on Hebrew words\n"
+            "/contact send message to the developer")
     context.bot.send_message(chat_id=person.id, text=text)
 
 
@@ -91,6 +56,14 @@ def register_handler(person: Person, context: CallbackContext):
         context.bot.send_message(text="you are already registered", chat_id=person.id)
     else:
         context.bot.send_message(reply_markup=gender_markup, chat_id=person.id, text="What's your gender")
+
+
+@update_handler_wrapper
+@update_registered_only()
+def contact_handler(person: Person, update: Update, context: CallbackContext):
+    message = update.message.text[8:].strip()
+    message_logger.info("message form %s  id: %d : %s", person.name, person.id, message)
+    context.bot.send_message(chat_id=person.id, text="Thanks for your message")
 
 
 @update_handler_wrapper
@@ -120,6 +93,8 @@ def button_map_handler(person: Person, update: Update, context: CallbackContext)
             else:
                 finish_quiz(person, context)
     elif answer.startswith('lang'):
+        if person.is_on_quiz:
+            return
         on_heb_words = True if 'he' in answer else False
         person.start_quiz(on_heb_words)
         quiz_person(person, context)
@@ -141,6 +116,8 @@ def quiz_me_handler(person: Person, context: CallbackContext):
 @basic_handler_wrapper
 @registered_only()
 def quiz_me_en_handler(person: Person, context: CallbackContext):
+    if person.is_on_quiz:
+        return
     person.start_quiz(False)
     quiz_person(person, context)
     bot_logger.info("%s started quiz id: %s", person.name, person.id)
@@ -149,13 +126,16 @@ def quiz_me_en_handler(person: Person, context: CallbackContext):
 @basic_handler_wrapper
 @registered_only()
 def quiz_me_he_handler(person: Person, context: CallbackContext):
+    if person.is_on_quiz:
+        return
     person.start_quiz(True)
     quiz_person(person, context)
     bot_logger.info("%s started quiz id: %s", person.name, person.id)
 
 
 @update_handler_wrapper
-def quiz_handler(person: Person,update: Update, context: CallbackContext):
+@update_registered_only()
+def quiz_handler(person: Person, update: Update, context: CallbackContext):
     user_answer = update.poll_answer.option_ids[0]
     try:
         poll_correct_answer = context.bot_data.pop(update.poll_answer.poll_id)
@@ -169,7 +149,7 @@ def quiz_handler(person: Person,update: Update, context: CallbackContext):
 
 
 @update_handler_wrapper
-def age_handler(person: Person,update: Update, context: CallbackContext):
+def age_handler(person: Person, update: Update, context: CallbackContext):
     if person.interval_to_get_age_is_open:
         person.age = int(update.message.text)
         person.interval_to_get_age_is_open = False  # Close Interval the bot now will no longer get text messages
@@ -201,25 +181,9 @@ def quiz_person(person: Person, context: CallbackContext):
 
 def finish_quiz(person: Person, context: CallbackContext):
     person.init_quiz()
-    success_percentage = round((15 - person.failed) / 15, 2) * 100
+    success_percentage = round(((15 - person.failed) / 15) * 100, 2)
     context.bot.send_message(chat_id=person.id, text=f"Your score is {success_percentage}")
     bot_logger.info("%s finished quiz with score %s id: %s", person.name, str(success_percentage), person.id)
-
-
-def start_session(person_id, name):
-    """
-    check if session already exist; if not create new session
-    :param person_id: person's id
-    :param name: person's name
-    :return: None
-    """
-    person = sessions.get(person_id)
-    if not person:
-        person = Person(person_id, name)
-        sessions[person_id] = person
-        bot_logger.info("%s started session with the bot id: %s", person.name, person.id)
-
-    return person, person_id
 
 
 def clean_old_sessions():

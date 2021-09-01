@@ -7,6 +7,7 @@ from bot_functions import (start_handler,
                            quiz_handler,
                            menu_handler,
                            age_handler,
+                           contact_handler,
                            notify_all_users
                            )
 
@@ -21,6 +22,7 @@ dispatcher = updater.dispatcher
 dispatcher.add_handler(CommandHandler('start', start_handler))
 dispatcher.add_handler(CommandHandler('register', register_handler))
 dispatcher.add_handler(CommandHandler('menu', menu_handler))
+dispatcher.add_handler(CommandHandler('contact', contact_handler))
 dispatcher.add_handler(CommandHandler('quiz_me', quiz_me_handler))
 dispatcher.add_handler(CommandHandler('quiz_me_en', quiz_me_en_handler))
 dispatcher.add_handler(CommandHandler('quiz_me_he', quiz_me_he_handler))
