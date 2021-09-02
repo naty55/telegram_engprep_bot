@@ -9,11 +9,11 @@ from Person import Person
 default_not_known_message = "You are not registered please use /register to register first"
 
 
-def basic_handler_wrapper(handler, command=None, regex_filter=None):
+def basic_handler(handler, command=None, regex_filter=None):
     def decorator(func):
         arguments_count = len(signature(func).parameters.keys())
 
-        def wrapper(update, context):
+        def handler_func(update, context):
             person = _start_session(update.effective_user.id, update.effective_user.name)
             context.bot.send_chat_action(chat_id=person.id, action=ChatAction.TYPING)
             if arguments_count == 2:
@@ -23,13 +23,13 @@ def basic_handler_wrapper(handler, command=None, regex_filter=None):
 
         handler_name = handler.__name__
         if handler_name == 'CommandHandler':
-            updater.dispatcher.add_handler(handler(command, wrapper))
+            updater.dispatcher.add_handler(handler(command, handler_func))
         elif handler_name == 'CallbackQueryHandler':
-            updater.dispatcher.add_handler(handler(wrapper))
+            updater.dispatcher.add_handler(handler(handler_func))
         elif handler_name == 'PollAnswerHandler':
-            updater.dispatcher.add_handler(handler(wrapper, pass_user_data=True, pass_chat_data=True))
+            updater.dispatcher.add_handler(handler(handler_func, pass_user_data=True, pass_chat_data=True))
         elif handler_name == 'MessageHandler':
-            updater.dispatcher.add_handler(handler(regex_filter, wrapper))
+            updater.dispatcher.add_handler(handler(regex_filter, handler_func))
 
         return func
     return decorator

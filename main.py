@@ -9,6 +9,5 @@ if len(sys.argv) > 1:
 
 Thread(target=clean_old_sessions).start()
 
-
 updater.start_polling()
 updater.idle()
