@@ -12,7 +12,7 @@ from telegram.ext import (CommandHandler,
                           CallbackContext,
                           )
 
-from apis import dict_api, db_api, bot_logger, sessions, message_logger
+from apis import dict_api, db_api, bot_logger, sessions, message_logger, ram_api
 from Person import Person
 from bot_decorators import basic_handler, registered_only
 from time import sleep, time
@@ -101,14 +101,10 @@ def button_map_handler(person: Person, update: Update, context: CallbackContext)
                 quiz_person(person, context)
             else:
                 finish_quiz(person, context)
-    elif answer.startswith('lang'):
-        if person.is_on_quiz:
-            return
+    elif answer.startswith('lang') and person.is_known:
+        # Making safe person is known - not required but on the safe side
         on_heb_words = True if 'he' in answer else False
-        person.start_quiz(on_heb_words)
-        quiz_person(person, context)
-
-        bot_logger.info("%s started quiz id: %s", person.name, person.id)
+        start_quiz(person, context, on_heb_words)
 
 
 @basic_handler(CommandHandler, command='quiz_me')
@@ -125,21 +121,13 @@ def quiz_me_handler(person: Person, context: CallbackContext):
 @basic_handler(CommandHandler, command='quiz_me_en')
 @registered_only(send_message=False)
 def quiz_me_en_handler(person: Person, context: CallbackContext):
-    if person.is_on_quiz:
-        return
-    person.start_quiz(False)
-    quiz_person(person, context)
-    bot_logger.info("%s started quiz id: %s", person.name, person.id)
+    start_quiz(person, context, False)
 
 
 @basic_handler(CommandHandler, command='quiz_me_he')
 @registered_only(send_message=False)
 def quiz_me_he_handler(person: Person, context: CallbackContext):
-    if person.is_on_quiz:
-        return
-    person.start_quiz(True)
-    quiz_person(person, context)
-    bot_logger.info("%s started quiz id: %s", person.name, person.id)
+    start_quiz(person, context, True)
 
 
 @basic_handler(PollAnswerHandler)
@@ -195,6 +183,22 @@ def finish_quiz(person: Person, context: CallbackContext):
     bot_logger.info("%s finished quiz with score %s id: %s", person.name, str(success_percentage), person.id)
 
 
+def start_quiz(person: Person, context: CallbackContext, on_heb: bool):
+    """
+    This function assumes that person is registered - therefore this method should be called from
+    handlers decorated with @registered_only
+    :param person:
+    :param context:
+    :param on_heb:
+    :return:
+    """
+    if person.is_on_quiz:
+        return
+    person.start_quiz(on_heb)
+    quiz_person(person, context)
+    bot_logger.info("%s started quiz id: %s", person.name, person.id)
+
+
 def clean_old_sessions():
     interval = 30 * 60
     while True:
@@ -214,7 +218,9 @@ def notify_all_users(message, bot):
     """
     for _id in db_api.get_all_persons_id():
         try:
-            bot.send_photo(_id, photo=open('update_image.jfif', 'rb'), caption=message)
+            name, image = ram_api.get_character()
+            message += "\n\n\n" + "Character-name: " + name
+            bot.send_photo(_id, photo=image, caption=message)
         except Exception as e:
             print(f"Couldn't send message for user {db_api.get_person_data(_id).get('name')}")
             print(e)

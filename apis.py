@@ -1,5 +1,6 @@
 from DatabaseAPI import DataBase
 from DictAPI import DictAPI
+from RamApi import RamApi
 from SessionsDict import SessionsDict
 from telegram.ext import Updater
 import logging
@@ -10,6 +11,7 @@ import logging
 ######
 db_api = DataBase('test.db')
 dict_api = DictAPI('new_dict.csv')
+ram_api = RamApi()
 
 # Logging shit goes here
 # --- This is not well written - to be fixed in the future ---
