@@ -3,12 +3,18 @@ from telegram import (Update,
                       InlineKeyboardMarkup,
                       Poll,
                       )
-from telegram.ext import CallbackContext
 from telegram.error import BadRequest
+from telegram.ext import (CommandHandler,
+                          CallbackQueryHandler,
+                          PollAnswerHandler,
+                          MessageHandler,
+                          Filters,
+                          CallbackContext,
+                          )
+
 from apis import dict_api, db_api, bot_logger, sessions, message_logger
 from Person import Person
-from bot_decorators import basic_handler_wrapper, update_handler_wrapper, registered_only, update_registered_only
-from threading import Thread
+from bot_decorators import basic_handler_wrapper, registered_only
 from time import sleep, time
 
 # CONSTANTS
@@ -25,7 +31,7 @@ gender_markup = InlineKeyboardMarkup(gender_kb)
 choose_lang_button = InlineKeyboardMarkup(lang_kb)
 
 
-@basic_handler_wrapper
+@basic_handler_wrapper(CommandHandler, command='start')
 def start_handler(person: Person, context: CallbackContext):
     if not person.is_known:
         context.bot.send_message(chat_id=person.id, text="Welcome " + person.name +
@@ -38,7 +44,7 @@ def start_handler(person: Person, context: CallbackContext):
                                                                       "of this bot")
 
 
-@basic_handler_wrapper
+@basic_handler_wrapper(CommandHandler, command='menu')
 def menu_handler(person: Person, context: CallbackContext):
     text = ("/start start conversion with the bot\n"
             "/menu get all options of this bot\n"
@@ -50,7 +56,7 @@ def menu_handler(person: Person, context: CallbackContext):
     context.bot.send_message(chat_id=person.id, text=text)
 
 
-@basic_handler_wrapper
+@basic_handler_wrapper(CommandHandler, command='register')
 def register_handler(person: Person, context: CallbackContext):
     if person.is_known:
         context.bot.send_message(text="you are already registered", chat_id=person.id)
@@ -58,15 +64,18 @@ def register_handler(person: Person, context: CallbackContext):
         context.bot.send_message(reply_markup=gender_markup, chat_id=person.id, text="What's your gender")
 
 
-@update_handler_wrapper
-@update_registered_only()
+@basic_handler_wrapper(CommandHandler, 'contact')
+@registered_only()
 def contact_handler(person: Person, update: Update, context: CallbackContext):
     message = update.message.text[8:].strip()
-    message_logger.info("message form %s  id: %d : %s", person.name, person.id, message)
-    context.bot.send_message(chat_id=person.id, text="Thanks for your message")
+    if message:
+        message_logger.info("message form %s  id: %d : %s", person.name, person.id, message)
+        context.bot.send_message(chat_id=person.id, text="Thanks for your message")
+    else:
+        context.bot.send_message(chat_id=person.id, text="Use /contact  <your message right here>")
 
 
-@update_handler_wrapper
+@basic_handler_wrapper(CallbackQueryHandler)
 def button_map_handler(person: Person, update: Update, context: CallbackContext):
     update.callback_query.answer()
     query = update.callback_query
@@ -102,7 +111,7 @@ def button_map_handler(person: Person, update: Update, context: CallbackContext)
         bot_logger.info("%s started quiz id: %s", person.name, person.id)
 
 
-@basic_handler_wrapper
+@basic_handler_wrapper(CommandHandler, command='quiz_me')
 @registered_only()
 def quiz_me_handler(person: Person, context: CallbackContext):
     if person.is_on_quiz:
@@ -113,8 +122,8 @@ def quiz_me_handler(person: Person, context: CallbackContext):
     context.bot.send_message(chat_id=person.id, reply_markup=choose_lang_button, text="Choose option: ")
 
 
-@basic_handler_wrapper
-@registered_only()
+@basic_handler_wrapper(CommandHandler, command='quiz_me_en')
+@registered_only(send_message=False)
 def quiz_me_en_handler(person: Person, context: CallbackContext):
     if person.is_on_quiz:
         return
@@ -123,8 +132,8 @@ def quiz_me_en_handler(person: Person, context: CallbackContext):
     bot_logger.info("%s started quiz id: %s", person.name, person.id)
 
 
-@basic_handler_wrapper
-@registered_only()
+@basic_handler_wrapper(CommandHandler, command='quiz_me_he')
+@registered_only(send_message=False)
 def quiz_me_he_handler(person: Person, context: CallbackContext):
     if person.is_on_quiz:
         return
@@ -133,8 +142,8 @@ def quiz_me_he_handler(person: Person, context: CallbackContext):
     bot_logger.info("%s started quiz id: %s", person.name, person.id)
 
 
-@update_handler_wrapper
-@update_registered_only()
+@basic_handler_wrapper(PollAnswerHandler)
+@registered_only(send_message=False)
 def quiz_handler(person: Person, update: Update, context: CallbackContext):
     user_answer = update.poll_answer.option_ids[0]
     try:
@@ -148,7 +157,7 @@ def quiz_handler(person: Person, update: Update, context: CallbackContext):
             pass
 
 
-@update_handler_wrapper
+@basic_handler_wrapper(MessageHandler, regex_filter=Filters.regex("^[1-9][0 -9]*$"))
 def age_handler(person: Person, update: Update, context: CallbackContext):
     if person.interval_to_get_age_is_open:
         person.age = int(update.message.text)
@@ -205,10 +214,8 @@ def notify_all_users(message, bot):
     """
     for _id in db_api.get_all_persons_id():
         try:
-            bot.send_message(_id, message)
+            bot.send_photo(_id, photo=open('update_image.jfif', 'rb'), caption=message)
         except Exception as e:
             print(f"Couldn't send message for user {db_api.get_person_data(_id).get('name')}")
             print(e)
 
-
-Thread(target=clean_old_sessions).start()

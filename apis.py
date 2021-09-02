@@ -1,10 +1,12 @@
 from DatabaseAPI import DataBase
 from DictAPI import DictAPI
 from SessionsDict import SessionsDict
+from telegram.ext import Updater
 import logging
 ######
 # This file is for any object that should be
-# accessible from all parts of the program
+# accessible from all parts of the program.
+# Here will be the factory for all these objects
 ######
 db_api = DataBase('test.db')
 dict_api = DictAPI('new_dict.csv')
@@ -30,4 +32,9 @@ message_file_handler.setFormatter(formatter)
 message_logger.addHandler(message_file_handler)
 
 
+# Updater
+with open("keys.txt", 'r') as f:
+    token = f.readline()
+
+updater = Updater(token=token)
 
