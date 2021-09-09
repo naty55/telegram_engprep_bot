@@ -152,6 +152,12 @@ def age_handler(person: Person, update: Update, context: CallbackContext):
         bot_logger.info("%s registered id: %s", person.name, person.id)
 
 
+@basic_handler(CommandHandler, 'compete')
+@registered_only()
+def compete_handler(person: Person, update: Update, context: CallbackContext):
+    pass
+
+
 def quiz_person(person: Person, context: CallbackContext):
     if person.left_questions > 0:
         question = dict_api.get_question(on_heb_words=person.quiz_on_heb_words)
