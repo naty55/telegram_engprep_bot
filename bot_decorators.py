@@ -59,8 +59,8 @@ def registered_only(not_known_message=default_not_known_message, send_message=Tr
             elif send_message:
                 try:
                     context.bot.send_message(chat_id=person.id, text=not_known_message)
-                except:
-                    print(f"couldn't send message to {person.id} - {person.name}")
+                except Exception as e:
+                    print(f"couldn't send message to {person.id} - {person.name} Error: {e}")
         return wrapper
     return decorator
 

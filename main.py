@@ -1,7 +1,7 @@
 import sys
 from threading import Thread
 from apis import updater
-from bot_functions import notify_all_users, clean_old_sessions
+from bot_handlers import notify_all_users, clean_old_sessions
 
 
 if __name__ == '__main__':

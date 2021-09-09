@@ -25,10 +25,13 @@ next_kb = ((InlineKeyboardButton('Finish Quiz', callback_data='finish_button'),
             InlineKeyboardButton('Next', callback_data='next')),)
 lang_kb = ((InlineKeyboardButton('Quiz on English words', callback_data='lang_en_button'),),
            (InlineKeyboardButton('Quiz on Hebrew words', callback_data='lang_he_button'),))
+compete_kb = ((InlineKeyboardButton('Decline', callback_data='compete_decline'),),
+              (InlineKeyboardButton('Accept', callback_data='compete_accept'),))
 
 next_button = InlineKeyboardMarkup(next_kb)
 gender_markup = InlineKeyboardMarkup(gender_kb)
 choose_lang_button = InlineKeyboardMarkup(lang_kb)
+compete_markup = InlineKeyboardMarkup(compete_kb)
 
 
 @basic_handler(CommandHandler, command='start')
@@ -155,7 +158,17 @@ def age_handler(person: Person, update: Update, context: CallbackContext):
 @basic_handler(CommandHandler, 'compete')
 @registered_only()
 def compete_handler(person: Person, update: Update, context: CallbackContext):
-    pass
+    another_user_id = update.message.text[8:].strip()
+    try:
+        context.bot.send_message(chat_id=another_user_id, reply_markup=compete_markup, text=f"You are invited to a "
+                                                                                            f"competition with"
+                                                                                            f" {person.name}")
+    except BadRequest:
+        context.bot.send_message(chat_id=person.id, text="Send this to your friend; couldn't find him")
+    else:
+        pass
+    finally:
+        pass
 
 
 def quiz_person(person: Person, context: CallbackContext):
@@ -225,4 +238,3 @@ def notify_all_users(message, bot):
         except Exception as e:
             print(f"Couldn't send message for user {db_api.get_person_data(_id).get('name')}")
             print(e)
-
