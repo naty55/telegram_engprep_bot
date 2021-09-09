@@ -1,8 +1,4 @@
-from telegram import (Update,
-                      InlineKeyboardButton,
-                      InlineKeyboardMarkup,
-                      Poll,
-                      )
+from telegram import Update, Poll
 from telegram.error import BadRequest
 from telegram.ext import (CommandHandler,
                           CallbackQueryHandler,
@@ -11,27 +7,11 @@ from telegram.ext import (CommandHandler,
                           Filters,
                           CallbackContext,
                           )
-
+from telegram_objects import choose_lang_button, next_button, gender_markup, compete_markup
 from apis import dict_api, db_api, bot_logger, sessions, message_logger, ram_api
 from Person import Person
 from bot_decorators import basic_handler, registered_only
 from time import sleep, time
-
-# CONSTANTS
-gender_kb = ([InlineKeyboardButton('Male', callback_data='gender_male')],
-             [InlineKeyboardButton('Female', callback_data='gender_female')],
-             [InlineKeyboardButton('Other', callback_data='gender_other')])
-next_kb = ((InlineKeyboardButton('Finish Quiz', callback_data='finish_button'),
-            InlineKeyboardButton('Next', callback_data='next')),)
-lang_kb = ((InlineKeyboardButton('Quiz on English words', callback_data='lang_en_button'),),
-           (InlineKeyboardButton('Quiz on Hebrew words', callback_data='lang_he_button'),))
-compete_kb = ((InlineKeyboardButton('Decline', callback_data='compete_decline'),),
-              (InlineKeyboardButton('Accept', callback_data='compete_accept'),))
-
-next_button = InlineKeyboardMarkup(next_kb)
-gender_markup = InlineKeyboardMarkup(gender_kb)
-choose_lang_button = InlineKeyboardMarkup(lang_kb)
-compete_markup = InlineKeyboardMarkup(compete_kb)
 
 
 @basic_handler(CommandHandler, command='start')
