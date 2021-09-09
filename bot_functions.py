@@ -102,7 +102,7 @@ def button_map_handler(person: Person, update: Update, context: CallbackContext)
             else:
                 finish_quiz(person, context)
     elif answer.startswith('lang') and person.is_known:
-        # Making safe person is known - not required but on the safe side
+        # Making sure person is known - not required but on the safe side
         on_heb_words = True if 'he' in answer else False
         start_quiz(person, context, on_heb_words)
 
@@ -110,11 +110,6 @@ def button_map_handler(person: Person, update: Update, context: CallbackContext)
 @basic_handler(CommandHandler, command='quiz_me')
 @registered_only()
 def quiz_me_handler(person: Person, context: CallbackContext):
-    if person.is_on_quiz:
-        # To be decided
-        # context.bot.send_message(chat_id=person.id, reply_markup=next_button,
-        #                          text="You have to finish you quiz first")
-        return
     context.bot.send_message(chat_id=person.id, reply_markup=choose_lang_button, text="Choose option: ")
 
 

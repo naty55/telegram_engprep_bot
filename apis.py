@@ -4,11 +4,15 @@ from RamApi import RamApi
 from SessionsDict import SessionsDict
 from telegram.ext import Updater
 import logging
+
+
 ######
 # This file is for any object that should be
 # accessible from all parts of the program.
-# Here will be the factory for all these objects
+# Here will be the factory for all of those objects
 ######
+
+# API's
 db_api = DataBase('test.db')
 dict_api = DictAPI('new_dict.csv')
 ram_api = RamApi()
