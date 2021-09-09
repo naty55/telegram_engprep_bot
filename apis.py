@@ -24,7 +24,6 @@ formatter = logging.Formatter(format_string)
 logging.basicConfig(format=format_string, level=logging.INFO)
 bot_logger = logging.getLogger('bot_logger')
 bot_file_handler = logging.FileHandler('bot_log.log')
-print("Test")
 bot_file_handler.setFormatter(formatter)
 bot_logger.addHandler(bot_file_handler)
 
