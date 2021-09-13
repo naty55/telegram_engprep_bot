@@ -7,7 +7,7 @@ from telegram.ext import (CommandHandler,
                           Filters,
                           CallbackContext,
                           )
-from telegram_objects import choose_lang_button, next_button, gender_markup, compete_markup
+from telegram_objects import choose_lang_button_markup, next_button_markup, gender_markup, compete_markup
 from apis import dict_api, db_api, bot_logger, sessions, message_logger, ram_api
 from Person import Person
 from bot_decorators import basic_handler, registered_only
@@ -55,7 +55,7 @@ def contact_handler(person: Person, update: Update, context: CallbackContext):
         message_logger.info("message form %s  id: %d : %s", person.name, person.id, message)
         context.bot.send_message(chat_id=person.id, text="Thanks for your message")
     else:
-        context.bot.send_message(chat_id=person.id, text="Use /contact  <your message right here>")
+        context.bot.send_message(chat_id=person.id, text="Use /contact  <your message>")
 
 
 @basic_handler(CallbackQueryHandler)
@@ -88,12 +88,14 @@ def button_map_handler(person: Person, update: Update, context: CallbackContext)
         # Making sure person is known - not required but on the safe side
         on_heb_words = True if 'he' in answer else False
         start_quiz(person, context, on_heb_words)
+    elif answer.startswith('compete_'):
+        pass
 
 
 @basic_handler(CommandHandler, command='quiz_me')
 @registered_only()
 def quiz_me_handler(person: Person, context: CallbackContext):
-    context.bot.send_message(chat_id=person.id, reply_markup=choose_lang_button, text="Choose option: ")
+    context.bot.send_message(chat_id=person.id, reply_markup=choose_lang_button_markup, text="Choose an option: ")
 
 
 @basic_handler(CommandHandler, command='quiz_me_en')
@@ -161,7 +163,7 @@ def quiz_person(person: Person, context: CallbackContext):
         poll_message = context.bot.send_poll(chat_id=person.id, question=q, options=options,
                                              type=Poll.QUIZ,
                                              correct_option_id=answer, is_anonymous=False)
-        button_message = context.bot.send_message(chat_id=person.id, reply_markup=next_button,
+        button_message = context.bot.send_message(chat_id=person.id, reply_markup=next_button_markup,
                                                   text="_" * 45)
         context.bot_data[button_message.message_id] = poll_message
         context.bot_data[poll_message.poll.id] = poll_message.poll.correct_option_id
