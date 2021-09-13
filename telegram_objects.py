@@ -10,7 +10,7 @@ lang_kb = ((InlineKeyboardButton('Quiz on English words', callback_data='lang_en
 compete_kb = ((InlineKeyboardButton('Decline', callback_data='compete_decline'),),
               (InlineKeyboardButton('Accept', callback_data='compete_accept'),))
 
-next_button = InlineKeyboardMarkup(next_kb)
+next_button_markup = InlineKeyboardMarkup(next_kb)
 gender_markup = InlineKeyboardMarkup(gender_kb)
-choose_lang_button = InlineKeyboardMarkup(lang_kb)
+choose_lang_button_markup = InlineKeyboardMarkup(lang_kb)
 compete_markup = InlineKeyboardMarkup(compete_kb)
