@@ -326,7 +326,7 @@ def send_message(text, bot, person, interval=0.01, animate=False):
 def count_down(person, bot, prefix="", interval=0.5):
     prefix += " "
     message = bot.send_message(chat_id=person.id, text=prefix + "10")
-    for i in range(9, -1, -1):
+    for i in range(9, 0, -1):
         sleep(interval)
         text = prefix + str(i)
         message.edit_text(text)
