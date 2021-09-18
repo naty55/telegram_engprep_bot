@@ -1,6 +1,8 @@
 import json
 import urllib.request
+import os
 import random
+os.environ['no_proxy'] = "https://rickandmortyapi.com"
 
 class RamApi:
     def __init__(self):
