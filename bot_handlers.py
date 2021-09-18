@@ -92,7 +92,7 @@ def button_map_handler(person: Person, update: Update, context: CallbackContext)
         on_heb_words = True if 'he' in answer else False
         start_quiz(person, context, on_heb_words)
 
-    elif answer.startswith('compete'):
+    elif answer.startswith('compete') and person.is_known:
         _, accepted, offering_person_id, offer_time = answer.split('_')
         if time() - float(offer_time) > 620:
             print("Offer expired")
