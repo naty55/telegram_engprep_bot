@@ -164,7 +164,7 @@ def compete_handler(person: Person, update: Update, context: CallbackContext):
 
 
 def compete_person(person: Person, context: CallbackContext, another_person_id):
-    if person.is_busy():
+    if person.is_busy() or str(person.id) == str(another_person_id):
         return
     try:
         another_person = sessions.get(int(another_person_id))
