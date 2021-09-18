@@ -30,17 +30,27 @@ class Person:
             self.name = person_data['name']
             self.gender = person_data['gender']
         self.init_quiz()
+        self.init_competition()
         # time
         self.time = time.time()
 
     def init_quiz(self):
         """
-        Init quiz settings
-        :return:
+        Init quiz settings and state
+        :return: None
         """
         self.is_on_quiz = False
         self.left_questions = 0
         self.quiz_on_heb_words = False
+
+    def init_competition(self):
+        """
+        Init competition settings and state
+        :return: None
+        """
+        self.init_quiz()
+        self.is_on_competition = False
+        self.against = None  # The opponent person
 
     def start_quiz(self, on_heb_words):
         """
@@ -52,6 +62,12 @@ class Person:
         self.left_questions = 15
         self.failed = 15
         self.quiz_on_heb_words = on_heb_words
+
+    def start_competition(self, other):
+        self.start_quiz(False)
+        self.is_on_competition = True
+        self.finished_competition = False
+        self.against = other
 
     def save_person_data(self):
         """
@@ -77,3 +93,28 @@ class Person:
         :return: None
         """
         self.time = time.time()
+
+    def is_busy(self):
+        """
+        Check if person is on a quiz or competition
+        :return: True if person is on quiz or competition; False otherwise
+        """
+        return self.is_on_quiz or self.is_on_competition
+
+    def get_score(self):
+        """
+        Return the score of person in the quiz, only if the person didn't finish the quiz already
+        :return:
+        """
+        if self.is_on_quiz:
+            return round(((15 - self.failed) / 15) * 100, 2)
+
+    def finish_competition(self):
+        if self.is_on_competition:
+            self.finished_competition = True
+
+    def close_session(self):
+        pass
+
+    def __repr__(self):
+        return f"Person name: {self.name}, id: {self.id}, last seen: {self.time}"
