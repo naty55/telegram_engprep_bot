@@ -297,9 +297,10 @@ def notify_all_users(message, bot):
     :param bot: The bot
     :return: None
     """
+
+    name, image = ram_api.get_character()
     for _id in db_api.get_all_persons_id():
         try:
-            name, image = ram_api.get_character()
             message += "\n\n\n" + "Character-name: " + name
             bot.send_photo(_id, photo=image, caption=message)
         except Exception as e:
