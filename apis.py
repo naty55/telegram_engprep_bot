@@ -4,7 +4,7 @@ from RamApi import RamApi
 from SessionsDict import SessionsDict
 from telegram.ext import Updater
 import logging
-
+import json
 
 ######
 # This file is for any object that should be
@@ -38,9 +38,10 @@ message_file_handler.setFormatter(formatter)
 message_logger.addHandler(message_file_handler)
 
 
-# Updater
-with open("keys.txt", 'r') as f:
-    token = f.readline()
+# Configuration
+with open('config.json', 'r') as c:
+    config = json.load(c)
 
-updater = Updater(token=token)
+
+updater = Updater(token=config['token'])
 
