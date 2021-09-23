@@ -8,7 +8,7 @@ from telegram.ext import (CommandHandler,
                           CallbackContext,
                           )
 from telegram_objects import choose_lang_button_markup, next_button_markup, gender_markup, compete_markup_factory, rematch_markup_factory
-from apis import dict_api, db_api, bot_logger, sessions, message_logger, ram_api
+from apis import dict_api, db_api, bot_logger, sessions, message_logger, ram_api, config
 from Person import Person
 from bot_decorators import basic_handler, registered_only
 from time import sleep, time
@@ -27,6 +27,15 @@ def start_handler(person: Person, context: CallbackContext):
                                  text=f"Welcome back {person.name}\n"
                                       "Use /menu to get all options "
                                       "of this bot")
+
+
+@basic_handler(CommandHandler, command='bot_status')
+def status_handler(person: Person, context : CallbackContext):
+    if person.id in config['admins']:
+        text = ("Bot is Up\n\n"
+                "Open sessions:\n"
+                ) + "\n".join((person.name for person in sessions.values()))
+        context.bot.send_message(chat_id=person.id, text=text)
 
 
 @basic_handler(CommandHandler, command='menu')
