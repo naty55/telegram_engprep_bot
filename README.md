@@ -3,7 +3,7 @@ Telegram Bot for learning English
 
 # What can this bot do ?
 Are you preparing for an exam in English and looking for a way to test and enrich your vocabulary ?   
-This bot was developed with you in mind! 
+This bot was developed with you in mind!   
 This Bot let you:
 1. Quiz yourself on English or Hebrew words, With simple command /quiz_me you get 15 questions on English or Hebrew words (you can choose) .
 2. Compete against other users (for now you will need their telegram id)
