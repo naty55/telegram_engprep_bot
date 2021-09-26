@@ -15,10 +15,10 @@ This Bot let you:
 Great, hopefully you already have your telegram account (if not go to https://telegram.org/ and create one). now you have 2 options:
 You have 2 options:
 1. The easier one, go to https://t.me/english_prep_bot and from there follow the bot's instructions, but notice that the bot moght be down from time to time
-2. a. Clone the project to your PC
-   b. get token from FatherBot (Here you can see how https://core.telegram.org/bots#3-how-do-i-create-a-bot)
-   c. Create `config.json` file and put `{'toke': <your-token>, 'admins' : [] }` 
-   d. you are all set run the program and go enjoy the bot you have just created. 
+2. - a. Clone the project to your PC
+   - b. get token from FatherBot (Here you can see how https://core.telegram.org/bots#3-how-do-i-create-a-bot)
+   - c. Create `config.json` file and put `{'toke': <your-token>, 'admins' : [] }` 
+   - d. you are all set run the program and go enjoy the bot you have just created. 
 
 # Note 
 This bot is under development
