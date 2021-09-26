@@ -12,7 +12,7 @@ This Bot let you:
 5. Enjoy
 
 # I want to use the bot, how ?
-Great, hopefully you already have your telegram account (if not go to https://telegram.org/ and create one). now you have 2 options:
+Great, hopefully you already have your telegram account (if not go to https://telegram.org/ and create one).  
 You have 2 options:
 1. The easier one, go to https://t.me/english_prep_bot, command `/start` and from there follow the bot's instructions, but notice that the bot might be down from time to time
 2.  a. Clone the project to your PC  
