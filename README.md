@@ -1,19 +1,20 @@
 # telegram_engprep_bot
-Simple telegram bot to help you memorize words in English (for Hebrew speakers)
+Telegram Bot for learning English
 
-# Usage:
-This bot was developed for hebrew speakers but with some slight changes, you can change the bot to be a trainer for any other language. For example for Spanish speakers all you have to do is
-1. to have a csv file with header id, word (english), translation(spanish) 
-2. name this file "new_dict.csv" 
-3. put it in the same diectory your bot is, where its main.py is 
-4. get your bot token from BotFather (google how to do it or see https://www.siteguarding.com/en/how-to-get-telegram-bot-api-token)
-5. put the token as first row in file named "keys.txt" (Not the most secure but good enough for our purposes)
-6. run the bot by "python main.py" 
-7. you are done! go to your bot and use it :)
+# What can this bot do ?
+Are you preparing for an exam in English and looking for a way to test and enrich your vocabulary ? 
+This bot was developed with you in mind! 
+This Bot let you:
+1. Quiz yourself on English or Hebrew words, With simple command /quiz_me you get 15 questions on English or Hebrew words (you can choose) .
+2. Compete against other users (for now you will need their telegram id)
+3. Get your scores and word-list that you need to improve [In-The-Future]
+4. Give feedback to the developer via /contact command 
+5. Enjoy
 
+# I want to use the bot, how ?
+Great, hopefully you already have your telegram account (if not go to https://telegram.org/ and create one). now you have 2 options:
+You have 2 options:
+1. The easier one, 
+2. 
 # Note 
-This bot is yet under development
-
-# Note 
-in newer versions of the bot - the bot assumes that you are Hebrew speaker. if you want to use it for other languages speakers, 
-some slight changes should be done in the code. 
+This bot is under development
