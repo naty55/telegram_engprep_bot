@@ -12,6 +12,7 @@ default_not_known_message = "You are not registered please use /register to regi
 def basic_handler(handler, command=None, regex_filter=None):
     """
 
+    :param description: Command description
     :param handler: handler type
     :param command: command string
     :param regex_filter: string
@@ -37,7 +38,6 @@ def basic_handler(handler, command=None, regex_filter=None):
             updater.dispatcher.add_handler(handler(handler_func, pass_user_data=True, pass_chat_data=True))
         elif handler_name == 'MessageHandler':
             updater.dispatcher.add_handler(handler(regex_filter, handler_func))
-
         return func
     return decorator
 

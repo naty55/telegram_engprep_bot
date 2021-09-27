@@ -8,7 +8,8 @@ from telegram.ext import (CommandHandler,
                           CallbackContext,
                           )
 from telegram_objects import choose_lang_button_markup, next_button_markup, gender_markup, compete_markup_factory, rematch_markup_factory
-from apis import dict_api, db_api, bot_logger, sessions, message_logger, ram_api, config
+from apis import dict_api, bot_logger, sessions, message_logger, config
+from bot_functions import send_message, count_down
 from Person import Person
 from bot_decorators import basic_handler, registered_only
 from time import sleep, time
@@ -204,7 +205,7 @@ def quiz_person(person: Person, context: CallbackContext):
         open_period = 8
     if person.left_questions > 0:
         question = dict_api.get_question(on_heb_words=person.quiz_on_heb_words)
-        word, answer, options = question['word'], question['answer'], question['options']
+        word, word_id, answer, options = question['word'], question['answer'], question['options']
         q = f"What is the translation of the word '{word}'"
         poll_message = context.bot.send_poll(chat_id=person.id,
                                              question=q,
@@ -297,47 +298,3 @@ def clean_old_sessions():
             if time() - sessions[i].time > interval:
                 person = sessions.pop(i)
                 bot_logger.info("%s session expired id: %s", person.name, person.id)
-
-
-def notify_all_users(message, bot):
-    """
-    Send message to all users that are in the db
-    :param message: message to send
-    :param bot: The bot
-    :return: None
-    """
-
-    name, image = ram_api.get_character()
-    for _id in db_api.get_all_persons_id():
-        try:
-            message += "\n\n\n" + "Character-name: " + name
-            bot.send_photo(_id, photo=image, caption=message)
-        except Exception as e:
-            print(f"Couldn't send message for user {db_api.get_person_data(_id).get('name')}")
-            print(e)
-
-
-def send_message(text, bot, person, interval=0.01, animate=False):
-    text = text.strip()
-    if animate:
-        str_to_send = text[0]
-        message = bot.send_message(chat_id=person.id, text=str_to_send)
-        for letter in text[1:]:
-            str_to_send += letter
-            if letter.isspace():
-                continue
-            message.edit_text(str_to_send)
-            sleep(interval)
-        return message
-
-    return bot.send_message(chat_id=person, text=text)
-
-
-def count_down(person, bot, prefix="", interval=0.5):
-    prefix += " "
-    message = bot.send_message(chat_id=person.id, text=prefix + "10")
-    for i in range(9, -1, -1):
-        sleep(interval)
-        text = prefix + str(i)
-        message.edit_text(text)
-    message.delete()
