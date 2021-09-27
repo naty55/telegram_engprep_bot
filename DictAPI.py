@@ -28,6 +28,7 @@ class DictAPI:
         if on_heb_words:
             word_lang_idx, answer_lang_idx = answer_lang_idx, word_lang_idx
         answer_index = random.randint(a, b)
+        word_id = self.rows[answer_index][0]
         word = self.rows[answer_index][word_lang_idx]
         answer = self.rows[answer_index][answer_lang_idx]
 
@@ -40,6 +41,7 @@ class DictAPI:
         random.shuffle(options)
         answer = options.index(answer)
         return {'word': word,
+                'word_id': word_id,
                 'answer': answer,
                 'options': options}
 
