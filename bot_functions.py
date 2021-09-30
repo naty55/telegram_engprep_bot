@@ -1,8 +1,10 @@
 from time import sleep
 from apis import ram_api, db_api
+from telegram import Bot, Message
+from Person import Person
 
 
-def notify_all_users(message, bot):
+def notify_all_users(message: str, bot: Bot) -> None:
     """
     Send Notification to all registered users;
     There is a telegram API limitation that only allow sending 30 messages
@@ -27,7 +29,7 @@ def notify_all_users(message, bot):
             print(e)
 
 
-def send_message(text, bot, person, interval=0.01, animate=False):
+def send_message(text: str, bot: Bot, person: Person, interval: float = 0.01, animate: bool = False) -> Message:
     text = text.strip()
     if animate:
         str_to_send = text[0]
@@ -43,7 +45,7 @@ def send_message(text, bot, person, interval=0.01, animate=False):
     return bot.send_message(chat_id=person, text=text)
 
 
-def count_down(person, bot, prefix="", interval=0.5):
+def count_down(person: Person, bot: Bot, prefix: str = "", interval: float = 0.5) -> None:
     prefix += " "
     message = bot.send_message(chat_id=person.id, text=prefix + "10")
     for i in range(9, -1, -1):
