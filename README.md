@@ -17,7 +17,7 @@ You have 2 options:
 1. The easier one, go to https://t.me/english_prep_bot, command `/start` and from there follow the bot's instructions, but notice that the bot might be down from time to time
 2.  a. Clone the project to your PC  
     b. Get a token from FatherBot (Here you can see how https://core.telegram.org/bots#3-how-do-i-create-a-bot)  
-    c. Create `config.json` file and put `{'toke': <your-token>, 'admins' : [] }`   
+    c. Create `config.json` file and put `{'token': <your-token>, 'admins' : [] }`   
     d. you are all set run the program and go enjoy the bot you have just created.   
 
 # Note 
