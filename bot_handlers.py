@@ -205,7 +205,7 @@ def quiz_person(person: Person, context: CallbackContext):
         open_period = 8
     if person.left_questions > 0:
         question = dict_api.get_question(on_heb_words=person.quiz_on_heb_words)
-        word, word_id, answer, options = question['word'], question['answer'], question['options']
+        word, word_id, answer, options = question['word'], question['word_id'], question['answer'], question['options']
         q = f"What is the translation of the word '{word}'"
         poll_message = context.bot.send_poll(chat_id=person.id,
                                              question=q,
