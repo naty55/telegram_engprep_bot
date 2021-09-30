@@ -12,7 +12,6 @@ default_not_known_message = "You are not registered please use /register to regi
 def basic_handler(handler, command=None, regex_filter=None):
     """
 
-    :param description: Command description
     :param handler: handler type
     :param command: command string
     :param regex_filter: string
