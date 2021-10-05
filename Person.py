@@ -113,8 +113,8 @@ class Person:
         if self.is_on_competition:
             self.finished_competition = True
 
-    def close_session(self):
-        pass
+    def close(self):
+        db_api.update_last_seen(self.id, self.time)
 
     def __repr__(self):
         return f"Person name: {self.name}, id: {self.id}, last seen: {self.time}"
