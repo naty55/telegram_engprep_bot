@@ -12,12 +12,18 @@ from apis import dict_api, bot_logger, sessions, message_logger, config
 from bot_functions import send_message, count_down
 from Person import Person
 from bot_decorators import basic_handler, registered_only
-from time import sleep, time
+from time import time
 from threading import Thread
 
 
 @basic_handler(CommandHandler, command='start')
-def start_handler(person: Person, context: CallbackContext):
+def start_handler(person: Person, context: CallbackContext) -> None:
+    """
+    Start Handler - Greet the user and instruct the user how to use the bot
+    :param person: person
+    :param context: callback context
+    :return: None
+    """
     if not person.is_known:
         context.bot.send_message(chat_id=person.id,
                                  text=f"Welcome {person.name}\n"
@@ -31,7 +37,13 @@ def start_handler(person: Person, context: CallbackContext):
 
 
 @basic_handler(CommandHandler, command='bot_status')
-def status_handler(person: Person, context : CallbackContext):
+def status_handler(person: Person, context: CallbackContext) -> None:
+    """
+    Status Handler - send bot status to the user, this is an admins' only command
+    :param person: person
+    :param context: callbackContext
+    :return: None
+    """
     if person.id in config['admins']:
         text = ("Bot is Up\n\n"
                 "Open sessions:\n"
@@ -40,7 +52,13 @@ def status_handler(person: Person, context : CallbackContext):
 
 
 @basic_handler(CommandHandler, command='menu')
-def menu_handler(person: Person, context: CallbackContext):
+def menu_handler(person: Person, context: CallbackContext) -> None:
+    """
+    Menu Handler - send the menu to the user
+    :param person: person
+    :param context: callbackContext
+    :return: None
+    """
     text = ("/start start conversion with the bot\n"
             "/menu get all options of this bot\n"
             "/register register in order to use the bot\n"
@@ -53,7 +71,13 @@ def menu_handler(person: Person, context: CallbackContext):
 
 
 @basic_handler(CommandHandler, command='register')
-def register_handler(person: Person, context: CallbackContext):
+def register_handler(person: Person, context: CallbackContext) -> None:
+    """
+    Register Handler - let  the user start registration process
+    :param person: person
+    :param context: callbackContext
+    :return: None
+    """
     if person.is_known:
         context.bot.send_message(text="you are already registered", chat_id=person.id)
     else:
@@ -62,7 +86,14 @@ def register_handler(person: Person, context: CallbackContext):
 
 @basic_handler(CommandHandler, 'contact')
 @registered_only()
-def contact_handler(person: Person, update: Update, context: CallbackContext):
+def contact_handler(person: Person, update: Update, context: CallbackContext) -> None:
+    """
+    Contact Handler - let the user contact and send feedback to the developer
+    :param person: perosn
+    :param update: Update
+    :param context: callbackContext
+    :return: None
+    """
     message = update.message.text[8:].strip()
     if message:
         message_logger.info("message form %s  id: %d : %s", person.name, person.id, message)
@@ -72,7 +103,14 @@ def contact_handler(person: Person, update: Update, context: CallbackContext):
 
 
 @basic_handler(CallbackQueryHandler)
-def button_map_handler(person: Person, update: Update, context: CallbackContext):
+def button_map_handler(person: Person, update: Update, context: CallbackContext) -> None:
+    """
+    Button Handler - This handler handle every type of button pressing event
+    :param person: person
+    :param update: Update
+    :param context: callbackContext
+    :return:
+    """
     update.callback_query.answer()
     query = update.callback_query
     answer = query.data
@@ -81,12 +119,14 @@ def button_map_handler(person: Person, update: Update, context: CallbackContext)
     except BadRequest:
         pass  # Ignore case; message couldn't be deleted
 
-    if answer.startswith('gender'):
-        person.gender = answer.split('_')[1]
+    data = answer.split('_')
+    req_type = data[0]
+    if req_type == 'gender':
+        person.gender = data[1]
         person.interval_to_get_age_is_open = True
         context.bot.send_message(text="How old are you ? ", chat_id=person.id)
 
-    elif answer.startswith('quiz'):
+    elif req_type == 'quiz':
         try:
             context.bot_data.pop(update.callback_query.message.poll.id)
         except KeyError:
@@ -96,14 +136,13 @@ def button_map_handler(person: Person, update: Update, context: CallbackContext)
                 quiz_person(person, context)
             else:
                 finish_quiz(person, context)
-
-    elif answer.startswith('lang') and person.is_known:
+    elif req_type == 'lang' and person.is_known:
         # Making sure person is known - not required but on the safe side
-        on_heb_words = True if 'he' in answer else False
+        on_heb_words = True if 'he' in data else False
         start_quiz(person, context, on_heb_words)
 
-    elif answer.startswith('compete') and person.is_known:
-        _, accepted, offering_person_id, offer_time = answer.split('_')
+    elif req_type == 'compete' and person.is_known:
+        _, accepted, offering_person_id, offer_time = data
         if time() - float(offer_time) > 620:
             print("Offer expired")
             return
@@ -111,8 +150,8 @@ def button_map_handler(person: Person, update: Update, context: CallbackContext)
             person1 = sessions.get(int(offering_person_id))
             start_competition(person, person1, context)
 
-    elif answer.startswith('rematch'):
-        _, another_user_id = answer.split('_')
+    elif req_type == 'rematch':
+        another_user_id = data[1]
         compete_person(person, context, another_user_id)
 
 
@@ -290,11 +329,3 @@ def finish_competition(person: Person, context: CallbackContext):
         person.init_competition()
 
 
-def clean_old_sessions():
-    interval = 30 * 60
-    while True:
-        sleep(interval)
-        for i in list(sessions.keys()):
-            if time() - sessions[i].time > interval:
-                person = sessions.pop(i)
-                bot_logger.info("%s session expired id: %s", person.name, person.id)
