@@ -1,5 +1,6 @@
 import sqlite3
 from sqlite3 import Error
+from time import time
 import logging
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -48,8 +49,8 @@ class DataBase:
                          "telegram_id INTEGER NOT NULL,"
                          "age INTEGER NOT NULL, "
                          "gender INTEGER NOT NULL,"
-                         "dict_index INTEGER NOT NULL,"
-                         "last_seen STRING );")
+                         "last_seen STRING ,"
+                         "signup_date STRING);")
 
         scores_table = ("CREATE TABLE IF NOT EXISTS scores ("
                         "word_id INTEGER NOT NULL,"
@@ -67,7 +68,9 @@ class DataBase:
         """
         Generic function to execute read query on db
         :param params: params
-        :param query: query to execute
+        :param query: query to exe
+
+        cute
         :return: 0 for success; 1 otherwise
         """
         cursor = self.connection.cursor()
@@ -122,13 +125,19 @@ class DataBase:
         if self.check_for_person({'telegram_id': telegram_id}):
             return
         query = f"""INSERT INTO persons
-                    (name, telegram_id, gender, age, dict_index)
+                    (name, telegram_id, gender, age, signup_date)
                    VALUES
                        (?, ?, ?, ?, ?); 
                 """
-        result = self.exec_query(query, (name, telegram_id, gender, age, 0))
+        result = self.exec_query(query, (name, telegram_id, gender, age, time()))
         if result == 0:
             db_logger.info(f"new person updated name : {name}, telegram_id : {telegram_id}")
+
+    def update_last_seen(self, person_id, last_seen_time):
+        query = "UPDATE persons" \
+                "SET last_seen=?" \
+                "WHERE telegram_id=?"
+        self.exec_query(query, (str(last_seen_time), person_id))
 
     def update_score(self, person_id, word_id, duration, failure):
         if not self.check_for_person({'id': person_id}):
@@ -174,8 +183,8 @@ class DataBase:
                 'telegram_id': row[2],
                 'age': row[3],
                 'gender': row[4],
-                'index': row[5],
-                'last_seen': row[6]
+                'last_seen': row[5],
+                'sing_up': row[6]
             }
             return data
         else:
