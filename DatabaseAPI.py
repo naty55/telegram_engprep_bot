@@ -80,6 +80,7 @@ class DataBase:
             return 0
         except Error as e:
             db_logger.error(f'The error {e} occurred')
+            print(e.with_traceback())
             return 1
 
     def exec_read_query(self, query: str, params: tuple):
@@ -134,9 +135,9 @@ class DataBase:
             db_logger.info(f"new person updated name : {name}, telegram_id : {telegram_id}")
 
     def update_last_seen(self, person_id, last_seen_time):
-        query = "UPDATE persons" \
-                "SET last_seen=?" \
-                "WHERE telegram_id=?"
+        query = ("UPDATE persons " 
+                 "SET last_seen=? " 
+                 "WHERE telegram_id=?")
         self.exec_query(query, (str(last_seen_time), person_id))
 
     def update_score(self, person_id, word_id, duration, failure):
@@ -149,7 +150,7 @@ class DataBase:
             failures = result[0][3] + (1 if failure else 0)
             total = result[0][4] + 1
             duration = (result[0][2] * (total - 1) + duration) / total
-            query = f"""UPDATE scores
+            query = """UPDATE scores
                     SET failures=?, total=?, duration=?
                     WHERE (word_id =? AND person_id = ?)"""
             params = (failures, total, duration, word_id, person_id)
@@ -163,15 +164,6 @@ class DataBase:
         if success == 0:
             db_logger.info(f"[INFO] score successfully updated person_id: {person_id}, word_id : {word_id}, "
                            f"duration : {duration}, failure : {failure}, total : {total}")
-
-    def update_dict_index(self, person_id, dict_index):
-        if not self.check_for_person({'id': person_id}):
-            raise Exception(f"Trying to update person status of person that does not exist {person_id}")
-        query = ("UPDATE persons "
-                 "SET dict_index=?"
-                 "WHERE id = ?")
-        if self.exec_query(query, (dict_index, person_id)) == 0:
-            db_logger.info(f"[INFO] successfully updated dict_index : {dict_index}, id : {person_id}")
 
     def get_person_data(self, telegram_id):
         if self.check_for_person({'telegram_id': telegram_id}):
