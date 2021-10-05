@@ -3,7 +3,7 @@ from apis import sessions, bot_logger
 
 
 def clean_old_sessions():
-    interval = 30 * 60
+    interval = 30 * 60  # 30 minutes
     while True:
         sleep(interval)
         for i in list(sessions.keys()):
