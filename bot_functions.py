@@ -1,7 +1,8 @@
 from time import sleep
-from apis import ram_api, db_api
+from apis import db_api
 from telegram import Bot, Message
 from Person import Person
+from util import get_ram_mem
 
 
 def notify_all_users(message: str, bot: Bot) -> None:
@@ -14,7 +15,7 @@ def notify_all_users(message: str, bot: Bot) -> None:
     :return: None
     """
 
-    name, image = ram_api.get_character()
+    name, image = get_ram_mem()
     message += "\n\n\n" + "Character-name: " + name
 
     counter = 0
